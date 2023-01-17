@@ -7,6 +7,7 @@ export const questionData: Question[] = [
     question: 'include',
     choices: ['を含む', 'を盗む', 'を標的とする', 'を侵害する'],
     answer: 'を含む',
+    partOfSpeech: '動詞',
     relatedWords: [
       {
         word: 'inclusion',
@@ -32,6 +33,7 @@ export const questionData: Question[] = [
     question: 'steal',
     choices: ['を侵害する', 'を盗む', 'を標的とする', 'を侵害する'],
     answer: 'を盗む',
+    partOfSpeech: '動詞',
     relatedWords: [],
     useExamples: [
       {
@@ -45,7 +47,8 @@ export const questionData: Question[] = [
     questionGroupId: 1,
     question: 'exploit',
     choices: ['を含む', 'を盗む', '(脆弱性)を突いて攻撃する', 'を侵害する'],
-    answer: 'を含む',
+    answer: '(脆弱性)を突いて攻撃する',
+    partOfSpeech: '動詞',
     relatedWords: [
       {
         word: 'exploitation',
@@ -71,6 +74,7 @@ export const questionData: Question[] = [
     question: 'release',
     choices: ['を含む', 'を盗む', 'を標的とする', 'を入手可能な状態にする'],
     answer: 'を入手可能な状態にする',
+    partOfSpeech: '動詞',
     relatedWords: [],
     useExamples: [
       {
@@ -85,6 +89,7 @@ export const questionData: Question[] = [
     question: 'target',
     choices: ['を含む', 'を盗む', 'を標的とする', 'を侵害する'],
     answer: 'を標的とする',
+    partOfSpeech: '動詞',
     relatedWords: [
       {
         word: 'targeted',
@@ -105,6 +110,7 @@ export const questionData: Question[] = [
     question: 'allow',
     choices: ['を含む', 'を盗む', 'を標的とする', 'を可能とする、許可する'],
     answer: 'を可能とする、許可する',
+    partOfSpeech: '動詞',
     relatedWords: [
       {
         word: 'allowlist',
@@ -125,6 +131,7 @@ export const questionData: Question[] = [
     question: 'provide',
     choices: ['を含む', 'を盗む', 'を提供する', 'を侵害する'],
     answer: 'を提供する',
+    partOfSpeech: '動詞',
     relatedWords: [
       {
         word: 'provider',
@@ -145,6 +152,7 @@ export const questionData: Question[] = [
     question: 'create',
     choices: ['を含む', 'を盗む', 'を標的とする', 'を作り出す'],
     answer: 'を作り出す',
+    partOfSpeech: '動詞',
     relatedWords: [
       {
         word: 'creation',
@@ -168,8 +176,9 @@ export const questionData: Question[] = [
     id: 9,
     questionGroupId: 1,
     question: 'compromise',
-    choices: ['を含む', 'を侵害する', 'を標的とする', 'を侵害する'],
+    choices: ['を含む', 'を作り出す', 'を標的とする', 'を侵害する'],
     answer: 'を侵害する',
+    partOfSpeech: '動詞',
     relatedWords: [
       {
         word: 'compromise',
@@ -190,6 +199,7 @@ export const questionData: Question[] = [
     question: 'warn',
     choices: ['を含む', 'を盗む', 'を標的とする', 'を警告する'],
     answer: 'を警告する',
+    partOfSpeech: '動詞',
     relatedWords: [
       {
         word: 'warning',

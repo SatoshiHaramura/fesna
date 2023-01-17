@@ -7,11 +7,12 @@ type Props = {
   categories: CategoryWithQuestionGroups[];
   userSetting: UserSetting;
   setUserSetting: (userSetting: UserSetting) => void;
-  transitToTestsPage: () => void;
+  transitToLessonsPage: () => void;
 };
 
 const Index: FC<Props> = (props) => {
-  const { categories, userSetting, setUserSetting, transitToTestsPage } = props;
+  const { categories, userSetting, setUserSetting, transitToLessonsPage } =
+    props;
 
   const [category, setCategory] = useState<CategoryWithQuestionGroups>(
     categories[0]
@@ -31,7 +32,7 @@ const Index: FC<Props> = (props) => {
       ...userSetting,
       questionGroupId: Number(event.currentTarget.value),
     });
-    transitToTestsPage();
+    transitToLessonsPage();
   };
 
   return (
