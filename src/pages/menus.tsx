@@ -30,8 +30,8 @@ const MenusPage: NextPage<Props> = ({ categories }) => {
   );
 
   const router = useRouter();
-  const transitToTestsPage = (): void => {
-    router.push('/tests');
+  const transitToLessonsPage = (): void => {
+    router.push('/lessons');
   };
 
   return (
@@ -43,7 +43,7 @@ const MenusPage: NextPage<Props> = ({ categories }) => {
         categories={categories}
         userSetting={userSetting}
         setUserSetting={setUserSetting}
-        transitToTestsPage={transitToTestsPage}
+        transitToLessonsPage={transitToLessonsPage}
       ></Menus>
     </>
   );

@@ -31,12 +31,10 @@ const Presenter: FC<Props> = (props) => {
         <br />
         選んでください
       </p>
-
       <CategorySelectButtonList
         categories={categories}
         handleClickCategory={handleClickCategory}
       />
-
       <QuestionGroupSelectDialog
         isOpen={isOpen}
         onClose={onClose}
