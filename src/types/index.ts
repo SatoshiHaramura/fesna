@@ -19,6 +19,7 @@ export type Question = {
   question: string;
   answer: string;
   choices: string[];
+  partOfSpeech: string;
   relatedWords: RelatedWord[];
   useExamples: UseExample[];
 };
