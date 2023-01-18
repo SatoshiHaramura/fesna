@@ -19,12 +19,13 @@ const Index: FC<Props> = ({ handleClickMenuButton }) => {
     {
       questionGroupId: undefined,
       incorrectQuestionIds: undefined,
-      playSound: undefined,
+      playSound: false,
     }
   );
   const [questionGroupId, setQuestionGroupId] = useState<number | undefined>(
     undefined
   );
+  const [playSound, setPlaySound] = useState<boolean>(!!userSetting.playSound);
   const [judgedAnswers, setJudgedAnswers] = useState<boolean[]>([]);
   const [filteredQuestions, setFilteredQuestions] = useState<Question[]>([]);
 
@@ -67,6 +68,13 @@ const Index: FC<Props> = ({ handleClickMenuButton }) => {
     setCurrentQuestionNumber(1);
   };
 
+  const handleClickPlaySoundButton = (): void => {
+    setUserSetting({
+      ...userSetting,
+      playSound: !userSetting.playSound,
+    });
+  };
+
   useEffect(() => {
     setQuestionGroupId(userSetting.questionGroupId);
 
@@ -101,6 +109,8 @@ const Index: FC<Props> = ({ handleClickMenuButton }) => {
       handleClickSameLessonButton={handleClickSameLessonButton}
       handleClickNextLessonButton={handleClickNextLessonButton}
       handleClickMenuButton={handleClickMenuButton}
+      playSound={userSetting.playSound}
+      handleClickPlaySoundButton={handleClickPlaySoundButton}
     />
   );
 };
