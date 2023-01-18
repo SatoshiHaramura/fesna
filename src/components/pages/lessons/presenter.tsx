@@ -15,6 +15,8 @@ type Props = {
   handleClickSameLessonButton: () => void;
   handleClickNextLessonButton: () => void;
   handleClickMenuButton: () => void;
+  playSound: boolean | undefined;
+  handleClickPlaySoundButton: () => void;
 };
 
 const Presenter: FC<Props> = ({
@@ -28,6 +30,8 @@ const Presenter: FC<Props> = ({
   handleClickSameLessonButton,
   handleClickNextLessonButton,
   handleClickMenuButton,
+  playSound,
+  handleClickPlaySoundButton,
 }) => {
   return (
     <div className="divide-y divide-gray-200">
@@ -44,6 +48,8 @@ const Presenter: FC<Props> = ({
           question={question}
           handleClickChoiceButton={handleClickChoiceButton}
           judgedAnswer={judgedAnswers[currentQuestionNumber - 1]}
+          playSound={playSound}
+          handleClickPlaySoundButton={handleClickPlaySoundButton}
         />
       ) : (
         <LessonResult

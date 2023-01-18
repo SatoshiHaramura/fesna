@@ -25,7 +25,7 @@ const MenusPage: NextPage<Props> = ({ categories }) => {
     {
       questionGroupId: undefined,
       incorrectQuestionIds: undefined,
-      playSound: undefined,
+      playSound: false,
     }
   );
 
