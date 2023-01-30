@@ -46,11 +46,18 @@ const Index: FC<Props> = ({ handleClickMenuButton }) => {
     setCurrentQuestionNumber(1);
   };
   const handleClickNextLessonButton = (): void => {
+    let nextLessonId;
+    if (lessonId === lessonData.length) {
+      nextLessonId = 1;
+    } else if (lessonId !== undefined) {
+      nextLessonId = lessonId + 1;
+    }
+
     setUserSetting({
       ...userSetting,
-      lessonId: userSetting.lessonId ? userSetting.lessonId + 1 : undefined,
+      lessonId: userSetting.lessonId ? nextLessonId : undefined,
     });
-    setLessonId(userSetting.lessonId ? userSetting.lessonId + 1 : undefined);
+    setLessonId(userSetting.lessonId ? nextLessonId : undefined);
     setJudgedAnswers([]);
     setCurrentQuestionNumber(1);
   };
