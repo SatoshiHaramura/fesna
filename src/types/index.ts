@@ -3,11 +3,11 @@ export type Category = {
   name: string;
 };
 
-export type CategoryWithQuestionGroups = Category & {
-  questionGroups: QuestionGroup[];
+export type CategoryWithLessons = Category & {
+  lessons: Lesson[];
 };
 
-export type QuestionGroup = {
+export type Lesson = {
   id: number;
   categoryId: number | null;
   name: string;
@@ -15,7 +15,7 @@ export type QuestionGroup = {
 
 export type Question = {
   id: number;
-  questionGroupId: number;
+  lessonId: number;
   question: string;
   answer: string;
   choices: string[];
@@ -36,7 +36,6 @@ export type UseExample = {
 };
 
 export type UserSetting = {
-  questionGroupId: number | undefined;
-  incorrectQuestionIds: number[] | undefined;
+  lessonId: number | undefined;
   playSound: boolean | undefined;
 };
