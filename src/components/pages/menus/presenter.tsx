@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
 import CategorySelectButtonList from '@/components/pages/menus/CategorySelectButtonList';
 import QuestionGroupSelectDialog from '@/components/pages/menus/QuestionGroupSelectDialog';
-import type { CategoryWithQuestionGroups } from '@/types';
+import type { CategoryWithLessons } from '@/types';
 
 type Props = {
-  categories: CategoryWithQuestionGroups[];
-  handleClickCategory: (category: CategoryWithQuestionGroups) => void;
+  categories: CategoryWithLessons[];
+  handleClickCategory: (category: CategoryWithLessons) => void;
   isOpen: boolean;
   onClose: () => void;
-  category: CategoryWithQuestionGroups;
+  category: CategoryWithLessons;
   handleClickQuestionGroup: (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => void;

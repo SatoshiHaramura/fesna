@@ -1,10 +1,10 @@
 import { FC } from 'react';
 import CategorySelectButton from '@/components/pages/menus/CategorySelectButton';
-import type { CategoryWithQuestionGroups } from '@/types';
+import type { CategoryWithLessons } from '@/types';
 
 type Props = {
-  categories: CategoryWithQuestionGroups[];
-  handleClickCategory: (category: CategoryWithQuestionGroups) => void;
+  categories: CategoryWithLessons[];
+  handleClickCategory: (category: CategoryWithLessons) => void;
 };
 
 const CategorySelectButtonList: FC<Props> = (props) => {

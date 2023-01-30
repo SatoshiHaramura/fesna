@@ -1,12 +1,12 @@
 import React from 'react';
 import { Dialog } from '@headlessui/react';
 
-import type { CategoryWithQuestionGroups } from '@/types';
+import type { CategoryWithLessons } from '@/types';
 
 type Props = {
   isOpen: boolean;
   onClose: () => void;
-  category: CategoryWithQuestionGroups;
+  category: CategoryWithLessons;
   handleClickQuestionGroup: (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => void;
@@ -25,14 +25,14 @@ const QuestionGroupSelectDialog = (props: Props) => {
             選んでください
           </Dialog.Title>
           <div className="grid grid-cols-4 grid-rows-4 justify-items-center gap-2">
-            {category.questionGroups.map((questionGroup) => (
+            {category.lessons.map((lesson) => (
               <button
-                key={questionGroup.id}
-                value={questionGroup.id}
+                key={lesson.id}
+                value={lesson.id}
                 onClick={handleClickQuestionGroup}
                 className="h-16 w-16 rounded-2xl border border-gray-300 bg-gray-100 hover:bg-opacity-10"
               >
-                {questionGroup.name}
+                {lesson.name}
               </button>
             ))}
           </div>
