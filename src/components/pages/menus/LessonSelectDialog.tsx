@@ -7,13 +7,13 @@ type Props = {
   isOpen: boolean;
   onClose: () => void;
   category: CategoryWithLessons;
-  handleClickQuestionGroup: (
+  handleClickLesson: (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => void;
 };
 
-const QuestionGroupSelectDialog = (props: Props) => {
-  const { isOpen, onClose, category, handleClickQuestionGroup } = props;
+const LessonSelectDialog = (props: Props) => {
+  const { isOpen, onClose, category, handleClickLesson } = props;
 
   return (
     <Dialog open={isOpen} onClose={onClose} className="relative z-50">
@@ -29,7 +29,7 @@ const QuestionGroupSelectDialog = (props: Props) => {
               <button
                 key={lesson.id}
                 value={lesson.id}
-                onClick={handleClickQuestionGroup}
+                onClick={handleClickLesson}
                 className="h-16 w-16 rounded-2xl border border-gray-300 bg-gray-100 hover:bg-opacity-10"
               >
                 {lesson.name}
@@ -50,4 +50,4 @@ const QuestionGroupSelectDialog = (props: Props) => {
   );
 };
 
-export default QuestionGroupSelectDialog;
+export default LessonSelectDialog;
