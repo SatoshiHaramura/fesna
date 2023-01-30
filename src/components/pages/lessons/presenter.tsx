@@ -1,12 +1,12 @@
 import { FC } from 'react';
-import { Category, Question, QuestionGroup } from '@/types';
+import { Category, Lesson, Question } from '@/types';
 import LessonsPageHeader from '@/components/pages/lessons/LessonsPageHeader';
 import SelectionTypeQuestion from '@/components/pages/lessons/SelectionTypeQuestion';
 import LessonResult from '@/components/pages/lessons/LessonResult';
 
 type Props = {
   category: Category | undefined;
-  questionGroup: QuestionGroup | undefined;
+  lesson: Lesson | undefined;
   judgedAnswers: boolean[];
   questions: Question[];
   currentQuestionNumber: number;
@@ -21,7 +21,7 @@ type Props = {
 
 const Presenter: FC<Props> = ({
   category,
-  questionGroup,
+  lesson,
   judgedAnswers,
   questions,
   currentQuestionNumber,
@@ -38,7 +38,7 @@ const Presenter: FC<Props> = ({
       <div className="divide-y divide-gray-200">
         <LessonsPageHeader
           categoryName={category?.name}
-          questionGroupName={questionGroup?.name}
+          lessonName={lesson?.name}
         />
         {currentQuestionNumber <= questions.length ? (
           <SelectionTypeQuestion

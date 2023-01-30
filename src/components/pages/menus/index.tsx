@@ -1,10 +1,10 @@
 import React, { FC, useState } from 'react';
 
 import MenusPage from './presenter';
-import type { CategoryWithQuestionGroups, UserSetting } from '@/types';
+import type { CategoryWithLessons, UserSetting } from '@/types';
 
 type Props = {
-  categories: CategoryWithQuestionGroups[];
+  categories: CategoryWithLessons[];
   userSetting: UserSetting;
   setUserSetting: (userSetting: UserSetting) => void;
   transitToLessonsPage: () => void;
@@ -14,12 +14,10 @@ const Index: FC<Props> = (props) => {
   const { categories, userSetting, setUserSetting, transitToLessonsPage } =
     props;
 
-  const [category, setCategory] = useState<CategoryWithQuestionGroups>(
-    categories[0]
-  );
+  const [category, setCategory] = useState<CategoryWithLessons>(categories[0]);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
-  const handleClickCategory = (category: CategoryWithQuestionGroups): void => {
+  const handleClickCategory = (category: CategoryWithLessons): void => {
     setCategory(category);
     setIsModalOpen(true);
   };
@@ -30,7 +28,7 @@ const Index: FC<Props> = (props) => {
   ): void => {
     setUserSetting({
       ...userSetting,
-      questionGroupId: Number(event.currentTarget.value),
+      lessonId: Number(event.currentTarget.value),
     });
     transitToLessonsPage();
   };

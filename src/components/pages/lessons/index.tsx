@@ -2,11 +2,11 @@ import React, { FC, useEffect, useState } from 'react';
 import LessonsPage from './presenter';
 import useLocalStorage from 'use-local-storage';
 import {
-  filterQuestionsByQuestionGroupId,
-  findCategoryByQuestionGroupId,
-  findQuestionGroupById,
+  filterQuestionsByLessonId,
+  findCategoryByLessonId,
+  findLessonById,
 } from '@/repositories';
-import { categoryData, questionData, questionGroupData } from '@/data';
+import { categoryData, lessonData, questionData } from '@/data';
 import { Question, UserSetting } from '@/types';
 
 type Props = {
@@ -17,26 +17,17 @@ const Index: FC<Props> = ({ handleClickMenuButton }) => {
   const [userSetting, setUserSetting] = useLocalStorage<UserSetting>(
     'userSetting',
     {
-      questionGroupId: undefined,
-      incorrectQuestionIds: undefined,
+      lessonId: undefined,
       playSound: false,
     }
   );
-  const [questionGroupId, setQuestionGroupId] = useState<number | undefined>(
-    undefined
-  );
+  const [lessonId, setLessonId] = useState<number | undefined>(undefined);
   const [playSound, setPlaySound] = useState<boolean>(!!userSetting.playSound);
   const [judgedAnswers, setJudgedAnswers] = useState<boolean[]>([]);
   const [filteredQuestions, setFilteredQuestions] = useState<Question[]>([]);
 
-  const questionGroup = findQuestionGroupById(
-    questionGroupData,
-    questionGroupId
-  );
-  const category = findCategoryByQuestionGroupId(
-    categoryData,
-    questionGroup?.categoryId
-  );
+  const lesson = findLessonById(lessonData, lessonId);
+  const category = findCategoryByLessonId(categoryData, lesson?.categoryId);
 
   const [currentQuestion, setCurrentQuestion] = useState<Question>(
     filteredQuestions[0]
@@ -57,13 +48,9 @@ const Index: FC<Props> = ({ handleClickMenuButton }) => {
   const handleClickNextLessonButton = (): void => {
     setUserSetting({
       ...userSetting,
-      questionGroupId: userSetting.questionGroupId
-        ? userSetting.questionGroupId + 1
-        : undefined,
+      lessonId: userSetting.lessonId ? userSetting.lessonId + 1 : undefined,
     });
-    setQuestionGroupId(
-      userSetting.questionGroupId ? userSetting.questionGroupId + 1 : undefined
-    );
+    setLessonId(userSetting.lessonId ? userSetting.lessonId + 1 : undefined);
     setJudgedAnswers([]);
     setCurrentQuestionNumber(1);
   };
@@ -76,13 +63,10 @@ const Index: FC<Props> = ({ handleClickMenuButton }) => {
   };
 
   useEffect(() => {
-    setQuestionGroupId(userSetting.questionGroupId);
+    setLessonId(userSetting.lessonId);
 
     setFilteredQuestions(
-      filterQuestionsByQuestionGroupId(
-        questionData,
-        userSetting.questionGroupId
-      )
+      filterQuestionsByLessonId(questionData, userSetting.lessonId)
     );
   }, [userSetting]);
 
@@ -100,7 +84,7 @@ const Index: FC<Props> = ({ handleClickMenuButton }) => {
   return (
     <LessonsPage
       category={category}
-      questionGroup={questionGroup}
+      lesson={lesson}
       judgedAnswers={judgedAnswers}
       questions={filteredQuestions}
       currentQuestionNumber={currentQuestionNumber}
