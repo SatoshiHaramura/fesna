@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import CategorySelectButtonList from '@/components/CategorySelectButtonList';
-import QuestionGroupSelectDialog from '@/components/QuestionGroupSelectDialog';
+import CategorySelectButtonList from '@/components/pages/menus/CategorySelectButtonList';
+import QuestionGroupSelectDialog from '@/components/pages/menus/QuestionGroupSelectDialog';
 import type { CategoryWithQuestionGroups } from '@/types';
 
 type Props = {
@@ -25,8 +25,8 @@ const Presenter: FC<Props> = (props) => {
   } = props;
 
   return (
-    <>
-      <p className="mx-4 mt-24 mb-4 text-center font-sans text-2xl font-thin text-gray-800">
+    <div className="container mx-auto flex h-screen w-screen max-w-sm flex-col justify-center px-1">
+      <p className="p-4 text-center font-sans text-2xl font-thin text-gray-800">
         品詞を
         <br />
         選んでください
@@ -41,7 +41,7 @@ const Presenter: FC<Props> = (props) => {
         category={category}
         handleClickQuestionGroup={handleClickQuestionGroup}
       />
-    </>
+    </div>
   );
 };
 

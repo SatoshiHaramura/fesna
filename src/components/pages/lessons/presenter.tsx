@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { Category, Question, QuestionGroup } from '@/types';
-import LessonsPageHeader from '@/components/LessonsPageHeader';
-import SelectionTypeQuestion from '@/components/SelectionTypeQuestion';
-import LessonResult from '@/components/LessonResult';
+import LessonsPageHeader from '@/components/pages/lessons/LessonsPageHeader';
+import SelectionTypeQuestion from '@/components/pages/lessons/SelectionTypeQuestion';
+import LessonResult from '@/components/pages/lessons/LessonResult';
 
 type Props = {
   category: Category | undefined;
@@ -34,32 +34,32 @@ const Presenter: FC<Props> = ({
   handleClickPlaySoundButton,
 }) => {
   return (
-    <div className="divide-y divide-gray-200">
-      <div className="p-4">
+    <div className="container mx-auto flex w-screen max-w-sm flex-col justify-center border border-gray-200">
+      <div className="divide-y divide-gray-200">
         <LessonsPageHeader
           categoryName={category?.name}
           questionGroupName={questionGroup?.name}
         />
+        {currentQuestionNumber <= questions.length ? (
+          <SelectionTypeQuestion
+            questions={questions}
+            currentQuestionNumber={currentQuestionNumber}
+            question={question}
+            handleClickChoiceButton={handleClickChoiceButton}
+            judgedAnswer={judgedAnswers[currentQuestionNumber - 1]}
+            playSound={playSound}
+            handleClickPlaySoundButton={handleClickPlaySoundButton}
+          />
+        ) : (
+          <LessonResult
+            questions={questions}
+            judgedAnswers={judgedAnswers}
+            handleClickSameLessonButton={handleClickSameLessonButton}
+            handleClickNextLessonButton={handleClickNextLessonButton}
+            handleClickMenuButton={handleClickMenuButton}
+          />
+        )}
       </div>
-      {currentQuestionNumber <= questions.length ? (
-        <SelectionTypeQuestion
-          questions={questions}
-          currentQuestionNumber={currentQuestionNumber}
-          question={question}
-          handleClickChoiceButton={handleClickChoiceButton}
-          judgedAnswer={judgedAnswers[currentQuestionNumber - 1]}
-          playSound={playSound}
-          handleClickPlaySoundButton={handleClickPlaySoundButton}
-        />
-      ) : (
-        <LessonResult
-          questions={questions}
-          judgedAnswers={judgedAnswers}
-          handleClickSameLessonButton={handleClickSameLessonButton}
-          handleClickNextLessonButton={handleClickNextLessonButton}
-          handleClickMenuButton={handleClickMenuButton}
-        />
-      )}
     </div>
   );
 };
