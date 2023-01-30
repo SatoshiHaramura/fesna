@@ -1,6 +1,6 @@
-import type { QuestionGroup } from '@/types';
+import { Lesson } from '@/types';
 
-export const questionGroupData: QuestionGroup[] = [
+export const lessonData: Lesson[] = [
   {
     id: 1,
     categoryId: 1,
@@ -175,15 +175,5 @@ export const questionGroupData: QuestionGroup[] = [
     id: 35,
     categoryId: 4,
     name: '1',
-  },
-  {
-    id: 36,
-    categoryId: null,
-    name: '復習',
-  },
-  {
-    id: 37,
-    categoryId: null,
-    name: 'ランダム',
   },
 ];

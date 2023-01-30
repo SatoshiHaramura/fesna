@@ -3,7 +3,7 @@ import type { Question } from '@/types';
 export const questionData: Question[] = [
   {
     id: 1,
-    questionGroupId: 1,
+    lessonId: 1,
     question: 'include',
     choices: ['を含む', 'を盗む', 'を標的とする', 'を侵害する'],
     answer: 'を含む',
@@ -29,7 +29,7 @@ export const questionData: Question[] = [
   },
   {
     id: 2,
-    questionGroupId: 1,
+    lessonId: 1,
     question: 'steal',
     choices: ['を侵害する', 'を盗む', 'を標的とする', 'を侵害する'],
     answer: 'を盗む',
@@ -44,7 +44,7 @@ export const questionData: Question[] = [
   },
   {
     id: 3,
-    questionGroupId: 1,
+    lessonId: 1,
     question: 'exploit',
     choices: ['を含む', 'を盗む', '(脆弱性)を突いて攻撃する', 'を侵害する'],
     answer: '(脆弱性)を突いて攻撃する',
@@ -70,7 +70,7 @@ export const questionData: Question[] = [
   },
   {
     id: 4,
-    questionGroupId: 1,
+    lessonId: 1,
     question: 'release',
     choices: ['を含む', 'を盗む', 'を標的とする', 'を入手可能な状態にする'],
     answer: 'を入手可能な状態にする',
@@ -85,7 +85,7 @@ export const questionData: Question[] = [
   },
   {
     id: 5,
-    questionGroupId: 1,
+    lessonId: 1,
     question: 'target',
     choices: ['を含む', 'を盗む', 'を標的とする', 'を侵害する'],
     answer: 'を標的とする',
@@ -106,7 +106,7 @@ export const questionData: Question[] = [
   },
   {
     id: 6,
-    questionGroupId: 1,
+    lessonId: 1,
     question: 'allow',
     choices: ['を含む', 'を盗む', 'を標的とする', 'を可能とする、許可する'],
     answer: 'を可能とする、許可する',
@@ -127,7 +127,7 @@ export const questionData: Question[] = [
   },
   {
     id: 7,
-    questionGroupId: 1,
+    lessonId: 1,
     question: 'provide',
     choices: ['を含む', 'を盗む', 'を提供する', 'を侵害する'],
     answer: 'を提供する',
@@ -148,7 +148,7 @@ export const questionData: Question[] = [
   },
   {
     id: 8,
-    questionGroupId: 1,
+    lessonId: 1,
     question: 'create',
     choices: ['を含む', 'を盗む', 'を標的とする', 'を作り出す'],
     answer: 'を作り出す',
@@ -174,7 +174,7 @@ export const questionData: Question[] = [
   },
   {
     id: 9,
-    questionGroupId: 1,
+    lessonId: 1,
     question: 'compromise',
     choices: ['を含む', 'を作り出す', 'を標的とする', 'を侵害する'],
     answer: 'を侵害する',
@@ -195,7 +195,7 @@ export const questionData: Question[] = [
   },
   {
     id: 10,
-    questionGroupId: 1,
+    lessonId: 1,
     question: 'warn',
     choices: ['を含む', 'を盗む', 'を標的とする', 'を警告する'],
     answer: 'を警告する',
