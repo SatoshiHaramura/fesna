@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import CategorySelectButtonList from '@/components/pages/menus/CategorySelectButtonList';
-import QuestionGroupSelectDialog from '@/components/pages/menus/QuestionGroupSelectDialog';
+import LessonSelectDialog from '@/components/pages/menus/LessonSelectDialog';
 import type { CategoryWithLessons } from '@/types';
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
   isOpen: boolean;
   onClose: () => void;
   category: CategoryWithLessons;
-  handleClickQuestionGroup: (
+  handleClickLesson: (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => void;
 };
@@ -21,7 +21,7 @@ const Presenter: FC<Props> = (props) => {
     isOpen,
     onClose,
     category,
-    handleClickQuestionGroup,
+    handleClickLesson,
   } = props;
 
   return (
@@ -35,11 +35,11 @@ const Presenter: FC<Props> = (props) => {
         categories={categories}
         handleClickCategory={handleClickCategory}
       />
-      <QuestionGroupSelectDialog
+      <LessonSelectDialog
         isOpen={isOpen}
         onClose={onClose}
         category={category}
-        handleClickQuestionGroup={handleClickQuestionGroup}
+        handleClickLesson={handleClickLesson}
       />
     </div>
   );

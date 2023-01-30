@@ -23,7 +23,7 @@ const Index: FC<Props> = (props) => {
   };
 
   const onClose = (): void => setIsModalOpen(false);
-  const handleClickQuestionGroup = (
+  const handleClickLesson = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ): void => {
     setUserSetting({
@@ -40,7 +40,7 @@ const Index: FC<Props> = (props) => {
       isOpen={isModalOpen}
       onClose={onClose}
       category={category}
-      handleClickQuestionGroup={handleClickQuestionGroup}
+      handleClickLesson={handleClickLesson}
     ></MenusPage>
   );
 };
