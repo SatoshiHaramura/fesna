@@ -17,7 +17,7 @@ const ChoiceButton: FC<Props> = ({
 }) => {
   const addedStyle: string[] = [];
   const unansweredStyle = 'bg-gray-50 hover:bg-opacity-10';
-  const correctStyle = `bg-lime-100`;
+  const correctStyle = `bg-lime-100 border-lime-400`;
   const incorrectStyle = 'bg-gray-50';
 
   if (judgedAnswer === undefined) {
