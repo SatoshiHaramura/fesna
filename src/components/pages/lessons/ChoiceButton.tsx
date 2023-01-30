@@ -31,7 +31,12 @@ const ChoiceButton: FC<Props> = ({
   const style = `${addedStyle} h-20 w-80 rounded-full border border-gray-200 py-2 px-5 text-left font-sans text-xl font-thin text-gray-800`;
 
   return (
-    <button value={choice} onClick={handleClickChoiceButton} className={style}>
+    <button
+      value={choice}
+      onClick={handleClickChoiceButton}
+      className={style}
+      disabled={judgedAnswer !== undefined}
+    >
       {choice}
     </button>
   );
