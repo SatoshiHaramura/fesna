@@ -7,7 +7,7 @@ type Props = {
 
 const LessonResultHeader: FC<Props> = ({ categoryName, questionGroupName }) => {
   return (
-    <div className="flex flex-row justify-center gap-2">
+    <div className="flex flex-row justify-center gap-2 p-4">
       <div>{categoryName}</div>
       <div>Lesson {questionGroupName}</div>
     </div>

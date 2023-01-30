@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import ChoiceButton from '@/components/ChoiceButton';
+import ChoiceButton from '@/components/pages/lessons/ChoiceButton';
 
 type Props = {
   choices: string[];
@@ -17,7 +17,7 @@ const ChoiceButtonList: FC<Props> = ({
   const correctChoiceIndex = choices?.findIndex((choice) => choice === answer);
 
   return (
-    <div className="p-4">
+    <div className="flex flex-col items-center justify-center gap-2">
       {choices?.map((choice, index) => (
         <div key={index}>
           <ChoiceButton

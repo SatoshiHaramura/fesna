@@ -21,12 +21,10 @@ const QuestionWord: FC<Props> = ({ questionWord, judgedAnswer }) => {
 
   return (
     <div
-      className={`${addedStyle} relative p-4 before:absolute before:top-24 before:left-0 before:right-0 before:z-10 before:m-auto before:h-40 before:w-40 before:text-center before:text-9xl before:font-bold before:leading-5 before:opacity-50`}
+      className={`${addedStyle} relative before:absolute before:top-6 before:left-0 before:right-0 before:z-10 before:m-auto before:h-40 before:w-40 before:text-center before:text-9xl before:font-bold before:opacity-50`}
     >
-      <div className="card m-1 h-44 w-80 rounded-xl border border-gray-100 p-1">
-        <div className="card-title m-auto text-center font-sans text-4xl text-gray-700">
-          {questionWord}
-        </div>
+      <div className="flex h-44 w-80 items-center justify-center rounded-xl border border-gray-100">
+        <div className="font-sans text-5xl text-gray-700">{questionWord}</div>
       </div>
     </div>
   );

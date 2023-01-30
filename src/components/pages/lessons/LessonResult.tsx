@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import CorrectAnswerNumber from '@/components/CorrectAnswerNumber';
-import WordCardList from '@/components/WordCardList';
-import LessonResultFooter from '@/components/LessonResultFooter';
+import CorrectAnswerNumber from '@/components/pages/lessons/CorrectAnswerNumber';
+import WordCardList from '@/components/pages/lessons/WordCardList';
+import LessonResultFooter from '@/components/pages/lessons/LessonResultFooter';
 import { Question } from '@/types';
 
 type Props = {

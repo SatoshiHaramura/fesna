@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import SoundToggleIcon from '@/components/SoundToggleIcon';
-import CurrentQuestionNumber from '@/components/CurrentQuestionNumber';
-import QuestionWord from '@/components/QuestionWord';
-import ChoiceButtonList from '@/components/ChoiceButtonList';
+import SoundToggleIcon from '@/components/pages/lessons/SoundToggleIcon';
+import CurrentQuestionNumber from '@/components/pages/lessons/CurrentQuestionNumber';
+import QuestionWord from '@/components/pages/lessons/QuestionWord';
+import ChoiceButtonList from '@/components/pages/lessons/ChoiceButtonList';
 import { Question } from '@/types';
 import { usePlaySound } from '@/hooks/usePlaySound';
 
@@ -29,24 +29,24 @@ const SelectionTypeQuestion: FC<Props> = ({
 
   return (
     <div>
-      <div className="p-2">
-        <div className="flex h-1/2 flex-row justify-around">
-          <SoundToggleIcon
-            playSound={playSound}
-            handleClickPlaySoundButton={handleClickPlaySoundButton}
-          />
-          <CurrentQuestionNumber
-            numberOfQuestions={questions.length}
-            currentQuestionNumber={currentQuestionNumber}
-          />
-        </div>
+      <div className="flex h-1/2 flex-row justify-between p-2">
+        <SoundToggleIcon
+          playSound={playSound}
+          handleClickPlaySoundButton={handleClickPlaySoundButton}
+        />
+        <CurrentQuestionNumber
+          numberOfQuestions={questions.length}
+          currentQuestionNumber={currentQuestionNumber}
+        />
       </div>
-      <div className="p-1">
-        <div className="flex flex-col items-center justify-center divide-y divide-gray-200">
+      <div className="flex flex-col items-center justify-center divide-y divide-gray-200 p-2">
+        <div className="py-2">
           <QuestionWord
             questionWord={question?.question}
             judgedAnswer={judgedAnswer}
           />
+        </div>
+        <div className="py-2">
           <ChoiceButtonList
             choices={question?.choices}
             handleClickChoiceButton={handleClickChoiceButton}

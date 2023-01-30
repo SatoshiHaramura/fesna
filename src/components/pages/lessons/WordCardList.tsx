@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import WordCard from '@/components/WordCard';
+import WordCard from '@/components/pages/lessons/WordCard';
 import { Question } from '@/types';
 
 type Props = {

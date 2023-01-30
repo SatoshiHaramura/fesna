@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import SameLessonButton from '@/components/SameLessonButton';
-import NextLessonButton from '@/components/NextLessonButton';
-import MenuButton from '@/components/MenuButton';
+import SameLessonButton from '@/components/pages/lessons/SameLessonButton';
+import NextLessonButton from '@/components/pages/lessons/NextLessonButton';
+import MenuButton from '@/components/pages/lessons/MenuButton';
 
 type Props = {
   handleClickSameLessonButton: () => void;
@@ -14,7 +14,7 @@ const LessonResultFooter: FC<Props> = ({
   handleClickMenuButton,
 }) => {
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-gray-50">
+    <div className="sticky bottom-0 left-0 right-0 bg-gray-50">
       <div className="flex flex-row justify-center">
         <SameLessonButton
           handleClickSameLessonButton={handleClickSameLessonButton}
