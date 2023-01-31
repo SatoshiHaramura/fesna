@@ -4,10 +4,7 @@ import { InferGetStaticPropsType, NextPage } from 'next';
 
 import Menus from '@/components/pages/menus';
 import { categoryData, lessonData } from '@/data';
-import type { UserSetting } from '@/types';
 import { buildCategories } from '@/repositories';
-
-import useLocalStorage from 'use-local-storage';
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
@@ -20,14 +17,6 @@ export const getStaticProps = () => {
 };
 
 const MenusPage: NextPage<Props> = ({ categories }) => {
-  const [userSetting, setUserSetting] = useLocalStorage<UserSetting>(
-    'userSetting',
-    {
-      lessonId: undefined,
-      playSound: false,
-    }
-  );
-
   const router = useRouter();
   const transitToLessonsPage = (): void => {
     router.push('/lessons');
@@ -40,8 +29,6 @@ const MenusPage: NextPage<Props> = ({ categories }) => {
       </Head>
       <Menus
         categories={categories}
-        userSetting={userSetting}
-        setUserSetting={setUserSetting}
         transitToLessonsPage={transitToLessonsPage}
       ></Menus>
     </>

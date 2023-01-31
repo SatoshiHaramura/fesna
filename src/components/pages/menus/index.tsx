@@ -2,18 +2,21 @@ import React, { FC, useState } from 'react';
 
 import MenusPage from './presenter';
 import type { CategoryWithLessons, UserSetting } from '@/types';
+import useLocalStorage from 'use-local-storage';
 
 type Props = {
   categories: CategoryWithLessons[];
-  userSetting: UserSetting;
-  setUserSetting: (userSetting: UserSetting) => void;
   transitToLessonsPage: () => void;
 };
 
-const Index: FC<Props> = (props) => {
-  const { categories, userSetting, setUserSetting, transitToLessonsPage } =
-    props;
-
+const Index: FC<Props> = ({ categories, transitToLessonsPage }) => {
+  const [userSetting, setUserSetting] = useLocalStorage<UserSetting>(
+    'userSetting',
+    {
+      lessonId: undefined,
+      playSound: false,
+    }
+  );
   const [category, setCategory] = useState<CategoryWithLessons>(categories[0]);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
