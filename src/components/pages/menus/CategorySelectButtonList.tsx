@@ -7,9 +7,10 @@ type Props = {
   handleClickCategory: (category: CategoryWithLessons) => void;
 };
 
-const CategorySelectButtonList: FC<Props> = (props) => {
-  const { categories, handleClickCategory } = props;
-
+const CategorySelectButtonList: FC<Props> = ({
+  categories,
+  handleClickCategory,
+}) => {
   return (
     <div className="p-4">
       <div className="flex flex-col items-center justify-center gap-4">

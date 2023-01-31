@@ -12,9 +12,12 @@ type Props = {
   ) => void;
 };
 
-const LessonSelectDialog = (props: Props) => {
-  const { isOpen, onClose, category, handleClickLesson } = props;
-
+const LessonSelectDialog = ({
+  isOpen,
+  onClose,
+  category,
+  handleClickLesson,
+}: Props) => {
   return (
     <Dialog open={isOpen} onClose={onClose} className="relative z-50">
       <div className="fixed inset-0 flex items-center justify-center bg-gray-100 bg-opacity-60 p-1">

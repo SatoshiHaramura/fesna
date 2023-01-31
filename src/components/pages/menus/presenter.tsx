@@ -14,16 +14,14 @@ type Props = {
   ) => void;
 };
 
-const Presenter: FC<Props> = (props) => {
-  const {
-    categories,
-    handleClickCategory,
-    isOpen,
-    onClose,
-    category,
-    handleClickLesson,
-  } = props;
-
+const Presenter: FC<Props> = ({
+  categories,
+  handleClickCategory,
+  isOpen,
+  onClose,
+  category,
+  handleClickLesson,
+}) => {
   return (
     <div className="container mx-auto flex h-screen w-screen max-w-sm flex-col justify-center px-1">
       <p className="p-4 text-center font-sans text-2xl font-thin text-gray-800">
