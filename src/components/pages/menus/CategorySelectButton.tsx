@@ -6,9 +6,7 @@ type Props = {
   handleClickCategory: (category: CategoryWithLessons) => void;
 };
 
-const CategorySelectButton: FC<Props> = (props) => {
-  const { category, handleClickCategory } = props;
-
+const CategorySelectButton: FC<Props> = ({ category, handleClickCategory }) => {
   return (
     <button
       onClick={() => handleClickCategory(category)}
