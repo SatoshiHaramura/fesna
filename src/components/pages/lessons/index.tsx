@@ -17,7 +17,7 @@ const Index: FC<Props> = ({ handleClickMenuButton }) => {
   const [userSetting, setUserSetting] = useLocalStorage<UserSetting>(
     'userSetting',
     {
-      lessonId: undefined,
+      lessonId: 1,
       playSound: false,
     }
   );
