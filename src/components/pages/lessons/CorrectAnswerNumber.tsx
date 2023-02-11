@@ -15,7 +15,9 @@ const CorrectAnswerNumber: FC<Props> = ({
 
   return (
     <div className="text-center">
-      <span className="text-3xl">{correctAnswerNumber}</span>
+      <span className="text-3xl" data-testid="correct-answer-number">
+        {correctAnswerNumber}
+      </span>
       <span> / </span>
       <span>{numberOfQuestions}</span>
     </div>
