@@ -56,6 +56,7 @@ const Index: FC<Props> = ({ handleClickMenuButton }) => {
       ...userSetting,
       lessonId: userSetting.lessonId ? nextLessonId : undefined,
     });
+    setFilteredQuestions(filterQuestionsByLessonId(questionData, nextLessonId));
     setLessonId(userSetting.lessonId ? nextLessonId : undefined);
     setJudgedAnswers([]);
     setCurrentQuestionNumber(1);
