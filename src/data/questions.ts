@@ -5,7 +5,7 @@ export const questionData: Question[] = [
     id: 1,
     lessonId: 1,
     question: 'include',
-    choices: ['を含む', 'を盗む', 'を標的とする', 'を侵害する'],
+    choices: ['を完了する', 'を避ける', 'に注意を払う、と述べる', 'を含む'],
     answer: 'を含む',
     partOfSpeech: '動詞',
     relatedWords: [
@@ -31,7 +31,7 @@ export const questionData: Question[] = [
     id: 2,
     lessonId: 1,
     question: 'steal',
-    choices: ['を侵害する', 'を盗む', 'を標的とする', 'を侵害する'],
+    choices: ['を悪用する', 'を盗む', 'になりすます', 'を脅迫する、ゆすり取る'],
     answer: 'を盗む',
     partOfSpeech: '動詞',
     relatedWords: [],
@@ -46,7 +46,12 @@ export const questionData: Question[] = [
     id: 3,
     lessonId: 1,
     question: 'exploit',
-    choices: ['を含む', 'を盗む', '(脆弱性)を突いて攻撃する', 'を侵害する'],
+    choices: [
+      'を標的とする',
+      'を妨げる',
+      '(脆弱性)を突いて攻撃する',
+      'と主張する',
+    ],
     answer: '(脆弱性)を突いて攻撃する',
     partOfSpeech: '動詞',
     relatedWords: [
@@ -72,7 +77,12 @@ export const questionData: Question[] = [
     id: 4,
     lessonId: 1,
     question: 'release',
-    choices: ['を含む', 'を盗む', 'を標的とする', 'を入手可能な状態にする'],
+    choices: [
+      'を暴露する',
+      'を表示する、展示する',
+      'と表明する',
+      'を入手可能な状態にする',
+    ],
     answer: 'を入手可能な状態にする',
     partOfSpeech: '動詞',
     relatedWords: [],
@@ -87,7 +97,12 @@ export const questionData: Question[] = [
     id: 5,
     lessonId: 1,
     question: 'target',
-    choices: ['を含む', 'を盗む', 'を標的とする', 'を侵害する'],
+    choices: [
+      'と接触する、連絡する',
+      'に携わる、を雇う',
+      'を標的とする',
+      'を侵害する',
+    ],
     answer: 'を標的とする',
     partOfSpeech: '動詞',
     relatedWords: [
@@ -108,7 +123,12 @@ export const questionData: Question[] = [
     id: 6,
     lessonId: 1,
     question: 'allow',
-    choices: ['を含む', 'を盗む', 'を標的とする', 'を可能とする、許可する'],
+    choices: [
+      'を強調する',
+      'を可能とする、許可する',
+      'を認証する',
+      'を提供する',
+    ],
     answer: 'を可能とする、許可する',
     partOfSpeech: '動詞',
     relatedWords: [
@@ -129,7 +149,7 @@ export const questionData: Question[] = [
     id: 7,
     lessonId: 1,
     question: 'provide',
-    choices: ['を含む', 'を盗む', 'を提供する', 'を侵害する'],
+    choices: ['を提案する、示唆する', 'を提出する', 'を提供する', 'を追跡する'],
     answer: 'を提供する',
     partOfSpeech: '動詞',
     relatedWords: [
@@ -150,7 +170,7 @@ export const questionData: Question[] = [
     id: 8,
     lessonId: 1,
     question: 'create',
-    choices: ['を含む', 'を盗む', 'を標的とする', 'を作り出す'],
+    choices: ['起こる', 'のきっかけとなる', 'に影響する', 'を作り出す'],
     answer: 'を作り出す',
     partOfSpeech: '動詞',
     relatedWords: [
@@ -176,7 +196,12 @@ export const questionData: Question[] = [
     id: 9,
     lessonId: 1,
     question: 'compromise',
-    choices: ['を含む', 'を作り出す', 'を標的とする', 'を侵害する'],
+    choices: [
+      'を侵害する',
+      'を悪用する',
+      'を脅迫する、ゆすり取る',
+      'になりすます',
+    ],
     answer: 'を侵害する',
     partOfSpeech: '動詞',
     relatedWords: [
@@ -197,7 +222,12 @@ export const questionData: Question[] = [
     id: 10,
     lessonId: 1,
     question: 'warn',
-    choices: ['を含む', 'を盗む', 'を標的とする', 'を警告する'],
+    choices: [
+      'を予期する、と推定する',
+      'を警告する',
+      'を妨げる',
+      'に注意を払う、と述べる',
+    ],
     answer: 'を警告する',
     partOfSpeech: '動詞',
     relatedWords: [
@@ -288,10 +318,10 @@ export const questionData: Question[] = [
     choices: [
       'を避ける',
       'を無効化する',
-      '(脆弱性やバグ) を修正する',
+      '(脆弱性やバグ)を修正する',
       'に知らせる',
     ],
-    answer: '(脆弱性やバグ) を修正する',
+    answer: '(脆弱性やバグ)を修正する',
     partOfSpeech: '動詞',
     relatedWords: [],
     useExamples: [
@@ -430,7 +460,7 @@ export const questionData: Question[] = [
     lessonId: 2,
     question: 'confirm',
     choices: [
-      '(脆弱性やバグ) を修正する',
+      '(脆弱性やバグ)を修正する',
       'に知らせる',
       'を確認する',
       'を破壊する、クラッシュする',
@@ -1521,7 +1551,7 @@ export const questionData: Question[] = [
     lessonId: 7,
     question: 'impersonate',
     choices: [
-      '(脆弱性やバグ) を修正する',
+      '(脆弱性やバグ)を修正する',
       'になりすます',
       'を予期する、と推定する',
       'を確立する',
