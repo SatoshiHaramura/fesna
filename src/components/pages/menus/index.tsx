@@ -13,7 +13,7 @@ const Index: FC<Props> = ({ categories, transitToLessonsPage }) => {
   const [userSetting, setUserSetting] = useLocalStorage<UserSetting>(
     'userSetting',
     {
-      lessonId: undefined,
+      lessonId: 1,
       playSound: false,
     }
   );

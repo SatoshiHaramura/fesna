@@ -17,12 +17,11 @@ const Index: FC<Props> = ({ handleClickMenuButton }) => {
   const [userSetting, setUserSetting] = useLocalStorage<UserSetting>(
     'userSetting',
     {
-      lessonId: undefined,
+      lessonId: 1,
       playSound: false,
     }
   );
   const [lessonId, setLessonId] = useState<number | undefined>(undefined);
-  const [playSound, setPlaySound] = useState<boolean>(!!userSetting.playSound);
   const [judgedAnswers, setJudgedAnswers] = useState<boolean[]>([]);
   const [filteredQuestions, setFilteredQuestions] = useState<Question[]>([]);
 
