@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint --dir src",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "test:unit/integration": "jest"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.7",
