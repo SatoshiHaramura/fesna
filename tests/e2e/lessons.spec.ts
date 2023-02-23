@@ -18,13 +18,13 @@ test.describe('lesson page', () => {
     await expect(questionWord).toHaveText('include');
     await page.getByRole('button', { name: 'を含む' }).click();
     await expect(correctMark).toBeVisible();
-    await expect(incorrectMark).not.toBeVisible();
+    await expect(incorrectMark).toBeHidden();
 
     await expect(currentQuestionNumber).toHaveText('2');
     await expect(questionWord).toHaveText('steal');
     await page.getByRole('button', { name: 'を盗む' }).click();
     await expect(correctMark).toBeVisible();
-    await expect(incorrectMark).not.toBeVisible();
+    await expect(incorrectMark).toBeHidden();
 
     await expect(currentQuestionNumber).toHaveText('3');
     await expect(questionWord).toHaveText('exploit');
@@ -32,49 +32,49 @@ test.describe('lesson page', () => {
       .getByRole('button', { name: '(脆弱性)を突いて攻撃する' })
       .click();
     await expect(correctMark).toBeVisible();
-    await expect(incorrectMark).not.toBeVisible();
+    await expect(incorrectMark).toBeHidden();
 
     await expect(currentQuestionNumber).toHaveText('4');
     await expect(questionWord).toHaveText('release');
     await page.getByRole('button', { name: 'を入手可能な状態にする' }).click();
     await expect(correctMark).toBeVisible();
-    await expect(incorrectMark).not.toBeVisible();
+    await expect(incorrectMark).toBeHidden();
 
     await expect(currentQuestionNumber).toHaveText('5');
     await expect(questionWord).toHaveText('target');
     await page.getByRole('button', { name: 'を標的とする' }).click();
     await expect(correctMark).toBeVisible();
-    await expect(incorrectMark).not.toBeVisible();
+    await expect(incorrectMark).toBeHidden();
 
     await expect(currentQuestionNumber).toHaveText('6');
     await expect(questionWord).toHaveText('allow');
     await page.getByRole('button', { name: 'を可能とする、許可する' }).click();
     await expect(correctMark).toBeVisible();
-    await expect(incorrectMark).not.toBeVisible();
+    await expect(incorrectMark).toBeHidden();
 
     await expect(currentQuestionNumber).toHaveText('7');
     await expect(questionWord).toHaveText('provide');
     await page.getByRole('button', { name: 'を提供する' }).click();
     await expect(correctMark).toBeVisible();
-    await expect(incorrectMark).not.toBeVisible();
+    await expect(incorrectMark).toBeHidden();
 
     await expect(currentQuestionNumber).toHaveText('8');
     await expect(questionWord).toHaveText('create');
     await page.getByRole('button', { name: 'を作り出す' }).click();
     await expect(correctMark).toBeVisible();
-    await expect(incorrectMark).not.toBeVisible();
+    await expect(incorrectMark).toBeHidden();
 
     await expect(currentQuestionNumber).toHaveText('9');
     await expect(questionWord).toHaveText('compromise');
     await page.getByRole('button', { name: 'を侵害する' }).click();
     await expect(correctMark).toBeVisible();
-    await expect(incorrectMark).not.toBeVisible();
+    await expect(incorrectMark).toBeHidden();
 
     await expect(currentQuestionNumber).toHaveText('10');
     await expect(questionWord).toHaveText('warn');
     await page.getByRole('button', { name: 'を警告する' }).click();
     await expect(correctMark).toBeVisible();
-    await expect(incorrectMark).not.toBeVisible();
+    await expect(incorrectMark).toBeHidden();
 
     const correctAnswerNumber = page.getByTestId('correct-answer-number');
     await expect(correctAnswerNumber).toHaveText('10');
