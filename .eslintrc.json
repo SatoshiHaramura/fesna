@@ -11,9 +11,10 @@
     "next/core-web-vitals",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:jest-dom/recommended",
     "prettier"
   ],
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "jest-dom"],
   "overrides": [
     {
       "files": ["./tests/integration/*.tsx", "./tests/unit/*.tsx"],
