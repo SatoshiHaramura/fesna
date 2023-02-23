@@ -12,6 +12,7 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:jest-dom/recommended",
+    "plugin:playwright/playwright-test",
     "prettier"
   ],
   "plugins": ["@typescript-eslint", "jest-dom"],
