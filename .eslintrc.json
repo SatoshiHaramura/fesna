@@ -14,6 +14,12 @@
     "prettier"
   ],
   "plugins": ["@typescript-eslint"],
+  "overrides": [
+    {
+      "files": ["./tests/integration/*.tsx", "./tests/unit/*.tsx"],
+      "extends": ["plugin:testing-library/react"]
+    }
+  ],
   "ignorePatterns": [
     "next.config.js",
     "tailwind.config.js",
