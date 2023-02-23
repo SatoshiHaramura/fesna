@@ -27,7 +27,9 @@ const WordCard: FC<Props> = ({ question, judgedAnswer }) => {
               />
             </div>
           </div>
-          <RelatedWord relatedWords={question.relatedWords} />
+          {question.relatedWords.length > 0 && (
+            <RelatedWord relatedWords={question.relatedWords} />
+          )}
           <UseExample useExamples={question.useExamples} />
         </div>
       </div>
