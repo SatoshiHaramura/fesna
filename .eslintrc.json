@@ -11,9 +11,17 @@
     "next/core-web-vitals",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:jest-dom/recommended",
+    "plugin:playwright/playwright-test",
     "prettier"
   ],
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "jest-dom"],
+  "overrides": [
+    {
+      "files": ["./tests/integration/*.tsx", "./tests/unit/*.tsx"],
+      "extends": ["plugin:testing-library/react"]
+    }
+  ],
   "ignorePatterns": [
     "next.config.js",
     "tailwind.config.js",
