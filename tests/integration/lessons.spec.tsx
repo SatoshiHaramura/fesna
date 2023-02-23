@@ -108,8 +108,8 @@ describe('lesson page', () => {
     });
     const correctMark = screen.getAllByText('○');
     expect(correctMark).toHaveLength(10);
-    const incorrectMark = screen.queryAllByText('×');
-    expect(incorrectMark).toHaveLength(0);
+    const incorrectMark = screen.queryByText('×');
+    expect(incorrectMark).not.toBeInTheDocument();
   }, 30000);
 
   test('answer the default lesson questions and repeat the same lesson', async () => {
