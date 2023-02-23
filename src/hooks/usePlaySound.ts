@@ -21,7 +21,7 @@ export const usePlaySound = (
     }, 200);
 
     return () => {
-      window.speechSynthesis.cancel();
+      window.speechSynthesis?.cancel();
     };
   }, [soundToggle, text]);
 };
