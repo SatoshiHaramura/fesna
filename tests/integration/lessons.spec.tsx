@@ -185,9 +185,7 @@ describe('lesson page', () => {
     });
     await user.click(screen.getByRole('button', { name: 'もう1度' }));
     expect(currentQuestionNumber).toHaveTextContent('1');
-    expect(await screen.getByTestId('question-word')).toHaveTextContent(
-      'include'
-    );
+    expect(screen.getByTestId('question-word')).toHaveTextContent('include');
   }, 30000);
 
   test('answer the default lesson questions and do the next lesson', async () => {
@@ -270,8 +268,6 @@ describe('lesson page', () => {
     expect(category).toHaveTextContent('動詞');
     expect(lessonNumber).toHaveTextContent('Lesson 2');
     expect(currentQuestionNumber).toHaveTextContent('1');
-    expect(await screen.getByTestId('question-word')).toHaveTextContent(
-      'enable'
-    );
+    expect(screen.getByTestId('question-word')).toHaveTextContent('enable');
   }, 30000);
 });
