@@ -36,6 +36,7 @@ const ChoiceButton: FC<Props> = ({
       onClick={handleClickChoiceButton}
       className={style}
       disabled={judgedAnswer !== undefined}
+      data-testid="choice-button"
     >
       {choice}
     </button>
