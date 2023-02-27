@@ -4029,4 +4029,2176 @@ export const questionData: Question[] = [
       },
     ],
   },
+  {
+    id: 160,
+    lessonId: 17,
+    question: 'vulnerability',
+    choices: ['脅威', '機能、関数', '機関、団体', '脆弱性'],
+    answer: '脆弱性',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'vulnerable',
+        meaning: '脆弱な',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'zero-day vulnerability',
+        meaning: 'ゼロデイ脆弱性',
+      },
+    ],
+  },
+  {
+    id: 161,
+    lessonId: 17,
+    question: 'threat',
+    choices: ['管理者', '報奨金', '脅威', '量、ボリューム'],
+    answer: '脅威',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'threaten',
+        meaning: 'を脅す',
+        partOfSpeech: '動詞',
+      },
+      {
+        word: 'threatening',
+        meaning: '脅迫する',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'threat intelligence',
+        meaning: '脅威インテリジェンス',
+      },
+    ],
+  },
+  {
+    id: 162,
+    lessonId: 17,
+    question: 'actor',
+    choices: ['過程、工程', '詐欺師', '当局、権威', '攻撃者グループ、アクター'],
+    answer: '攻撃者グループ、アクター',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'threat actor',
+        meaning: '脅威アクター',
+      },
+    ],
+  },
+  {
+    id: 163,
+    lessonId: 17,
+    question: 'issue',
+    choices: [
+      '設定、環境',
+      '問題(点)',
+      'コード、符号',
+      '(マルウェアなどの)亜種、変異種',
+    ],
+    answer: '問題(点)',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'report issues',
+        meaning: '問題点を報告する',
+      },
+    ],
+  },
+  {
+    id: 164,
+    lessonId: 17,
+    question: 'customer',
+    choices: [
+      '挙動、振る舞い',
+      '報道',
+      '顧客、取引先',
+      '進路、(ファイルの)パス',
+    ],
+    answer: '顧客、取引先',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'both customers and providers',
+        meaning: '顧客とプロバイダーの両方',
+      },
+    ],
+  },
+  {
+    id: 165,
+    lessonId: 17,
+    question: 'victim',
+    choices: ['企業', '量、総計', '(システムなどの)停止', '被害者'],
+    answer: '被害者',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: "victim's email address",
+        meaning: '被害者のメールアドレス',
+      },
+    ],
+  },
+  {
+    id: 166,
+    lessonId: 17,
+    question: 'account',
+    choices: ['型、タイプ', '機能、関数', 'アカウント、口座', '対策、基準'],
+    answer: 'アカウント、口座',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'stolen account credentials',
+        meaning: '盗まれたアカウントの認証情報',
+      },
+    ],
+  },
+  {
+    id: 167,
+    lessonId: 17,
+    question: 'organization',
+    choices: ['役割', '組織', '詐欺', 'パッチ、修正プログラム'],
+    answer: '組織',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'organize',
+        meaning: 'を組織化する、体系化する',
+        partOfSpeech: '動詞',
+      },
+      {
+        word: 'organizational',
+        meaning: '組織の',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'targeted organizations',
+        meaning: '標的にされた組織',
+      },
+    ],
+  },
+  {
+    id: 168,
+    lessonId: 17,
+    question: 'code',
+    choices: ['詐欺師', '仕事、タスク', 'コード、符号', '苦情、告訴'],
+    answer: 'コード、符号',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: '2FA code',
+        meaning: '二要素認証の符号',
+      },
+    ],
+  },
+  {
+    id: 169,
+    lessonId: 17,
+    question: 'breach',
+    choices: [
+      '(データの)流出、侵害',
+      '(アンケートなどによる)調査',
+      '仕組み、悪だくみ、スキーム',
+      '戦略',
+    ],
+    answer: '(データの)流出、侵害',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'data breach',
+        meaning: '情報流出',
+      },
+    ],
+  },
+  {
+    id: 170,
+    lessonId: 18,
+    question: 'feature',
+    choices: ['四半期', '価格', '特徴、目玉', '(利用などの)規約、期間、用語'],
+    answer: '特徴、目玉',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'anti-analysis features',
+        meaning: '耐解析機能の特徴',
+      },
+    ],
+  },
+  {
+    id: 171,
+    lessonId: 18,
+    question: 'campaign',
+    choices: ['量、総計', '報奨金', '対策、基準', '一連の作戦、キャンペーン'],
+    answer: '一連の作戦、キャンペーン',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'large-scale phishing campaign',
+        meaning: '大規模なフィッシングキャンペーン',
+      },
+    ],
+  },
+  {
+    id: 172,
+    lessonId: 18,
+    question: 'government',
+    choices: ['政府', '制裁', '顧客、取引先', '問題(点)'],
+    answer: '政府',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'govern',
+        meaning: 'を統治する、運営する',
+        partOfSpeech: '動詞',
+      },
+      {
+        word: 'governmental',
+        meaning: '政府の',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'multiple government agencies',
+        meaning: '複数の政府機関',
+      },
+    ],
+  },
+  {
+    id: 173,
+    lessonId: 18,
+    question: 'tool',
+    choices: ['証明書', '詐欺', '制裁', '道具、ツール'],
+    answer: '道具、ツール',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'toolkit',
+        meaning: 'ツールキット',
+        partOfSpeech: '名詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'a freely available tool',
+        meaning: '自由に入手できるツール',
+      },
+    ],
+  },
+  {
+    id: 174,
+    lessonId: 18,
+    question: 'flaw',
+    choices: ['欠陥', '能力', '資金、基金', 'パッチ、修正プログラム'],
+    answer: '欠陥',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'fix 10 flaws',
+        meaning: '10個の欠陥を修正する',
+      },
+    ],
+  },
+  {
+    id: 175,
+    lessonId: 18,
+    question: 'source',
+    choices: ['進路、(ファイルの)パス', '出所', '制裁', '省、局'],
+    answer: '出所',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'open source intelligence (OSINT)',
+        meaning: '公開情報によるインテリジェンス',
+      },
+    ],
+  },
+  {
+    id: 176,
+    lessonId: 18,
+    question: 'ransom',
+    choices: ['細部、詳細', '(人や組織などの)主体', '身代金', '特徴、目玉'],
+    answer: '身代金',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'ransom demands',
+        meaning: '身代金の要求',
+      },
+    ],
+  },
+  {
+    id: 177,
+    lessonId: 18,
+    question: 'firm',
+    choices: ['会社', '能力', '状態', '選択肢、オプション'],
+    answer: '会社',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'cybersecurity firm JohnDoe',
+        meaning: 'ジョン・ドゥというサイバーセキュリティ企業',
+      },
+    ],
+  },
+  {
+    id: 178,
+    lessonId: 18,
+    question: 'process',
+    choices: ['(システムなどの)停止', '記事', '過程、工程', '保険'],
+    answer: '過程、工程',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'processing',
+        meaning: '処理、加工',
+        partOfSpeech: '名詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'the final step in the process',
+        meaning: '過程の最後の段階',
+      },
+    ],
+  },
+  {
+    id: 179,
+    lessonId: 18,
+    question: 'detail',
+    choices: ['脅威', '窃盗', '(権限の)昇格', '細部、詳細'],
+    answer: '細部、詳細',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'detailed',
+        meaning: '詳細な',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'publish the details',
+        meaning: '詳細を発表する',
+      },
+    ],
+  },
+  {
+    id: 180,
+    lessonId: 19,
+    question: 'law',
+    choices: ['効果、影響', '法', '方針、信条、設定(の集まり)', '刑務所'],
+    answer: '法',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'law firms',
+        meaning: '法律事務所',
+      },
+    ],
+  },
+  {
+    id: 181,
+    lessonId: 19,
+    question: 'agency',
+    choices: ['挙動、振る舞い', '機関', '管理者', '取り組み方、接近'],
+    answer: '機関',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'federal agency',
+        meaning: '連邦政府の機関',
+      },
+    ],
+  },
+  {
+    id: 182,
+    lessonId: 19,
+    question: 'patch',
+    choices: ['問題(点)', '個人', '認証情報', 'パッチ、修正プログラム'],
+    answer: 'パッチ、修正プログラム',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'unpatched',
+        meaning: 'パッチ未適用の',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'the patch for RCE vulnerability',
+        meaning: 'リモートコード実行脆弱性を修正するパッチ',
+      },
+    ],
+  },
+  {
+    id: 183,
+    lessonId: 19,
+    question: 'scam',
+    choices: ['詐欺', 'おとり、ルアー', '機関、団体', '管理者'],
+    answer: '詐欺',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'scammer',
+        meaning: '詐欺師',
+        partOfSpeech: '名詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'the romance scams',
+        meaning: 'ロマンス詐欺',
+      },
+    ],
+  },
+  {
+    id: 184,
+    lessonId: 19,
+    question: 'fraud',
+    choices: ['詐欺', '税金', '付加', '機関、団体'],
+    answer: '詐欺',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'fraudulent',
+        meaning: '詐欺の',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'fraud detection mechanisms',
+        meaning: '詐欺検知メカニズム',
+      },
+    ],
+  },
+  {
+    id: 185,
+    lessonId: 19,
+    question: 'fraudster',
+    choices: ['加盟メンバー', '欠陥', '機会', '詐欺師'],
+    answer: '詐欺師',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'freeze accounts used by fraudsters',
+        meaning: '詐欺師に悪用されていた口座を凍結する',
+      },
+    ],
+  },
+  {
+    id: 186,
+    lessonId: 19,
+    question: 'setting',
+    choices: ['組織', '設定、環境', '値、価値', '機会'],
+    answer: '設定、環境',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'the default settings',
+        meaning: 'デフォルトの設定',
+      },
+    ],
+  },
+  {
+    id: 187,
+    lessonId: 19,
+    question: 'image',
+    choices: ['識別情報', '値、価値', '画像、イメージ', '行政長官、経営者'],
+    answer: '画像、イメージ',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'images uploaded to the C2',
+        meaning: 'C2 サーバーにアップロードされた画像',
+      },
+    ],
+  },
+  {
+    id: 188,
+    lessonId: 19,
+    question: 'policy',
+    choices: ['役割', '緊急事態', '経路、方向', '方針、信条、設定(の集まり)'],
+    answer: '方針、信条、設定(の集まり)',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'vulnerability disclosure policy',
+        meaning: '脆弱性開示方針',
+      },
+    ],
+  },
+  {
+    id: 189,
+    lessonId: 19,
+    question: 'variant',
+    choices: [
+      '(アンケートなどによる)調査',
+      '(マルウェアなどの)亜種、変異種',
+      '苦情、告訴',
+      '手順、手続き',
+    ],
+    answer: '(マルウェアなどの)亜種、変異種',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'massive amounts of variants',
+        meaning: '大量の亜種',
+      },
+    ],
+  },
+  {
+    id: 190,
+    lessonId: 20,
+    question: 'industry',
+    choices: ['選挙', '報奨金', '産業、業界', '内部の人、会員'],
+    answer: '産業、業界',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'industrial',
+        meaning: '産業の、工業の',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'oil and gas industry',
+        meaning: '石油・ガス業界',
+      },
+    ],
+  },
+  {
+    id: 191,
+    lessonId: 20,
+    question: 'individual',
+    choices: ['挙動、振る舞い', '役割', '脅威', '個人'],
+    answer: '個人',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'individuals are being increasingly targeted in BEC',
+        meaning: 'ますます多くの個人が BEC の標的になっている',
+      },
+    ],
+  },
+  {
+    id: 192,
+    lessonId: 20,
+    question: 'privilege',
+    choices: ['特権', '識別情報', '詐欺', '管理者'],
+    answer: '特権',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'privileged',
+        meaning: '特権のある',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'privilege escalation (elevation)',
+        meaning: '権限昇格',
+      },
+    ],
+  },
+  {
+    id: 193,
+    lessonId: 20,
+    question: 'type',
+    choices: ['パッチ、修正プログラム', '型、タイプ', '四半期', '資金、基金'],
+    answer: '型、タイプ',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'these types of vulnerabilities',
+        meaning: 'これらのタイプの脆弱性',
+      },
+    ],
+  },
+  {
+    id: 194,
+    lessonId: 20,
+    question: 'sector',
+    choices: ['当局、権威', '内部の人、会員', '付加', '業界、分野'],
+    answer: '業界、分野',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'critical infrastructure sector',
+        meaning: '重要インフラ業界',
+      },
+    ],
+  },
+  {
+    id: 195,
+    lessonId: 20,
+    question: 'department',
+    choices: ['出所', '取り組み方、接近', '省、局', '苦情、告訴'],
+    answer: '省、局',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'the US Department of Justice',
+        meaning: '米国司法省',
+      },
+    ],
+  },
+  {
+    id: 196,
+    lessonId: 20,
+    question: 'identity',
+    choices: ['注目度、プロフィール', '識別情報', '費用', '犯罪'],
+    answer: '識別情報',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'online identity monitoring service',
+        meaning: '(流出して)公開されている識別情報を監視するサービス',
+      },
+    ],
+  },
+  {
+    id: 197,
+    lessonId: 20,
+    question: 'cryptocurrency',
+    choices: [
+      '行政長官、経営者',
+      '取り組み方、接近',
+      '加盟メンバー',
+      '暗号通貨',
+    ],
+    answer: '暗号通貨',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'currency',
+        meaning: '通貨',
+        partOfSpeech: '名詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'cryptocurrency theft',
+        meaning: '暗号通貨の窃盗',
+      },
+    ],
+  },
+  {
+    id: 198,
+    lessonId: 20,
+    question: 'content',
+    choices: ['細部、詳細', '内容、コンテンツ', '報奨金', '状態'],
+    answer: '内容、コンテンツ',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'change the clipboard content',
+        meaning: 'クリップボードの内容を変更する',
+      },
+    ],
+  },
+  {
+    id: 199,
+    lessonId: 20,
+    question: 'enterprise',
+    choices: ['企業', '消費者', '管理者', '取り組み方、接近'],
+    answer: '企業',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'access to large enterprise network',
+        meaning: '大規模な企業ネットワークへのアクセス',
+      },
+    ],
+  },
+  {
+    id: 200,
+    lessonId: 21,
+    question: 'connection',
+    choices: ['裁判所', '省、局', '保険', '接続、コネクション'],
+    answer: '接続、コネクション',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'disconnect',
+        meaning: '接続を断つ',
+        partOfSpeech: '動詞',
+      },
+      {
+        word: 'connectivity',
+        meaning: '接続性',
+        partOfSpeech: '名詞',
+      },
+      {
+        word: 'connected',
+        meaning: '接続された、連続した',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'connection between networks and third-party systems',
+        meaning: 'ネットワークとサードパーティのシステムとの接続',
+      },
+    ],
+  },
+  {
+    id: 201,
+    lessonId: 21,
+    question: 'form',
+    choices: [
+      '(人や組織などの)主体',
+      '業界、分野',
+      '政府',
+      '形態、種類、フォーム',
+    ],
+    answer: '形態、種類、フォーム',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'all forms of transactions',
+        meaning: 'すべての種類のトランザクション',
+      },
+    ],
+  },
+  {
+    id: 202,
+    lessonId: 21,
+    question: 'method',
+    choices: ['戦略', '過程、工程', '方法、方式', '取り組み方、接近'],
+    answer: '方法、方式',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'different encryption methods',
+        meaning: '異なる暗号方式',
+      },
+    ],
+  },
+  {
+    id: 203,
+    lessonId: 21,
+    question: 'option',
+    choices: ['例、インスタンス', '値、価値', '費用', '選択肢、オプション'],
+    answer: '選択肢、オプション',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'optional',
+        meaning: '任意選択の',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'the best option',
+        meaning: '最善策',
+      },
+    ],
+  },
+  {
+    id: 204,
+    lessonId: 21,
+    question: 'intelligence',
+    choices: [
+      '機関、団体',
+      '知能、インテリジェンス',
+      '資金、基金',
+      '過程、工程',
+    ],
+    answer: '知能、インテリジェンス',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'artificial intelligence (AI)',
+        meaning: '人工知能',
+      },
+    ],
+  },
+  {
+    id: 205,
+    lessonId: 21,
+    question: 'outage',
+    choices: [
+      '(システムなどの)停止',
+      '(データの)流出、侵害',
+      '回避策、緩和策',
+      '戦術',
+    ],
+    answer: '(システムなどの)停止',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'the computer outage caused issues at some clinics',
+        meaning: 'コンピュータの停止により、一部のクリニックで問題が発生した',
+      },
+    ],
+  },
+  {
+    id: 206,
+    lessonId: 21,
+    question: 'theft',
+    choices: ['特権', '窃盗', '対策、基準', '組織'],
+    answer: '窃盗',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'identity theft',
+        meaning: '識別情報の窃盗',
+      },
+    ],
+  },
+  {
+    id: 207,
+    lessonId: 21,
+    question: 'consumer',
+    choices: ['管理者', '内部の人、会員', '消費者', '機関、団体'],
+    answer: '消費者',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'target consumers and small businesses',
+        meaning: '消費者と小規模事業者を標的とする',
+      },
+    ],
+  },
+  {
+    id: 208,
+    lessonId: 21,
+    question: 'capability',
+    choices: ['方針、信条、設定(の集まり)', '能力', '証明書', '対策、基準'],
+    answer: '能力',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'capable',
+        meaning: '能力がある',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example:
+          'the malware displayed advanced capabilities to evade detection',
+        meaning: 'マルウェアは検知回避の高度な能力を示した',
+      },
+    ],
+  },
+  {
+    id: 209,
+    lessonId: 21,
+    question: 'tactic',
+    choices: ['機能、関数', '暗号通貨', '過程、工程', '戦術'],
+    answer: '戦術',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'Tactics, Techniques and Procedures (TTPs)',
+        meaning: '戦術・技術・手順',
+      },
+    ],
+  },
+  {
+    id: 210,
+    lessonId: 22,
+    question: 'measure',
+    choices: ['報奨金', '対策、基準', '能力', '挙動、振る舞い'],
+    answer: '対策、基準',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'take measures to counter threats',
+        meaning: '脅威に対抗するために対策をとる',
+      },
+    ],
+  },
+  {
+    id: 211,
+    lessonId: 22,
+    question: 'technique',
+    choices: ['手法', '役割', '細部、詳細', '能力'],
+    answer: '手法',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'technical',
+        meaning: '技術的な',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'obfuscation techniques to evade detection',
+        meaning: '検知を回避するための難読化手法',
+      },
+    ],
+  },
+  {
+    id: 212,
+    lessonId: 22,
+    question: 'certificate',
+    choices: ['機関', '取り組み方、接近', '証明書', '特徴、目玉'],
+    answer: '証明書',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'certify',
+        meaning: 'を証明する、認定する',
+        partOfSpeech: '動詞',
+      },
+      {
+        word: 'certification',
+        meaning: '証明(書)、認定',
+        partOfSpeech: '名詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'code signing certificate',
+        meaning: 'コード署名証明書',
+      },
+    ],
+  },
+  {
+    id: 213,
+    lessonId: 22,
+    question: 'addition',
+    choices: ['知能、インテリジェンス', '業界、分野', '(権限の)昇格', '付加'],
+    answer: '付加',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'additional',
+        meaning: '追加の',
+        partOfSpeech: '形容詞',
+      },
+      {
+        word: 'additionally',
+        meaning: '加えて',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'in addition to website outage',
+        meaning: 'Web サイトの停止に加えて',
+      },
+    ],
+  },
+  {
+    id: 214,
+    lessonId: 22,
+    question: 'administrator',
+    choices: ['機関、団体', '管理者', '裁判所', '企業'],
+    answer: '管理者',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'administration',
+        meaning: '管理、経営',
+        partOfSpeech: '名詞',
+      },
+      {
+        word: 'administrative',
+        meaning: '管理の、経営の',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'gain administrator privileges',
+        meaning: '管理者の特権を獲得する',
+      },
+    ],
+  },
+  {
+    id: 215,
+    lessonId: 22,
+    question: 'channel',
+    choices: ['設定、環境', '興味、関心事', '付加', '経路'],
+    answer: '経路',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'Trickbot distribution channel',
+        meaning: 'Trickbotの配送経路',
+      },
+    ],
+  },
+  {
+    id: 216,
+    lessonId: 22,
+    question: 'evidence',
+    choices: ['報道', '選挙', '証拠', '(利用などの)規約、期間、用語'],
+    answer: '証拠',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'evident',
+        meaning: '明らかな',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'the evidence collected so far',
+        meaning: 'これまでに収集された証拠',
+      },
+    ],
+  },
+  {
+    id: 217,
+    lessonId: 22,
+    question: 'amount',
+    choices: ['量、総計', '身代金', '加盟メンバー', '過程、工程'],
+    answer: '量、総計',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'huge amount of money',
+        meaning: '巨額のお金',
+      },
+    ],
+  },
+  {
+    id: 218,
+    lessonId: 22,
+    question: 'affiliate',
+    choices: [
+      '注目度、プロフィール',
+      '優先度、優先すべきこと',
+      '説明、指示、命令',
+      '加盟メンバー',
+    ],
+    answer: '加盟メンバー',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'arrests of Ransomware-as-a-Service affiliates',
+        meaning: 'RaaS加盟メンバーの逮捕',
+      },
+    ],
+  },
+  {
+    id: 219,
+    lessonId: 22,
+    question: 'loss',
+    choices: [
+      '緊急事態',
+      '問題(点)',
+      '損害、喪失',
+      '(マルウェアなどの)亜種、変異種',
+    ],
+    answer: '損害、喪失',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'lose',
+        meaning: 'を失う、負ける',
+        partOfSpeech: '動詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'tens of millions in losses',
+        meaning: '数千万ドルの損害',
+      },
+    ],
+  },
+  {
+    id: 220,
+    lessonId: 23,
+    question: 'entity',
+    choices: ['入り口、項目', '省、局', '(人や組織などの)主体', '道具、ツール'],
+    answer: '(人や組織などの)主体',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'governments and other entities',
+        meaning: '政府やその他の主体',
+      },
+    ],
+  },
+  {
+    id: 221,
+    lessonId: 23,
+    question: 'value',
+    choices: ['方針、信条、設定(の集まり)', '細部、詳細', '値、価値', '保険'],
+    answer: '値、価値',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'contain an invalid value',
+        meaning: '不正な値を含んでいる',
+      },
+    ],
+  },
+  {
+    id: 222,
+    lessonId: 23,
+    question: 'role',
+    choices: ['供給', '資金、基金', '(権限の)昇格', '役割'],
+    answer: '役割',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'play a key role',
+        meaning: '重要な役割を担う',
+      },
+    ],
+  },
+  {
+    id: 223,
+    lessonId: 23,
+    question: 'authority',
+    choices: ['能力', '当局、権威', '産業、業界', '値、価値'],
+    answer: '当局、権威',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'authoritative',
+        meaning: '当局の、権威のある',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'Certification Authority (CA)',
+        meaning: '認証局',
+      },
+    ],
+  },
+  {
+    id: 224,
+    lessonId: 23,
+    question: 'approach',
+    choices: ['戦略', '回避策、緩和策', '過程、工程', '取り組み方、接近'],
+    answer: '取り組み方、接近',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'the best approach',
+        meaning: '最善の取り組み方',
+      },
+    ],
+  },
+  {
+    id: 225,
+    lessonId: 23,
+    question: 'supply',
+    choices: ['量、総計', '証拠', '供給', '注目度、プロフィール'],
+    answer: '供給',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'supplier',
+        meaning: 'サプライヤー',
+        partOfSpeech: '名詞',
+      },
+      {
+        word: 'supply-chain',
+        meaning: 'サプライチェーン',
+        partOfSpeech: '名詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'supply chain attack',
+        meaning: 'サプライチェーン攻撃',
+      },
+    ],
+  },
+  {
+    id: 226,
+    lessonId: 23,
+    question: 'behavior',
+    choices: ['能力', '挙動、振る舞い', '設定、環境', '経路、方向'],
+    answer: '挙動、振る舞い',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'behave',
+        meaning: '振る舞う',
+        partOfSpeech: '動詞',
+      },
+      {
+        word: 'behavioral',
+        meaning: '振る舞いの',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'cause unexpected behavior',
+        meaning: '予期しない挙動の原因となる',
+      },
+    ],
+  },
+  {
+    id: 227,
+    lessonId: 23,
+    question: 'scheme',
+    choices: ['戦術', '手法', '仕組み、悪だくみ、スキーム', '過程、工程'],
+    answer: '仕組み、悪だくみ、スキーム',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'Internet-based fraud scheme',
+        meaning: 'インターネット上での詐欺の仕組み',
+      },
+    ],
+  },
+  {
+    id: 228,
+    lessonId: 23,
+    question: 'instance',
+    choices: [
+      '一連の作戦、キャンペーン',
+      '証明書',
+      '例、インスタンス',
+      '接続、コネクション',
+    ],
+    answer: '例、インスタンス',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'for instance',
+        meaning: '例えば',
+      },
+    ],
+  },
+  {
+    id: 229,
+    lessonId: 23,
+    question: 'ability',
+    choices: ['機関', '機能、関数', '緊急事態', '能力'],
+    answer: '能力',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'ability to analyze complex and large datasets',
+        meaning: '複雑で大きなデータセットを分析する能力',
+      },
+    ],
+  },
+  {
+    id: 230,
+    lessonId: 24,
+    question: 'fund',
+    choices: ['当局、権威', '省、局', '資金、基金', '顧客、取引先'],
+    answer: '資金、基金',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'funding',
+        meaning: '資金提供・調達',
+        partOfSpeech: '名詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'the funds and their movements are being traced',
+        meaning: '資金とその移動は追跡されていた',
+      },
+    ],
+  },
+  {
+    id: 231,
+    lessonId: 24,
+    question: 'patient',
+    choices: ['被害者', '患者', '身代金', '内部の人、会員'],
+    answer: '患者',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'patience',
+        meaning: '忍耐',
+        partOfSpeech: '名詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: "the stolen files contained patients' personal information",
+        meaning: '盗まれたファイルには患者の個人情報が含まれていた',
+      },
+    ],
+  },
+  {
+    id: 232,
+    lessonId: 24,
+    question: 'crime',
+    choices: ['窃盗', '欠陥', '犯罪', '(マルウェアなどの)亜種、変異種'],
+    answer: '犯罪',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'criminal',
+        meaning: '犯罪者',
+        partOfSpeech: '名詞',
+      },
+      {
+        word: 'criminal',
+        meaning: '犯罪の',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'organized crime group',
+        meaning: '組織化された犯罪グループ',
+      },
+    ],
+  },
+  {
+    id: 233,
+    lessonId: 24,
+    question: 'profile',
+    choices: [
+      '細部、詳細',
+      '方針、信条、設定(の集まり)',
+      '興味、関心事',
+      '注目度、プロフィール',
+    ],
+    answer: '注目度、プロフィール',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'high-profile',
+        meaning: '著名な、人目を引く',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'high profile targets',
+        meaning: '知名度のある標的',
+      },
+    ],
+  },
+  {
+    id: 234,
+    lessonId: 24,
+    question: 'opportunity',
+    choices: ['値、価値', '機会', '資産、財産', '優先度、優先すべきこと'],
+    answer: '機会',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'opportunistic',
+        meaning: '日和見的な',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'Opportunity, Motivation and Rationalization',
+        meaning: '機会・動機・正当化',
+      },
+    ],
+  },
+  {
+    id: 235,
+    lessonId: 24,
+    question: 'function',
+    choices: ['道具、ツール', '挙動、振る舞い', '能力', '機能、関数'],
+    answer: '機能、関数',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'functionality',
+        meaning: '機能性',
+        partOfSpeech: '名詞',
+      },
+      {
+        word: 'functional',
+        meaning: '機能の',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'have two different functions',
+        meaning: '2つの異なる機能を持つ',
+      },
+    ],
+  },
+  {
+    id: 236,
+    lessonId: 24,
+    question: 'interest',
+    choices: ['経路、方向', '興味、関心事', '能力', '保険'],
+    answer: '興味、関心事',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'interestingly',
+        meaning: '興味深いことに',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'the interest of ransomware actor',
+        meaning: 'ランサムウェアアクターの関心事',
+      },
+    ],
+  },
+  {
+    id: 237,
+    lessonId: 24,
+    question: 'term',
+    choices: ['組織', '特権', '対策、基準', '(利用などの)規約、期間、用語'],
+    answer: '(利用などの)規約、期間、用語',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'terms of use',
+        meaning: '利用規約',
+      },
+    ],
+  },
+  {
+    id: 238,
+    lessonId: 24,
+    question: 'volume',
+    choices: ['苦情、告訴', '報奨金', '設定、環境', '量、ボリューム'],
+    answer: '量、ボリューム',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'the volume of suspicious network traffic',
+        meaning: '不審なネットワークトラフィックの量',
+      },
+    ],
+  },
+  {
+    id: 239,
+    lessonId: 24,
+    question: 'tax',
+    choices: ['身代金', '報奨金', '税金', '証明書'],
+    answer: '税金',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'taxpayer',
+        meaning: '納税者',
+        partOfSpeech: '名詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'tax season',
+        meaning: '確定申告の時期',
+      },
+    ],
+  },
+  {
+    id: 240,
+    lessonId: 25,
+    question: 'permission',
+    choices: ['特権', '能力', '機能、関数', '許可'],
+    answer: '許可',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'permit',
+        meaning: 'を許可する',
+        partOfSpeech: '動詞',
+      },
+      {
+        word: 'permissive',
+        meaning: '緩い',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'require additional permissions',
+        meaning: '追加の許可を必要とする',
+      },
+    ],
+  },
+  {
+    id: 241,
+    lessonId: 25,
+    question: 'insider',
+    choices: ['仕組み、悪だくみ、スキーム', '内部の人、会員', '管理者', '個人'],
+    answer: '内部の人、会員',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'insider threat',
+        meaning: '内部犯による脅威',
+      },
+    ],
+  },
+  {
+    id: 242,
+    lessonId: 25,
+    question: 'task',
+    choices: ['仕事、タスク', '税金', '資金、基金', '特徴、目玉'],
+    answer: '仕事、タスク',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'organize and manage tasks',
+        meaning: '仕事を体系化し、管理する',
+      },
+    ],
+  },
+  {
+    id: 243,
+    lessonId: 25,
+    question: 'institution',
+    choices: ['識別情報', '手順、手続き', '緊急事態', '機関、団体'],
+    answer: '機関、団体',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'institute',
+        meaning: '研究所',
+        partOfSpeech: '名詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'financial and medical institution',
+        meaning: '金融・医療機関',
+      },
+    ],
+  },
+  {
+    id: 244,
+    lessonId: 25,
+    question: 'strategy',
+    choices: ['制裁', '機会', '脅威', '戦略'],
+    answer: '戦略',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'strategic',
+        meaning: '戦略の',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'the new zero trust strategy',
+        meaning: '新しいゼロトラスト戦略',
+      },
+    ],
+  },
+  {
+    id: 245,
+    lessonId: 25,
+    question: 'vector',
+    choices: ['興味、関心事', '経路、方向', '患者', '身代金'],
+    answer: '経路、方向',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'the initial infection vector remain unclear',
+        meaning: '最初の感染経路はまだはっきりしていない',
+      },
+    ],
+  },
+  {
+    id: 246,
+    lessonId: 25,
+    question: 'article',
+    choices: ['出所', '脆弱性', '業界、分野', '記事'],
+    answer: '記事',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'after the article published',
+        meaning: 'その記事が発表された後',
+      },
+    ],
+  },
+  {
+    id: 247,
+    lessonId: 25,
+    question: 'cost',
+    choices: ['量、総計', '報奨金', '費用', '保険'],
+    answer: '費用',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'expect additional costs',
+        meaning: '追加費用を見込む',
+      },
+    ],
+  },
+  {
+    id: 248,
+    lessonId: 25,
+    question: 'court',
+    choices: ['裁判所', '省、局', '機関、団体', '資産、財産'],
+    answer: '裁判所',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'a court order',
+        meaning: '裁判所命令',
+      },
+    ],
+  },
+  {
+    id: 249,
+    lessonId: 25,
+    question: 'insurance',
+    choices: ['認証情報', '当局、権威', '保険', '機関'],
+    answer: '保険',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'insurer',
+        meaning: '保険業者',
+        partOfSpeech: '名詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'health insurance information',
+        meaning: '医療保険の情報',
+      },
+    ],
+  },
+  {
+    id: 250,
+    lessonId: 26,
+    question: 'asset',
+    choices: ['価格', '量、総計', '証拠', '資産、財産'],
+    answer: '資産、財産',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'the value of the stolen assets',
+        meaning: '盗まれた資産の価値',
+      },
+    ],
+  },
+  {
+    id: 251,
+    lessonId: 26,
+    question: 'press',
+    choices: ['注目度、プロフィール', '供給', '報道', '裁判所'],
+    answer: '報道',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'press release',
+        meaning: 'プレスリリース、報道発表',
+      },
+    ],
+  },
+  {
+    id: 252,
+    lessonId: 26,
+    question: 'path',
+    choices: [
+      '(データの)流出、侵害',
+      '進路、(ファイルの)パス',
+      '認証情報',
+      '(権限の)昇格',
+    ],
+    answer: '進路、(ファイルの)パス',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'regardless of the attack path',
+        meaning: '攻撃経路によらず',
+      },
+    ],
+  },
+  {
+    id: 253,
+    lessonId: 26,
+    question: 'lure',
+    choices: ['欠陥', '詐欺', 'おとり、ルアー', '量、総計'],
+    answer: 'おとり、ルアー',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'lures related to the tax season',
+        meaning: '確定申告の時期に関係したおとり',
+      },
+    ],
+  },
+  {
+    id: 254,
+    lessonId: 26,
+    question: 'workaround',
+    choices: [
+      '報奨金',
+      '回避策、緩和策',
+      'パッチ、修正プログラム',
+      '(システムなどの)停止',
+    ],
+    answer: '回避策、緩和策',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'there is no patch or workaround for this vulnerability',
+        meaning: 'この脆弱性にはパッチや回避策がない',
+      },
+    ],
+  },
+  {
+    id: 255,
+    lessonId: 26,
+    question: 'emergency',
+    choices: ['緊急事態', '当局、権威', '脆弱性', '苦情、告訴'],
+    answer: '緊急事態',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'emergency directive',
+        meaning: '緊急指令',
+      },
+    ],
+  },
+  {
+    id: 256,
+    lessonId: 26,
+    question: 'survey',
+    choices: [
+      '(人や組織などの)主体',
+      '成功',
+      '細部、詳細',
+      '(アンケートなどによる)調査',
+    ],
+    answer: '(アンケートなどによる)調査',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'conduct surveys',
+        meaning: '調査を実施する',
+      },
+    ],
+  },
+  {
+    id: 257,
+    lessonId: 26,
+    question: 'sanction',
+    choices: ['制裁', '窃盗', '業界、分野', '機関'],
+    answer: '制裁',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'bypass sanctions',
+        meaning: '制裁を回避する',
+      },
+    ],
+  },
+  {
+    id: 258,
+    lessonId: 26,
+    question: 'bounty',
+    choices: ['効果、影響', '経路、方向', '挙動、振る舞い', '報奨金'],
+    answer: '報奨金',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'bug bounty program',
+        meaning: '脆弱性報奨金制度、バグバウンティプログラム',
+      },
+    ],
+  },
+  {
+    id: 259,
+    lessonId: 26,
+    question: 'credential',
+    choices: ['暗号通貨', '認証情報', '証拠', '方針、信条、設定(の集まり)'],
+    answer: '認証情報',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'use a different credential for all log-ins',
+        meaning: 'すべてのログインで異なる認証情報を使う',
+      },
+    ],
+  },
+  {
+    id: 260,
+    lessonId: 27,
+    question: 'election',
+    choices: ['欠陥', '形態、種類、フォーム', '機会', '選挙'],
+    answer: '選挙',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'elect',
+        meaning: 'を選ぶ',
+        partOfSpeech: '動詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'the Presidential election',
+        meaning: '大統領選挙',
+      },
+    ],
+  },
+  {
+    id: 261,
+    lessonId: 27,
+    question: 'status',
+    choices: ['例、インスタンス', '状態', '特徴、目玉', '(権限の)昇格'],
+    answer: '状態',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'monitor the security status of the device',
+        meaning: 'デバイスのセキュリティの状態を監視する',
+      },
+    ],
+  },
+  {
+    id: 262,
+    lessonId: 27,
+    question: 'complaint',
+    choices: ['苦情、告訴', '緊急事態', '機関、団体', '(データの)流出、侵害'],
+    answer: '苦情、告訴',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'complain',
+        meaning: '文句を言う',
+        partOfSpeech: '動詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'complaints from enterprise users',
+        meaning: '企業ユーザーからの苦情',
+      },
+    ],
+  },
+  {
+    id: 263,
+    lessonId: 27,
+    question: 'procedure',
+    choices: [
+      '道具、ツール',
+      '挙動、振る舞い',
+      '説明、指示、命令',
+      '手順、手続き',
+    ],
+    answer: '手順、手続き',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'proceed',
+        meaning: '進行する',
+        partOfSpeech: '動詞',
+      },
+      {
+        word: 'procedural',
+        meaning: '手続き上の',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'response and notification procedures for incidents',
+        meaning: 'インシデントの対応・ 通知手順',
+      },
+    ],
+  },
+  {
+    id: 264,
+    lessonId: 27,
+    question: 'quarter',
+    choices: ['役割', '能力', '四半期', '個人'],
+    answer: '四半期',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'in the first quarter of last year',
+        meaning: '昨年の第一四半期に',
+      },
+    ],
+  },
+  {
+    id: 265,
+    lessonId: 27,
+    question: 'executive',
+    choices: ['顧客、取引先', '行政長官、経営者', '管理者', '機関、団体'],
+    answer: '行政長官、経営者',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'Executive Order 14028',
+        meaning: '大統領令14028号',
+      },
+    ],
+  },
+  {
+    id: 266,
+    lessonId: 27,
+    question: 'instruction',
+    choices: ['機能、関数', '機関', '付加', '説明、指示、命令'],
+    answer: '説明、指示、命令',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'instruct',
+        meaning: 'を教える',
+        partOfSpeech: '動詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'you can find detailed instructions here',
+        meaning: 'より詳細な説明はここにある',
+      },
+    ],
+  },
+  {
+    id: 267,
+    lessonId: 27,
+    question: 'price',
+    choices: [
+      'アカウント、口座',
+      'コード、符号',
+      '価格',
+      '一連の作戦、キャンペーン',
+    ],
+    answer: '価格',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'rising cryptocurrency prices',
+        meaning: '値上がりしている暗号通貨の価格',
+      },
+    ],
+  },
+  {
+    id: 268,
+    lessonId: 27,
+    question: 'priority',
+    choices: [
+      '効果、影響',
+      '優先度、優先すべきこと',
+      '方針、信条、設定(の集まり)',
+      '取り組み方、接近',
+    ],
+    answer: '優先度、優先すべきこと',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'prioritize',
+        meaning: 'を優先する',
+        partOfSpeech: '動詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'customer safety is the top priority',
+        meaning: '顧客の安全が最優先事項である',
+      },
+    ],
+  },
+  {
+    id: 269,
+    lessonId: 27,
+    question: 'entry',
+    choices: ['出所', '内部の人、会員', '接続、コネクション', '入り口、項目'],
+    answer: '入り口、項目',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'enter',
+        meaning: 'に入る',
+        partOfSpeech: '動詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'highlight suspicious log entry',
+        meaning: '不審なログの項目を強調表示する',
+      },
+    ],
+  },
+  {
+    id: 270,
+    lessonId: 28,
+    question: 'prison',
+    choices: ['裁判所', '刑務所', '省、局', '企業'],
+    answer: '刑務所',
+    partOfSpeech: '名詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'he was sentenced to five years in prison',
+        meaning: '彼は 5年の刑を宣告された',
+      },
+    ],
+  },
+  {
+    id: 271,
+    lessonId: 28,
+    question: 'effect',
+    choices: ['能力', '付加', '資産、財産', '効果、影響'],
+    answer: '効果、影響',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'effectiveness',
+        meaning: '有効性',
+        partOfSpeech: '名詞',
+      },
+      {
+        word: 'effective',
+        meaning: '有効な、効果的な',
+        partOfSpeech: '形容詞',
+      },
+      {
+        word: 'effectively',
+        meaning: '効果的に',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'notable economical effects',
+        meaning: '顕著な経済的影響',
+      },
+    ],
+  },
+  {
+    id: 272,
+    lessonId: 28,
+    question: 'success',
+    choices: ['機会', '成功', '注目度、プロフィール', '報奨金'],
+    answer: '成功',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'succeed',
+        meaning: '成功する',
+        partOfSpeech: '動詞',
+      },
+      {
+        word: 'successful',
+        meaning: '成功した',
+        partOfSpeech: '形容詞',
+      },
+      {
+        word: 'successfully',
+        meaning: 'うまく、首尾よく',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'the attempt with little success so far',
+        meaning: '今のところあまり成功していない試み',
+      },
+    ],
+  },
+  {
+    id: 273,
+    lessonId: 28,
+    question: 'elevation',
+    choices: ['選挙', '個人', '特権', '(権限の)昇格'],
+    answer: '(権限の)昇格',
+    partOfSpeech: '名詞',
+    relatedWords: [
+      {
+        word: 'elevate',
+        meaning: '(権限) を昇格させる',
+        partOfSpeech: '動詞',
+      },
+      {
+        word: 'elevated',
+        meaning: '(権限が)高い',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'privilege elevation vulnerability',
+        meaning: '権限昇格の脆弱性',
+      },
+    ],
+  },
 ];
