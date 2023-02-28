@@ -168,11 +168,6 @@ export const lessonData: Lesson[] = [
   },
   {
     id: 34,
-    categoryId: 3,
-    name: '6',
-  },
-  {
-    id: 35,
     categoryId: 4,
     name: '1',
   },
