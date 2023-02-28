@@ -6201,4 +6201,1068 @@ export const questionData: Question[] = [
       },
     ],
   },
+  {
+    id: 274,
+    lessonId: 29,
+    question: 'malicious',
+    choices: ['累積の', '重大な、致命的な', '悪意のある', '上級の'],
+    answer: '悪意のある',
+    partOfSpeech: '形容詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'malicious attachments',
+        meaning: '悪意のある添付ファイル',
+      },
+    ],
+  },
+  {
+    id: 275,
+    lessonId: 29,
+    question: 'critical',
+    choices: ['大規模な', '累積の', '機微な、取扱注意の', '重大な、致命的な'],
+    answer: '重大な、致命的な',
+    partOfSpeech: '形容詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'critical vulnerability',
+        meaning: '致命的な脆弱性',
+      },
+    ],
+  },
+  {
+    id: 276,
+    lessonId: 29,
+    question: 'remote',
+    choices: ['さらに進んだ', '遠隔の、遠隔からの', '典型的な', '最初の'],
+    answer: '遠隔の、遠隔からの',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'remotely',
+        meaning: '遠隔で',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'Remote Code Execution(RCE)',
+        meaning: 'リモートコード実行',
+      },
+    ],
+  },
+  {
+    id: 277,
+    lessonId: 29,
+    question: 'available',
+    choices: [
+      'を知っている',
+      'の原因である、責任がある',
+      'ある特定の、確かな',
+      '利用可能である',
+    ],
+    answer: '利用可能である',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'availability',
+        meaning: '可用性',
+        partOfSpeech: '名詞',
+      },
+      {
+        word: 'unavailable',
+        meaning: '利用・入手できない',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'latest available version',
+        meaning: '利用可能な最新のバージョン',
+      },
+    ],
+  },
+  {
+    id: 278,
+    lessonId: 29,
+    question: 'personal',
+    choices: ['既知の', '機密の', '個人の', '進行中の'],
+    answer: '個人の',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'personally',
+        meaning: '個人的に',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'personal information',
+        meaning: '個人情報',
+      },
+    ],
+  },
+  {
+    id: 279,
+    lessonId: 29,
+    question: 'multiple',
+    choices: ['任意の', '典型的な', '社会の、社会的な', '多数の'],
+    answer: '多数の',
+    partOfSpeech: '形容詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'on multiple platform',
+        meaning: '複数のプラットフォームで',
+      },
+    ],
+  },
+  {
+    id: 280,
+    lessonId: 29,
+    question: 'public',
+    choices: ['社会の、社会的な', '外部の', '公共の、公然の', '手動の'],
+    answer: '公共の、公然の',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'publicly',
+        meaning: '公に',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'public spaces',
+        meaning: '公共の空間',
+      },
+    ],
+  },
+  {
+    id: 281,
+    lessonId: 29,
+    question: 'financial',
+    choices: ['連邦の', '金銭的な、金融の', '特に、特定の', 'ありそうな'],
+    answer: '金銭的な、金融の',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'finance',
+        meaning: '金融、財政',
+        partOfSpeech: '名詞',
+      },
+      {
+        word: 'financially',
+        meaning: '財政的に',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'financial, healthcare and manufacturing sectors',
+        meaning: '金融・医療・製造業界',
+      },
+    ],
+  },
+  {
+    id: 282,
+    lessonId: 29,
+    question: 'fake',
+    choices: ['機微な、取扱注意の', '内部の', '偽の', '現在の、最新の'],
+    answer: '偽の',
+    partOfSpeech: '形容詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'fake job posting',
+        meaning: '偽の求人票',
+      },
+    ],
+  },
+  {
+    id: 283,
+    lessonId: 29,
+    question: 'social',
+    choices: ['正規の', '著しい、重要な', '進行中の', '社会の、社会的な'],
+    answer: '社会の、社会的な',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'society',
+        meaning: '社会',
+        partOfSpeech: '名詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'social security number',
+        meaning: '(米国の)社会保障番号',
+      },
+    ],
+  },
+  {
+    id: 284,
+    lessonId: 30,
+    question: 'sensitive',
+    choices: ['深刻な', '機微な、取扱注意の', '前の、先の', '医療の'],
+    answer: '機微な、取扱注意の',
+    partOfSpeech: '形容詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'steal sensitive data',
+        meaning: '機微なデータを盗む',
+      },
+    ],
+  },
+  {
+    id: 285,
+    lessonId: 30,
+    question: 'likely',
+    choices: ['ありそうな', '任意の', 'いくつかの', '手動の'],
+    answer: 'ありそうな',
+    partOfSpeech: '形容詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'the likely reason',
+        meaning: 'ありそうな理由',
+      },
+    ],
+  },
+  {
+    id: 286,
+    lessonId: 30,
+    question: 'recent',
+    choices: ['潜在的な', '洗練された', '正規の', '最近の'],
+    answer: '最近の',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'recently',
+        meaning: '最近',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'the most recent backup',
+        meaning: '最新のバックアップ',
+      },
+    ],
+  },
+  {
+    id: 287,
+    lessonId: 30,
+    question: 'private',
+    choices: ['外部の', '特に、特定の', '内密の、私用の', '前の、先の'],
+    answer: '内密の、私用の',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'privately',
+        meaning: '非公開で、個人で',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'private key',
+        meaning: '秘密鍵',
+      },
+    ],
+  },
+  {
+    id: 288,
+    lessonId: 30,
+    question: 'further',
+    choices: [
+      '現在の、最新の',
+      '疑わしい、不審な',
+      'の原因である、責任がある',
+      'さらに進んだ',
+    ],
+    answer: 'さらに進んだ',
+    partOfSpeech: '形容詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'further investigation',
+        meaning: 'さらなる調査',
+      },
+    ],
+  },
+  {
+    id: 289,
+    lessonId: 30,
+    question: 'several',
+    choices: ['機密の', '機微な、取扱注意の', '特定の、明白な', 'いくつかの'],
+    answer: 'いくつかの',
+    partOfSpeech: '形容詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'execute several commands',
+        meaning: 'いくつかのコマンドを実行する',
+      },
+    ],
+  },
+  {
+    id: 290,
+    lessonId: 30,
+    question: 'potential',
+    choices: ['内密の、私用の', '機密の', '潜在的な', '正規の'],
+    answer: '潜在的な',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'potentially',
+        meaning: '潜在的に',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'potential security issues',
+        meaning: '潜在的なセキュリティ上の問題',
+      },
+    ],
+  },
+  {
+    id: 291,
+    lessonId: 30,
+    question: 'legitimate',
+    choices: ['洗練された', '正規の', '偽の、間違った', '法人の、企業の'],
+    answer: '正規の',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'legitimacy',
+        meaning: '正当性',
+        partOfSpeech: '名詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'impersonate legitimate software',
+        meaning: '正規のソフトウェアに偽装する',
+      },
+    ],
+  },
+  {
+    id: 292,
+    lessonId: 30,
+    question: 'ongoing',
+    choices: ['進行中の', '即時の、即座の', '現在の、最新の', '先の、以前の'],
+    answer: '進行中の',
+    partOfSpeech: '形容詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'ongoing phishing campaign',
+        meaning: '進行中のフィッシングキャンペーン',
+      },
+    ],
+  },
+  {
+    id: 293,
+    lessonId: 30,
+    question: 'current',
+    choices: ['先の、以前の', '洗練された', '現在の、最新の', '深刻な'],
+    answer: '現在の、最新の',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'currently',
+        meaning: '現在は',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'under current versions',
+        meaning: '現在のバージョンでは',
+      },
+    ],
+  },
+  {
+    id: 294,
+    lessonId: 31,
+    question: 'federal',
+    choices: ['法人の、企業の', '連邦の', '正規の', 'ありそうな'],
+    answer: '連邦の',
+    partOfSpeech: '形容詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'Federal Bureau of Investigation (FBI)',
+        meaning: '連邦捜査局',
+      },
+    ],
+  },
+  {
+    id: 295,
+    lessonId: 31,
+    question: 'internal',
+    choices: ['多数の', '前の、先の', '著しい、重要な', '内部の'],
+    answer: '内部の',
+    partOfSpeech: '形容詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'access to the internal networks',
+        meaning: '内部ネットワークへのアクセス',
+      },
+    ],
+  },
+  {
+    id: 296,
+    lessonId: 31,
+    question: 'external',
+    choices: ['個人の', '深刻な', '外部の', '累積の'],
+    answer: '外部の',
+    partOfSpeech: '形容詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'XML external entity reference vulnerability',
+        meaning: 'XML外部実体参照の脆弱性',
+      },
+    ],
+  },
+  {
+    id: 297,
+    lessonId: 31,
+    question: 'significant',
+    choices: [
+      'の原因である、責任がある',
+      '既知の',
+      'を知っている',
+      '著しい、重要な',
+    ],
+    answer: '著しい、重要な',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'significantly',
+        meaning: '著しく',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'affect a significant number of users',
+        meaning: 'かなりの数のユーザーに影響を与える',
+      },
+    ],
+  },
+  {
+    id: 298,
+    lessonId: 31,
+    question: 'corporate',
+    choices: [
+      '社会の、社会的な',
+      '上級の',
+      '法人の、企業の',
+      '法的な、法曹業界の、合法の',
+    ],
+    answer: '法人の、企業の',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'corporation',
+        meaning: '法人',
+        partOfSpeech: '名詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'corporate and government victims',
+        meaning: '企業と政府機関の被害者',
+      },
+    ],
+  },
+  {
+    id: 299,
+    lessonId: 31,
+    question: 'previous',
+    choices: ['先の、以前の', '疑わしい、不審な', '特に、特定の', '機密の'],
+    answer: '先の、以前の',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'previously',
+        meaning: '以前に',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'version 2.4.1 and all previous versions',
+        meaning: 'バージョン 2.4.1 とそれ以前のすべてのバージョン',
+      },
+    ],
+  },
+  {
+    id: 300,
+    lessonId: 31,
+    question: 'certain',
+    choices: ['正規の', '洗練された', 'ある特定の、確かな', '個人の'],
+    answer: 'ある特定の、確かな',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'ascertain',
+        meaning: 'を確認する',
+        partOfSpeech: '動詞',
+      },
+      {
+        word: 'uncertainty',
+        meaning: '不確実性',
+        partOfSpeech: '名詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'under certain conditions',
+        meaning: '特定の状況において',
+      },
+    ],
+  },
+  {
+    id: 301,
+    lessonId: 31,
+    question: 'specific',
+    choices: [
+      '特定の、明白な',
+      '機密の',
+      '機微な、取扱注意の',
+      '重大な、致命的な',
+    ],
+    answer: '特定の、明白な',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'specifically',
+        meaning: '特に',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'DDoS attacks against a specific target',
+        meaning: '特定の標的に対するDDoS攻撃',
+      },
+    ],
+  },
+  {
+    id: 302,
+    lessonId: 31,
+    question: 'aware',
+    choices: ['全体の、完全な', 'を知っている', '深刻な', '最近の'],
+    answer: 'を知っている',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'awareness',
+        meaning: '意識、気づくこと',
+        partOfSpeech: '名詞',
+      },
+      {
+        word: 'unaware',
+        meaning: '気づかない',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'the vender is aware of the problem',
+        meaning: 'ベンダーは問題を認識している',
+      },
+    ],
+  },
+  {
+    id: 303,
+    lessonId: 31,
+    question: 'initial',
+    choices: ['先の、以前の', '利用可能である', '個人の', '最初の'],
+    answer: '最初の',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'initialize',
+        meaning: 'を初期化する',
+        partOfSpeech: '動詞',
+      },
+      {
+        word: 'initially',
+        meaning: '最初に、最初は',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: "initial access to victims' networks",
+        meaning: '被害者のネットワークへの初期アクセス',
+      },
+    ],
+  },
+  {
+    id: 304,
+    lessonId: 32,
+    question: 'medical',
+    choices: ['潜在的な', '洗練された', '医療の', '累積の'],
+    answer: '医療の',
+    partOfSpeech: '形容詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'medical software vender',
+        meaning: '医療用ソフトウェアベンダー',
+      },
+    ],
+  },
+  {
+    id: 305,
+    lessonId: 32,
+    question: 'suspicious',
+    choices: [
+      '深刻な',
+      '金銭的な、金融の',
+      '遠隔の、遠隔からの',
+      '疑わしい、不審な',
+    ],
+    answer: '疑わしい、不審な',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'suspicion',
+        meaning: '疑い',
+        partOfSpeech: '名詞',
+      },
+      {
+        word: 'suspiciously',
+        meaning: '疑わしげに',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'this file looks suspicious',
+        meaning: 'このファイルは不審に見える',
+      },
+    ],
+  },
+  {
+    id: 306,
+    lessonId: 32,
+    question: 'cumulative',
+    choices: ['累積の', 'さらに進んだ', '全体の、完全な', '典型的な'],
+    answer: '累積の',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'cumulate',
+        meaning: 'を積み重ねる',
+        partOfSpeech: '動詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'cumulative update',
+        meaning: '累積更新プログラム',
+      },
+    ],
+  },
+  {
+    id: 307,
+    lessonId: 32,
+    question: 'former',
+    choices: ['深刻な', '医療の', '前の、先の', '特定の、明白な'],
+    answer: '前の、先の',
+    partOfSpeech: '形容詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'a former employee',
+        meaning: '元従業員',
+      },
+    ],
+  },
+  {
+    id: 308,
+    lessonId: 32,
+    question: 'arbitrary',
+    choices: ['特に、特定の', '任意の', '遠隔の、遠隔からの', '個人の'],
+    answer: '任意の',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'arbitrarily',
+        meaning: '任意に',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'buffer overflow leading to arbitrary code execution',
+        meaning: '任意のコード実行につながるバッファオーバーフロー',
+      },
+    ],
+  },
+  {
+    id: 309,
+    lessonId: 32,
+    question: 'massive',
+    choices: ['大規模な', 'ある特定の、確かな', 'いくつかの', '公共の、公然の'],
+    answer: '大規模な',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'massively',
+        meaning: '大規模に',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'massive scale and ongoing attacks',
+        meaning: '大規模で進行中の攻撃',
+      },
+    ],
+  },
+  {
+    id: 310,
+    lessonId: 32,
+    question: 'particular',
+    choices: [
+      '典型的な',
+      '疑わしい、不審な',
+      '特に、特定の',
+      '法的な、法曹業界の、合法の',
+    ],
+    answer: '特に、特定の',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'particularly',
+        meaning: '特に',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'in this particular case',
+        meaning: 'この特定の事例では',
+      },
+    ],
+  },
+  {
+    id: 311,
+    lessonId: 32,
+    question: 'numerous',
+    choices: ['洗練された', '現在の、最新の', '特定の、明白な', '多数の'],
+    answer: '多数の',
+    partOfSpeech: '形容詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'this update fixes numerous issues',
+        meaning: 'このアップデートで多数の問題が修正された',
+      },
+    ],
+  },
+  {
+    id: 312,
+    lessonId: 32,
+    question: 'responsible',
+    choices: ['累積の', 'の原因である、責任がある', '最近の', 'ありそうな'],
+    answer: 'の原因である、責任がある',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'responsibility',
+        meaning: '責任',
+        partOfSpeech: '名詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'it is unknown what group is responsible for the attack',
+        meaning: '攻撃がどのグループによるものかは不明である',
+      },
+    ],
+  },
+  {
+    id: 313,
+    lessonId: 32,
+    question: 'senior',
+    choices: ['任意の', '正規の', '既知の', '上級の'],
+    answer: '上級の',
+    partOfSpeech: '形容詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'senior product manager',
+        meaning: '上級プロダクトマネージャー',
+      },
+    ],
+  },
+  {
+    id: 314,
+    lessonId: 33,
+    question: 'sophisticated',
+    choices: ['さらに進んだ', '洗練された', '典型的な', '著しい、重要な'],
+    answer: '洗練された',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'unsophisticated',
+        meaning: '洗練されていない',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'highly sophisticated zero-day attack',
+        meaning: 'きわめて洗練されたゼロデイ攻撃',
+      },
+    ],
+  },
+  {
+    id: 315,
+    lessonId: 33,
+    question: 'legal',
+    choices: [
+      '深刻な',
+      '重大な、致命的な',
+      '典型的な',
+      '法的な、法曹業界の、合法の',
+    ],
+    answer: '法的な、法曹業界の、合法の',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'illegal',
+        meaning: '違法な',
+        partOfSpeech: '形容詞',
+      },
+      {
+        word: 'legally',
+        meaning: '法的に、合法的に',
+        partOfSpeech: '副詞',
+      },
+      {
+        word: 'illegally',
+        meaning: '違法に',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'business information including legal documents',
+        meaning: '法的文書を含むビジネス情報',
+      },
+    ],
+  },
+  {
+    id: 316,
+    lessonId: 33,
+    question: 'known',
+    choices: ['最初の', '既知の', '正規の', '最近の'],
+    answer: '既知の',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'well-known',
+        meaning: 'よく知られた',
+        partOfSpeech: '形容詞',
+      },
+      {
+        word: 'unknown',
+        meaning: '未知の',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'Known Exploited Vulnerabilities Catalog',
+        meaning: '既知の悪用された脆弱性カタログ',
+      },
+    ],
+  },
+  {
+    id: 317,
+    lessonId: 33,
+    question: 'entire',
+    choices: [
+      '内密の、私用の',
+      '機微な、取扱注意の',
+      '任意の',
+      '全体の、完全な',
+    ],
+    answer: '全体の、完全な',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'entirely',
+        meaning: '完全に',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'entire corporate networks',
+        meaning: '企業のネットワーク全体',
+      },
+    ],
+  },
+  {
+    id: 318,
+    lessonId: 33,
+    question: 'false',
+    choices: [
+      '悪意のある',
+      '偽の、間違った',
+      '著しい、重要な',
+      '即時の、即座の',
+    ],
+    answer: '偽の、間違った',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'falsely',
+        meaning: '間違って、不正に',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'to avoid false positives',
+        meaning: '誤検知を避けるために',
+      },
+    ],
+  },
+  {
+    id: 319,
+    lessonId: 33,
+    question: 'severe',
+    choices: ['累積の', '潜在的な', '深刻な', 'ある特定の、確かな'],
+    answer: '深刻な',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'severity',
+        meaning: '深刻さ、重大さ',
+        partOfSpeech: '名詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'a new report about a severe security issue',
+        meaning: '深刻なセキュリティの問題に関する新しいレポート',
+      },
+    ],
+  },
+  {
+    id: 320,
+    lessonId: 33,
+    question: 'confidential',
+    choices: ['任意の', '典型的な', '累積の', '機密の'],
+    answer: '機密の',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'confidence',
+        meaning: '信用、信任',
+        partOfSpeech: '名詞',
+      },
+      {
+        word: 'confidentiality',
+        meaning: '機密性',
+        partOfSpeech: '名詞',
+      },
+      {
+        word: 'confident',
+        meaning: '確信している',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'include confidential documents',
+        meaning: '機密文書を含む',
+      },
+    ],
+  },
+  {
+    id: 321,
+    lessonId: 33,
+    question: 'immediate',
+    choices: [
+      'を知っている',
+      '利用可能である',
+      '即時の、即座の',
+      '金銭的な、金融の',
+    ],
+    answer: '即時の、即座の',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'immediately',
+        meaning: '即座に',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'receive an immediate response',
+        meaning: '即時に返信を受け取る',
+      },
+    ],
+  },
+  {
+    id: 322,
+    lessonId: 33,
+    question: 'typical',
+    choices: ['社会の、社会的な', '典型的な', '最初の', '進行中の'],
+    answer: '典型的な',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'typically',
+        meaning: '典型的に、一般的に',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'in a typical environment',
+        meaning: '典型的な環境では',
+      },
+    ],
+  },
+  {
+    id: 323,
+    lessonId: 33,
+    question: 'manual',
+    choices: ['いくつかの', '既知の', '個人の', '手動の'],
+    answer: '手動の',
+    partOfSpeech: '形容詞',
+    relatedWords: [
+      {
+        word: 'manually',
+        meaning: '手動で',
+        partOfSpeech: '副詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'manual vulnerability scan',
+        meaning: '手動での脆弱性スキャン',
+      },
+    ],
+  },
 ];
