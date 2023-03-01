@@ -7265,4 +7265,181 @@ export const questionData: Question[] = [
       },
     ],
   },
+  {
+    id: 324,
+    lessonId: 34,
+    question: 'according',
+    choices: ['だいたい', 'ますます', 'によれば', '伝えられるところによれば'],
+    answer: 'によれば',
+    partOfSpeech: '副詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'according to the latest report',
+        meaning: '最新の報告書によれば',
+      },
+    ],
+  },
+  {
+    id: 325,
+    lessonId: 34,
+    question: 'nearly',
+    choices: ['ほとんど', 'したがって', '伝えられるところによれば', 'ますます'],
+    answer: 'ほとんど',
+    partOfSpeech: '副詞',
+    relatedWords: [
+      {
+        word: 'near',
+        meaning: '近い',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'nearly half of small business owners',
+        meaning: '小規模企業経営者のほぼ半分',
+      },
+    ],
+  },
+  {
+    id: 326,
+    lessonId: 34,
+    question: 'increasingly',
+    choices: ['不運なことに', 'ますます', 'だいたい', 'したがって'],
+    answer: 'ますます',
+    partOfSpeech: '副詞',
+    relatedWords: [
+      {
+        word: 'increase',
+        meaning: '増加する',
+        partOfSpeech: '動詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'as cyber criminals use increasingly sophisticated methods',
+        meaning: 'サイバー犯罪者の手法がますます洗練化する中で',
+      },
+    ],
+  },
+  {
+    id: 327,
+    lessonId: 34,
+    question: 'approximately',
+    choices: [
+      'ますます',
+      '伝えられるところによれば',
+      '不運なことに',
+      'おおよそ',
+    ],
+    answer: 'おおよそ',
+    partOfSpeech: '副詞',
+    relatedWords: [
+      {
+        word: 'approximate',
+        meaning: 'おおよその',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'approximately one million customers',
+        meaning: 'おおよそ 100万人の顧客',
+      },
+    ],
+  },
+  {
+    id: 328,
+    lessonId: 34,
+    question: 'rather',
+    choices: ['よりむしろ', 'ますます', 'ほとんど', 'によれば'],
+    answer: 'よりむしろ',
+    partOfSpeech: '副詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'this seems to be a wiper rather than ransomware',
+        meaning: 'これはランサムウェアよりむしろワイパーのようだ',
+      },
+    ],
+  },
+  {
+    id: 329,
+    lessonId: 34,
+    question: 'unfortunately',
+    choices: ['ますます', '不運なことに', 'したがって', 'おおよそ'],
+    answer: '不運なことに',
+    partOfSpeech: '副詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example: 'Unfortunately, there was no backup.',
+        meaning: '不運なことに、バックアップはなかった。',
+      },
+    ],
+  },
+  {
+    id: 330,
+    lessonId: 34,
+    question: 'therefore',
+    choices: ['よりむしろ', 'によれば', 'ますます', 'したがって'],
+    answer: 'したがって',
+    partOfSpeech: '副詞',
+    relatedWords: [],
+    useExamples: [
+      {
+        example:
+          'Therefore, English skills are required for security engineers.',
+        meaning:
+          'したがって、セキュリティエンジニアには英語のスキルが求められます。',
+      },
+    ],
+  },
+  {
+    id: 331,
+    lessonId: 34,
+    question: 'roughly',
+    choices: ['だいたい', '不運なことに', 'によれば', 'よりむしろ'],
+    answer: 'だいたい',
+    partOfSpeech: '副詞',
+    relatedWords: [
+      {
+        word: 'rough',
+        meaning: '乱暴な',
+        partOfSpeech: '形容詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'roughly 10 million individual devices',
+        meaning: 'だいたい 1千万個の個人デバイス',
+      },
+    ],
+  },
+  {
+    id: 332,
+    lessonId: 34,
+    question: 'reportedly',
+    choices: ['によれば', 'ますます', 'したがって', '伝えられるところによれば'],
+    answer: '伝えられるところによれば',
+    partOfSpeech: '副詞',
+    relatedWords: [
+      {
+        word: 'report',
+        meaning: 'を報告する',
+        partOfSpeech: '動詞',
+      },
+      {
+        word: 'report',
+        meaning: '報告書',
+        partOfSpeech: '名詞',
+      },
+    ],
+    useExamples: [
+      {
+        example: 'this attack reportedly took place in the morning',
+        meaning: '伝えられるところによれば、この攻撃は朝に起こったという',
+      },
+    ],
+  },
 ];
