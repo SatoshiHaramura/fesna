@@ -8,7 +8,7 @@ const SameLessonButton: FC<Props> = ({ handleClickSameLessonButton }) => {
   return (
     <button
       onClick={handleClickSameLessonButton}
-      className="m-1 w-36 rounded-l-full border border-gray-300 bg-gray-100 py-2 px-1 font-sans text-xl font-thin text-gray-800 hover:bg-opacity-10"
+      className="m-1 w-36 rounded-l-full border border-gray-300 bg-gray-100 py-2 px-1 text-xl text-gray-800 hover:bg-opacity-10"
     >
       もう1度
     </button>
