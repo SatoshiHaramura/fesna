@@ -1,11 +1,17 @@
 import { FC } from 'react';
 import { shortenPartOfSpeech } from '@/utils';
+import { Roboto_Flex } from '@next/font/google';
 
 type Props = {
   partOfSpeech: string;
   word: string;
   meaning: string;
 };
+
+const roboto = Roboto_Flex({
+  weight: ['400'],
+  preload: false,
+});
 
 const Word: FC<Props> = ({ partOfSpeech, word, meaning }) => {
   return (
@@ -18,7 +24,7 @@ const Word: FC<Props> = ({ partOfSpeech, word, meaning }) => {
         </div>
         <div className="pl-1">
           <div className="flex flex-col">
-            <div className="text-4xl">{word}</div>
+            <div className={`${roboto.className} text-4xl`}>{word}</div>
             <div>{meaning}</div>
           </div>
         </div>

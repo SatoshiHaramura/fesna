@@ -24,7 +24,7 @@ const Presenter: FC<Props> = ({
 }) => {
   return (
     <div className="container mx-auto flex h-screen w-screen max-w-sm flex-col justify-center px-1">
-      <p className="p-4 text-center font-sans text-2xl font-thin text-gray-800">
+      <p className="p-4 text-center text-2xl text-gray-800">
         品詞を
         <br />
         選んでください

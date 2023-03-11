@@ -1,15 +1,23 @@
 import { FC } from 'react';
+import { Roboto_Flex } from '@next/font/google';
 
 type Props = {
   categoryName: string | undefined;
   lessonName: string | undefined;
 };
 
+const roboto = Roboto_Flex({
+  weight: ['400'],
+  preload: false,
+});
+
 const LessonResultHeader: FC<Props> = ({ categoryName, lessonName }) => {
   return (
     <div className="flex flex-row justify-center gap-2 p-4">
       <div data-testid="category">{categoryName}</div>
-      <div data-testid="lesson-number">Lesson {lessonName}</div>
+      <div data-testid="lesson-number" className={`${roboto.className}`}>
+        Lesson {lessonName}
+      </div>
     </div>
   );
 };

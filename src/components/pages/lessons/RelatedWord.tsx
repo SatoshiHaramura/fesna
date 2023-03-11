@@ -1,10 +1,16 @@
 import { FC } from 'react';
 import { RelatedWord } from '@/types';
 import { shortenPartOfSpeech } from '@/utils';
+import { Roboto_Flex } from '@next/font/google';
 
 type Props = {
   relatedWords: RelatedWord[];
 };
+
+const roboto = Roboto_Flex({
+  weight: ['400'],
+  preload: false,
+});
 
 const RelatedWord: FC<Props> = ({ relatedWords }) => {
   return (
@@ -21,7 +27,9 @@ const RelatedWord: FC<Props> = ({ relatedWords }) => {
                   {shortenPartOfSpeech(partOfSpeech)}
                 </div>
               </div>
-              <div className="p-0.5 text-sm leading-4">{word}</div>
+              <div className={`${roboto.className} p-0.5 text-sm leading-4`}>
+                {word}
+              </div>
               <div className="p-0.5 text-sm leading-4">:</div>
               <div className="p-0.5 text-sm leading-4">{meaning}</div>
             </div>

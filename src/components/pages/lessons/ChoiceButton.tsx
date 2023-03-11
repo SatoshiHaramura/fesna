@@ -28,7 +28,7 @@ const ChoiceButton: FC<Props> = ({
     addedStyle.push(incorrectStyle);
   }
 
-  const style = `${addedStyle} h-20 w-80 rounded-full border border-gray-200 py-2 px-5 text-left font-sans text-xl font-thin text-gray-800`;
+  const style = `${addedStyle} h-20 w-80 rounded-full border border-gray-200 py-2 px-5 text-left text-xl text-gray-800`;
 
   return (
     <button

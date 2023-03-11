@@ -1,9 +1,15 @@
 import { FC } from 'react';
 import { UseExample } from '@/types';
+import { Roboto_Flex } from '@next/font/google';
 
 type Props = {
   useExamples: UseExample[];
 };
+
+const roboto = Roboto_Flex({
+  weight: ['400'],
+  preload: false,
+});
 
 const UseExample: FC<Props> = ({ useExamples }) => {
   return (
@@ -15,7 +21,9 @@ const UseExample: FC<Props> = ({ useExamples }) => {
         {useExamples.map(({ example, meaning }, index) => {
           return (
             <div key={index}>
-              <div className="p-0.5 text-sm leading-4">{example}</div>
+              <div className={`${roboto.className} p-0.5 text-sm leading-4`}>
+                {example}
+              </div>
               <div className="p-0.5 text-sm leading-4">{meaning}</div>
             </div>
           );
