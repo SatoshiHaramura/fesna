@@ -268,7 +268,12 @@ export const questionData: Question[] = [
     id: 12,
     lessonId: 2,
     question: 'expose',
-    choices: ['に携わる、を雇う', 'を暴露する', 'を強調する', 'を強調する'],
+    choices: [
+      'に携わる、を雇う',
+      'を暴露する',
+      'を強調する',
+      'を引き起こす、のふりをする',
+    ],
     answer: 'を暴露する',
     partOfSpeech: '動詞',
     relatedWords: [
@@ -4004,7 +4009,7 @@ export const questionData: Question[] = [
     question: 'authorize',
     choices: [
       'を確認する',
-      'を認める、入れる',
+      'を特定する',
       'を認可する、権限を与える',
       'を認証する',
     ],
