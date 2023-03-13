@@ -23,22 +23,24 @@ const Presenter: FC<Props> = ({
   handleClickLesson,
 }) => {
   return (
-    <div className="container mx-auto flex h-screen w-screen max-w-sm flex-col justify-center px-1">
-      <p className="p-4 text-center text-2xl text-gray-800">
-        品詞を
-        <br />
-        選んでください
-      </p>
-      <CategorySelectButtonList
-        categories={categories}
-        handleClickCategory={handleClickCategory}
-      />
-      <LessonSelectDialog
-        isOpen={isOpen}
-        onClose={onClose}
-        category={category}
-        handleClickLesson={handleClickLesson}
-      />
+    <div className="bg-[url('/background.png')]">
+      <div className="mx-auto flex h-screen max-w-sm flex-col justify-center border-x border-gray-100 bg-stone-50">
+        <p className="p-4 text-center text-2xl text-gray-800">
+          品詞を
+          <br />
+          選んでください
+        </p>
+        <CategorySelectButtonList
+          categories={categories}
+          handleClickCategory={handleClickCategory}
+        />
+        <LessonSelectDialog
+          isOpen={isOpen}
+          onClose={onClose}
+          category={category}
+          handleClickLesson={handleClickLesson}
+        />
+      </div>
     </div>
   );
 };

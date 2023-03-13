@@ -10,7 +10,7 @@ type Props = {
 const Presenter: FC<Props> = ({ transitToMenusPage }) => {
   return (
     <div className="bg-[url('/background.png')]">
-      <div className="mx-auto flex h-screen max-w-sm flex-col justify-center border-gray-200 bg-gray-50">
+      <div className="mx-auto flex h-screen max-w-sm flex-col justify-center border-x border-gray-100 bg-slate-50">
         <h1 className="py-4 px-4">
           セキュリティに関する英文記事を読む
           <br />

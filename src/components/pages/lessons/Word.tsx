@@ -18,7 +18,7 @@ const Word: FC<Props> = ({ partOfSpeech, word, meaning }) => {
     <>
       <div className="flex flex-row gap-1">
         <div className="pt-2.5">
-          <div className="rounded border border-gray-300 px-1">
+          <div className="rounded border border-slate-400 px-1">
             {shortenPartOfSpeech(partOfSpeech)}
           </div>
         </div>

@@ -28,7 +28,7 @@ const QuestionWord: FC<Props> = ({ questionWord, judgedAnswer }) => {
   }
 
   return (
-    <div className="relative flex h-44 w-80 items-center justify-center rounded-xl border border-gray-100">
+    <div className="relative flex h-44 w-80 items-center justify-center rounded-xl">
       <div
         className={`${roboto.className} text-5xl text-gray-700`}
         data-testid="question-word"
@@ -36,7 +36,7 @@ const QuestionWord: FC<Props> = ({ questionWord, judgedAnswer }) => {
         {questionWord}
       </div>
       <div
-        className={`${addedStyle} z-1 absolute top-6 left-0 right-0 bottom-0 m-auto text-center font-sans text-9xl font-bold opacity-50`}
+        className={`${addedStyle} z-1 absolute top-6 left-0 right-0 bottom-0 m-auto text-center font-sans text-9xl font-bold opacity-70`}
         data-testid="correct-mark-or-incorrect-mark"
       >
         {correctMarkOrIncorrectMark}

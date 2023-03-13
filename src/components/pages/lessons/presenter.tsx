@@ -34,31 +34,33 @@ const Presenter: FC<Props> = ({
   handleClickPlaySoundButton,
 }) => {
   return (
-    <div className="container mx-auto flex w-screen max-w-sm flex-col justify-center border border-gray-200">
-      <div className="divide-y divide-gray-200">
-        <LessonsPageHeader
-          categoryName={category?.name}
-          lessonName={lesson?.name}
-        />
-        {currentQuestionNumber <= questions.length ? (
-          <SelectionTypeQuestion
-            questions={questions}
-            currentQuestionNumber={currentQuestionNumber}
-            question={question}
-            handleClickChoiceButton={handleClickChoiceButton}
-            judgedAnswer={judgedAnswers[currentQuestionNumber - 1]}
-            playSound={playSound}
-            handleClickPlaySoundButton={handleClickPlaySoundButton}
+    <div className="min-h-screen bg-[url('/background.png')]">
+      <div className="mx-auto flex max-w-sm flex-col justify-center border-gray-100 bg-stone-50">
+        <div className="min-h-screen divide-y divide-gray-300">
+          <LessonsPageHeader
+            categoryName={category?.name}
+            lessonName={lesson?.name}
           />
-        ) : (
-          <LessonResult
-            questions={questions}
-            judgedAnswers={judgedAnswers}
-            handleClickSameLessonButton={handleClickSameLessonButton}
-            handleClickNextLessonButton={handleClickNextLessonButton}
-            handleClickMenuButton={handleClickMenuButton}
-          />
-        )}
+          {currentQuestionNumber <= questions.length ? (
+            <SelectionTypeQuestion
+              questions={questions}
+              currentQuestionNumber={currentQuestionNumber}
+              question={question}
+              handleClickChoiceButton={handleClickChoiceButton}
+              judgedAnswer={judgedAnswers[currentQuestionNumber - 1]}
+              playSound={playSound}
+              handleClickPlaySoundButton={handleClickPlaySoundButton}
+            />
+          ) : (
+            <LessonResult
+              questions={questions}
+              judgedAnswers={judgedAnswers}
+              handleClickSameLessonButton={handleClickSameLessonButton}
+              handleClickNextLessonButton={handleClickNextLessonButton}
+              handleClickMenuButton={handleClickMenuButton}
+            />
+          )}
+        </div>
       </div>
     </div>
   );

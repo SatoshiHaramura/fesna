@@ -40,13 +40,13 @@ const SelectionTypeQuestion: FC<Props> = ({
         />
       </div>
       <div className="flex flex-col items-center justify-center divide-y divide-gray-200 p-2">
-        <div className="py-2">
+        <div className="py-4">
           <QuestionWord
             questionWord={question?.question}
             judgedAnswer={judgedAnswer}
           />
         </div>
-        <div className="py-2">
+        <div className="py-4">
           <ChoiceButtonList
             choices={question?.choices}
             handleClickChoiceButton={handleClickChoiceButton}

@@ -21,7 +21,7 @@ const LessonResult: FC<Props> = ({
 }) => {
   return (
     <div className="relative">
-      <div className="p-1">
+      <div className="p-4">
         <CorrectAnswerNumber
           judgedAnswers={judgedAnswers}
           numberOfQuestions={questions.length}
