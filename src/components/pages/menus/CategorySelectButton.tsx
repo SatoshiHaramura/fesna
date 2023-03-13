@@ -10,7 +10,7 @@ const CategorySelectButton: FC<Props> = ({ category, handleClickCategory }) => {
   return (
     <button
       onClick={() => handleClickCategory(category)}
-      className="w-48 rounded-full border border-gray-300 bg-gray-100 py-2 px-1 text-5xl text-gray-800 hover:bg-opacity-10"
+      className="h-16 w-44 rounded-full border border-cyan-500 bg-cyan-500 bg-opacity-5 py-2 px-1 text-4xl text-gray-700 hover:bg-opacity-30"
     >
       {category.name}
     </button>

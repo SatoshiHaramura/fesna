@@ -16,9 +16,11 @@ const ChoiceButton: FC<Props> = ({
   correctChoiceIndex,
 }) => {
   const addedStyle: string[] = [];
-  const unansweredStyle = 'bg-gray-50 hover:bg-opacity-10';
-  const correctStyle = `bg-lime-100 border-lime-400`;
-  const incorrectStyle = 'bg-gray-50';
+  const unansweredStyle =
+    'bg-slate-100 bg-opacity-40 border-slate-300 text-gray-800';
+  const correctStyle = `bg-lime-100 border-lime-400 text-gray-800`;
+  const incorrectStyle =
+    'bg-slate-50 bg-opacity-80 border-slate-200 text-gray-400';
 
   if (judgedAnswer === undefined) {
     addedStyle.push(unansweredStyle);
@@ -28,7 +30,7 @@ const ChoiceButton: FC<Props> = ({
     addedStyle.push(incorrectStyle);
   }
 
-  const style = `${addedStyle} h-20 w-80 rounded-full border border-gray-200 py-2 px-5 text-left text-xl text-gray-800`;
+  const style = `${addedStyle} h-20 w-80 rounded-full border py-2 px-8 text-left text-xl border-2`;
 
   return (
     <button
