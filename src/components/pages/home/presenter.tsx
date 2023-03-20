@@ -3,11 +3,20 @@ import { FC } from 'react';
 
 import logo from '/public/logo.png';
 import StartButton from '@/components/pages/home/StartButton';
+import TermsOfUseDialog from '@/components/pages/home/TermsOfUseDialog';
 
 type Props = {
   transitToMenusPage: () => void;
+  isOpen: boolean;
+  handleClickTermsOfUse: () => void;
+  onClose: () => void;
 };
-const Presenter: FC<Props> = ({ transitToMenusPage }) => {
+const Presenter: FC<Props> = ({
+  transitToMenusPage,
+  isOpen,
+  handleClickTermsOfUse,
+  onClose,
+}) => {
   return (
     <div className="bg-[url('/background.png')]">
       <div className="mx-auto flex h-screen max-w-sm flex-col justify-center border-x border-gray-100 bg-slate-50">
@@ -33,6 +42,10 @@ const Presenter: FC<Props> = ({ transitToMenusPage }) => {
         <div className="py-6 px-8 text-center">
           <StartButton onClick={transitToMenusPage} />
         </div>
+        <button onClick={handleClickTermsOfUse} className="text-gray-600">
+          利用規約
+        </button>
+        <TermsOfUseDialog isOpen={isOpen} onClose={onClose} />
       </div>
     </div>
   );
