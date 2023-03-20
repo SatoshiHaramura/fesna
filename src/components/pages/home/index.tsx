@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
 import HomePage from './presenter';
 
@@ -7,7 +7,19 @@ type Props = {
 };
 
 const Index: FC<Props> = ({ transitToMenusPage }) => {
-  return <HomePage transitToMenusPage={transitToMenusPage}></HomePage>;
+  const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
+
+  const handleClickTermsOfUse = () => setIsDialogOpen(true);
+  const onClose = () => setIsDialogOpen(false);
+
+  return (
+    <HomePage
+      transitToMenusPage={transitToMenusPage}
+      isOpen={isDialogOpen}
+      handleClickTermsOfUse={handleClickTermsOfUse}
+      onClose={onClose}
+    ></HomePage>
+  );
 };
 
 export default Index;
