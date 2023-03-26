@@ -26,7 +26,7 @@ const Presenter: FC<Props> = ({
 }) => {
   return (
     <div className="bg-[url('/background.png')]">
-      <div className="mx-auto flex h-screen max-w-sm flex-col justify-center border-x border-gray-100 bg-slate-50">
+      <div className="relative mx-auto flex h-screen max-w-sm flex-col justify-center border-x border-gray-100 bg-slate-50">
         <h1 className="py-4 px-4">
           セキュリティに関する英文記事を読む
           <br />
@@ -49,23 +49,27 @@ const Presenter: FC<Props> = ({
         <div className="py-6 px-8 text-center">
           <StartButton onClick={transitToMenusPage} />
         </div>
-        <button
-          onClick={handleClickTermsOfUse}
-          className="text-xs text-gray-600"
-        >
-          利用規約
-        </button>
-        <TermsOfUseDialog isOpen={isOpen} onClose={onClose} />
-        <button
-          onClick={handleClickPrivacyPolicy}
-          className="text-xs text-gray-600"
-        >
-          プライバシーポリシー
-        </button>
-        <PrivacyPolicyDialog
-          isOpen={isPrivacyPolicyDialogOpen}
-          onClose={onClosePrivacyPolicyDialog}
-        />
+        <div className="absolute bottom-0 left-0 right-0 border-t border-gray-100 bg-slate-50 p-2">
+          <div className="flex flex-row justify-center gap-10 p-2">
+            <button
+              onClick={handleClickTermsOfUse}
+              className="text-xs text-gray-600 hover:underline"
+            >
+              利用規約
+            </button>
+            <TermsOfUseDialog isOpen={isOpen} onClose={onClose} />
+            <button
+              onClick={handleClickPrivacyPolicy}
+              className="text-xs text-gray-600 hover:underline"
+            >
+              プライバシーポリシー
+            </button>
+            <PrivacyPolicyDialog
+              isOpen={isPrivacyPolicyDialogOpen}
+              onClose={onClosePrivacyPolicyDialog}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
