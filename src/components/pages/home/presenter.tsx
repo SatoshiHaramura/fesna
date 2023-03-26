@@ -49,11 +49,17 @@ const Presenter: FC<Props> = ({
         <div className="py-6 px-8 text-center">
           <StartButton onClick={transitToMenusPage} />
         </div>
-        <button onClick={handleClickTermsOfUse} className="text-gray-600">
+        <button
+          onClick={handleClickTermsOfUse}
+          className="text-xs text-gray-600"
+        >
           利用規約
         </button>
         <TermsOfUseDialog isOpen={isOpen} onClose={onClose} />
-        <button onClick={handleClickPrivacyPolicy} className="text-gray-600">
+        <button
+          onClick={handleClickPrivacyPolicy}
+          className="text-xs text-gray-600"
+        >
           プライバシーポリシー
         </button>
         <PrivacyPolicyDialog
