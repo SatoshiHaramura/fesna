@@ -4,18 +4,25 @@ import { FC } from 'react';
 import logo from '/public/logo.png';
 import StartButton from '@/components/pages/home/StartButton';
 import TermsOfUseDialog from '@/components/pages/home/TermsOfUseDialog';
+import PrivacyPolicyDialog from '@/components/pages/home/PrivacyPolicyDialog';
 
 type Props = {
   transitToMenusPage: () => void;
   isOpen: boolean;
   handleClickTermsOfUse: () => void;
   onClose: () => void;
+  isPrivacyPolicyDialogOpen: boolean;
+  handleClickPrivacyPolicy: () => void;
+  onClosePrivacyPolicyDialog: () => void;
 };
 const Presenter: FC<Props> = ({
   transitToMenusPage,
   isOpen,
   handleClickTermsOfUse,
   onClose,
+  isPrivacyPolicyDialogOpen,
+  handleClickPrivacyPolicy,
+  onClosePrivacyPolicyDialog,
 }) => {
   return (
     <div className="bg-[url('/background.png')]">
@@ -46,6 +53,13 @@ const Presenter: FC<Props> = ({
           利用規約
         </button>
         <TermsOfUseDialog isOpen={isOpen} onClose={onClose} />
+        <button onClick={handleClickPrivacyPolicy} className="text-gray-600">
+          プライバシーポリシー
+        </button>
+        <PrivacyPolicyDialog
+          isOpen={isPrivacyPolicyDialogOpen}
+          onClose={onClosePrivacyPolicyDialog}
+        />
       </div>
     </div>
   );
