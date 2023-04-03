@@ -1,0 +1,22 @@
+name: ESLint and Prettier
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  eslint-prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: yarn
+      - name: Run ESLint
+        run: yarn lint
+      - name: Run Prettier
+        run: yarn format:check
