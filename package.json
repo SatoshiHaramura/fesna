@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint --dir src",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'",
+    "format:check": "prettier --check --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'",
     "test:all": "playwright test && jest",
     "test:e2e": "playwright test",
     "test:unit/integration": "jest"
