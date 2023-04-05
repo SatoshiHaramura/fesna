@@ -14,7 +14,7 @@ const roboto = Roboto_Flex({
 const UseExample: FC<Props> = ({ useExamples }) => {
   return (
     <div className="flex flex-row gap-2 py-2">
-      <div className="m-auto w-2/12 rounded-xl border border-slate-400 px-0.5 py-2 text-center text-sm">
+      <div className="m-auto w-2/12 rounded-xl border border-slate-400 bg-slate-100 px-0.5 py-2 text-center text-sm">
         使用例
       </div>
       <div className="w-10/12">
