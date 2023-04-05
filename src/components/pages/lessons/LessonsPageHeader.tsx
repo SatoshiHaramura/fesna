@@ -19,7 +19,7 @@ const LessonResultHeader: FC<Props> = ({ categoryName, lessonName }) => {
         data-testid="lesson-number"
         className={`${roboto.className} text-lg`}
       >
-        Lesson {lessonName}
+        Lesson{lessonName}
       </div>
     </div>
   );
