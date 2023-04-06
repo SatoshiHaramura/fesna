@@ -11,7 +11,7 @@ test.describe('menu page', () => {
 
     await expect(page).toHaveURL('/lessons');
     await expect(page.getByTestId('category')).toHaveText('動詞');
-    await expect(page.getByTestId('lesson-number')).toHaveText('Lesson 1');
+    await expect(page.getByTestId('lesson-number')).toHaveText('Lesson1');
   });
 
   test('choose a category noun and choose a lesson number', async ({
@@ -24,7 +24,7 @@ test.describe('menu page', () => {
 
     await expect(page).toHaveURL('/lessons');
     await expect(page.getByTestId('category')).toHaveText('名詞');
-    await expect(page.getByTestId('lesson-number')).toHaveText('Lesson 1');
+    await expect(page.getByTestId('lesson-number')).toHaveText('Lesson1');
   });
 
   test('choose a category adjective and choose a lesson number', async ({
@@ -37,7 +37,7 @@ test.describe('menu page', () => {
 
     await expect(page).toHaveURL('/lessons');
     await expect(page.getByTestId('category')).toHaveText('形容詞');
-    await expect(page.getByTestId('lesson-number')).toHaveText('Lesson 1');
+    await expect(page.getByTestId('lesson-number')).toHaveText('Lesson1');
   });
 
   test('choose a category adverb and choose a lesson number', async ({
@@ -50,6 +50,6 @@ test.describe('menu page', () => {
 
     await expect(page).toHaveURL('/lessons');
     await expect(page.getByTestId('category')).toHaveText('副詞');
-    await expect(page.getByTestId('lesson-number')).toHaveText('Lesson 1');
+    await expect(page.getByTestId('lesson-number')).toHaveText('Lesson1');
   });
 });
