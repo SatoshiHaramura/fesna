@@ -1,12 +1,8 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
 
 import HomePage from './presenter';
 
-type Props = {
-  transitToMenusPage: () => void;
-};
-
-const Index: FC<Props> = ({ transitToMenusPage }) => {
+const Index = () => {
   const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
   const [isPrivacyPolicyDialogOpen, setIsPrivacyPolicyDialogOpen] =
     useState(false);
@@ -18,7 +14,6 @@ const Index: FC<Props> = ({ transitToMenusPage }) => {
 
   return (
     <HomePage
-      transitToMenusPage={transitToMenusPage}
       isOpen={isDialogOpen}
       handleClickTermsOfUse={handleClickTermsOfUse}
       onClose={onClose}
