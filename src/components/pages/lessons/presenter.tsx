@@ -14,7 +14,6 @@ type Props = {
   handleClickChoiceButton: (event: React.MouseEvent<HTMLButtonElement>) => void;
   handleClickSameLessonButton: () => void;
   handleClickNextLessonButton: () => void;
-  handleClickMenuButton: () => void;
   playSound: boolean | undefined;
   handleClickPlaySoundButton: () => void;
 };
@@ -29,7 +28,6 @@ const Presenter: FC<Props> = ({
   handleClickChoiceButton,
   handleClickSameLessonButton,
   handleClickNextLessonButton,
-  handleClickMenuButton,
   playSound,
   handleClickPlaySoundButton,
 }) => {
@@ -57,7 +55,6 @@ const Presenter: FC<Props> = ({
               judgedAnswers={judgedAnswers}
               handleClickSameLessonButton={handleClickSameLessonButton}
               handleClickNextLessonButton={handleClickNextLessonButton}
-              handleClickMenuButton={handleClickMenuButton}
             />
           )}
         </div>
