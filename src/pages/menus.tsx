@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import { InferGetStaticPropsType, NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 
@@ -18,11 +17,6 @@ export const getStaticProps = () => {
 };
 
 const MenusPage: NextPage<Props> = ({ categories }) => {
-  const router = useRouter();
-  const transitToLessonsPage = (): void => {
-    router.push('/lessons');
-  };
-
   return (
     <>
       <Head>
@@ -35,10 +29,7 @@ const MenusPage: NextPage<Props> = ({ categories }) => {
           url: 'https://stock-word.vercel.app/menus',
         }}
       />
-      <Menus
-        categories={categories}
-        transitToLessonsPage={transitToLessonsPage}
-      ></Menus>
+      <Menus categories={categories}></Menus>
     </>
   );
 };
