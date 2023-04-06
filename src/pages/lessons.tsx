@@ -1,15 +1,9 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 
 import Lessons from '@/components/pages/lessons';
 
 export const LessonsPage = () => {
-  const router = useRouter();
-  const handleClickMenuButton = (): void => {
-    router.push(`/menus`);
-  };
-
   return (
     <>
       <Head>
@@ -22,7 +16,7 @@ export const LessonsPage = () => {
           url: 'https://stock-word.vercel.app/lessons',
         }}
       />
-      <Lessons handleClickMenuButton={handleClickMenuButton} />
+      <Lessons />
     </>
   );
 };

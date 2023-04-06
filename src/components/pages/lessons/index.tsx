@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import LessonsPage from './presenter';
 import useLocalStorage from 'use-local-storage';
 import {
@@ -9,11 +9,7 @@ import {
 import { categoryData, lessonData, questionData } from '@/data';
 import { Question, UserSetting } from '@/types';
 
-type Props = {
-  handleClickMenuButton: () => void;
-};
-
-const Index: FC<Props> = ({ handleClickMenuButton }) => {
+const Index = () => {
   const [userSetting, setUserSetting] = useLocalStorage<UserSetting>(
     'userSetting',
     {
@@ -99,7 +95,6 @@ const Index: FC<Props> = ({ handleClickMenuButton }) => {
       handleClickChoiceButton={handleClickChoiceButton}
       handleClickSameLessonButton={handleClickSameLessonButton}
       handleClickNextLessonButton={handleClickNextLessonButton}
-      handleClickMenuButton={handleClickMenuButton}
       playSound={userSetting.playSound}
       handleClickPlaySoundButton={handleClickPlaySoundButton}
     />

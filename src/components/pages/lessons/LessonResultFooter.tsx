@@ -6,12 +6,10 @@ import MenuButton from '@/components/pages/lessons/MenuButton';
 type Props = {
   handleClickSameLessonButton: () => void;
   handleClickNextLessonButton: () => void;
-  handleClickMenuButton: () => void;
 };
 const LessonResultFooter: FC<Props> = ({
   handleClickSameLessonButton,
   handleClickNextLessonButton,
-  handleClickMenuButton,
 }) => {
   return (
     <div className="sticky bottom-0 left-0 right-0 border-t border-gray-200 bg-slate-50">
@@ -24,7 +22,7 @@ const LessonResultFooter: FC<Props> = ({
         />
       </div>
       <div className="flex flex-row justify-center">
-        <MenuButton handleClickMenuButton={handleClickMenuButton} />
+        <MenuButton />
       </div>
     </div>
   );
