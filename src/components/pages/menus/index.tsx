@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router';
+
 import React, { FC, useState } from 'react';
 
 import MenusPage from './presenter';
@@ -6,10 +8,9 @@ import useLocalStorage from 'use-local-storage';
 
 type Props = {
   categories: CategoryWithLessons[];
-  transitToLessonsPage: () => void;
 };
 
-const Index: FC<Props> = ({ categories, transitToLessonsPage }) => {
+const Index: FC<Props> = ({ categories }) => {
   const [userSetting, setUserSetting] = useLocalStorage<UserSetting>(
     'userSetting',
     {
@@ -26,6 +27,10 @@ const Index: FC<Props> = ({ categories, transitToLessonsPage }) => {
   };
 
   const onClose = (): void => setIsModalOpen(false);
+  const router = useRouter();
+  const transitToLessonsPage = (): void => {
+    router.push('/lessons');
+  };
   const handleClickLesson = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ): void => {
