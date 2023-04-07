@@ -11,7 +11,7 @@ describe('lesson page', () => {
     const category = screen.getByTestId('category');
     const lessonNumber = screen.getByTestId('lesson-number');
     expect(category).toHaveTextContent('動詞');
-    expect(lessonNumber).toHaveTextContent('Lesson 1');
+    expect(lessonNumber).toHaveTextContent('Lesson1');
 
     const currentQuestionNumber = screen.getByTestId('current-question-number');
     const questionWord = screen.getByTestId('question-word');
@@ -194,7 +194,7 @@ describe('lesson page', () => {
     const category = screen.getByTestId('category');
     const lessonNumber = screen.getByTestId('lesson-number');
     expect(category).toHaveTextContent('動詞');
-    expect(lessonNumber).toHaveTextContent('Lesson 1');
+    expect(lessonNumber).toHaveTextContent('Lesson1');
 
     const currentQuestionNumber = screen.getByTestId('current-question-number');
     const questionWord = screen.getByTestId('question-word');
@@ -266,7 +266,7 @@ describe('lesson page', () => {
     });
     await user.click(screen.getByRole('button', { name: '次のレッスン' }));
     expect(category).toHaveTextContent('動詞');
-    expect(lessonNumber).toHaveTextContent('Lesson 2');
+    expect(lessonNumber).toHaveTextContent('Lesson2');
     expect(currentQuestionNumber).toHaveTextContent('1');
     expect(screen.getByTestId('question-word')).toHaveTextContent('enable');
   }, 30000);

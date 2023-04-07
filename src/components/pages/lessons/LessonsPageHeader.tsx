@@ -7,7 +7,7 @@ type Props = {
 };
 
 const roboto = Roboto_Flex({
-  weight: ['400'],
+  weight: ['300'],
   preload: false,
 });
 
@@ -15,8 +15,11 @@ const LessonResultHeader: FC<Props> = ({ categoryName, lessonName }) => {
   return (
     <div className="flex flex-row justify-center gap-2 p-4">
       <div data-testid="category">{categoryName}</div>
-      <div data-testid="lesson-number" className={`${roboto.className}`}>
-        Lesson {lessonName}
+      <div
+        data-testid="lesson-number"
+        className={`${roboto.className} text-lg`}
+      >
+        Lesson{lessonName}
       </div>
     </div>
   );
