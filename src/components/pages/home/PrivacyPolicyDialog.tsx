@@ -77,12 +77,6 @@ const PrivacyPolicyDialog = ({ isOpen, onClose }: Props) => {
                   </p>
                 </div>
               </div>
-              <div className="py-1">
-                <h3 className="underline decoration-1 underline-offset-2"></h3>
-                <div className="py-1 px-4 text-sm text-gray-500">
-                  <p className="py-1"></p>
-                </div>
-              </div>
               <div className="py-1 text-center">
                 <button
                   type="button"

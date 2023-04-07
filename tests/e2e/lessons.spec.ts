@@ -7,7 +7,7 @@ test.describe('lesson page', () => {
     const category = page.getByTestId('category');
     const lessonNumber = page.getByTestId('lesson-number');
     await expect(category).toHaveText('動詞');
-    await expect(lessonNumber).toHaveText('Lesson 1');
+    await expect(lessonNumber).toHaveText('Lesson1');
 
     const currentQuestionNumber = page.getByTestId('current-question-number');
     const questionWord = page.getByTestId('question-word');
@@ -92,7 +92,7 @@ test.describe('lesson page', () => {
     const category = page.getByTestId('category');
     const lessonNumber = page.getByTestId('lesson-number');
     await expect(category).toHaveText('動詞');
-    await expect(lessonNumber).toHaveText('Lesson 1');
+    await expect(lessonNumber).toHaveText('Lesson1');
 
     const currentQuestionNumber = page.getByTestId('current-question-number');
     const questionWord = page.getByTestId('question-word');
@@ -131,7 +131,7 @@ test.describe('lesson page', () => {
 
     await page.getByRole('button', { name: 'もう1度' }).click();
     await expect(category).toHaveText('動詞');
-    await expect(lessonNumber).toHaveText('Lesson 1');
+    await expect(lessonNumber).toHaveText('Lesson1');
     await expect(currentQuestionNumber).toHaveText('1');
     await expect(questionWord).toHaveText('include');
   });
@@ -144,7 +144,7 @@ test.describe('lesson page', () => {
     const category = page.getByTestId('category');
     const lessonNumber = page.getByTestId('lesson-number');
     await expect(category).toHaveText('動詞');
-    await expect(lessonNumber).toHaveText('Lesson 1');
+    await expect(lessonNumber).toHaveText('Lesson1');
 
     const currentQuestionNumber = page.getByTestId('current-question-number');
     const questionWord = page.getByTestId('question-word');
@@ -183,7 +183,7 @@ test.describe('lesson page', () => {
 
     await page.getByRole('button', { name: '次のレッスン' }).click();
     await expect(category).toHaveText('動詞');
-    await expect(lessonNumber).toHaveText('Lesson 2');
+    await expect(lessonNumber).toHaveText('Lesson2');
     await expect(currentQuestionNumber).toHaveText('1');
     await expect(questionWord).toHaveText('enable');
   });
@@ -196,7 +196,7 @@ test.describe('lesson page', () => {
     const category = page.getByTestId('category');
     const lessonNumber = page.getByTestId('lesson-number');
     await expect(category).toHaveText('動詞');
-    await expect(lessonNumber).toHaveText('Lesson 1');
+    await expect(lessonNumber).toHaveText('Lesson1');
 
     const questionWord = page.getByTestId('question-word');
 
