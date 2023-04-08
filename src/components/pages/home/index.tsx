@@ -3,20 +3,21 @@ import { useState } from 'react';
 import HomePage from './presenter';
 
 const Index = () => {
-  const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
+  const [isTermsOfUseDialogOpen, setIsTermsOfUseDialogOpen] =
+    useState<boolean>(false);
   const [isPrivacyPolicyDialogOpen, setIsPrivacyPolicyDialogOpen] =
     useState(false);
 
-  const handleClickTermsOfUse = () => setIsDialogOpen(true);
+  const handleClickTermsOfUse = () => setIsTermsOfUseDialogOpen(true);
+  const onCloseTermsOfUseDialog = () => setIsTermsOfUseDialogOpen(false);
   const handleClickPrivacyPolicy = () => setIsPrivacyPolicyDialogOpen(true);
-  const onClose = () => setIsDialogOpen(false);
   const onClosePrivacyPolicyDialog = () => setIsPrivacyPolicyDialogOpen(false);
 
   return (
     <HomePage
-      isOpen={isDialogOpen}
+      isTermsOfUseDialogOpen={isTermsOfUseDialogOpen}
       handleClickTermsOfUse={handleClickTermsOfUse}
-      onClose={onClose}
+      onCloseTermsOfUseDialog={onCloseTermsOfUseDialog}
       isPrivacyPolicyDialogOpen={isPrivacyPolicyDialogOpen}
       handleClickPrivacyPolicy={handleClickPrivacyPolicy}
       onClosePrivacyPolicyDialog={onClosePrivacyPolicyDialog}
