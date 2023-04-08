@@ -7,17 +7,17 @@ import TermsOfUseDialog from '@/components/pages/home/TermsOfUseDialog';
 import PrivacyPolicyDialog from '@/components/pages/home/PrivacyPolicyDialog';
 
 type Props = {
-  isOpen: boolean;
+  isTermsOfUseDialogOpen: boolean;
   handleClickTermsOfUse: () => void;
-  onClose: () => void;
+  onCloseTermsOfUseDialog: () => void;
   isPrivacyPolicyDialogOpen: boolean;
   handleClickPrivacyPolicy: () => void;
   onClosePrivacyPolicyDialog: () => void;
 };
 const Presenter: FC<Props> = ({
-  isOpen,
+  isTermsOfUseDialogOpen,
   handleClickTermsOfUse,
-  onClose,
+  onCloseTermsOfUseDialog,
   isPrivacyPolicyDialogOpen,
   handleClickPrivacyPolicy,
   onClosePrivacyPolicyDialog,
@@ -55,7 +55,10 @@ const Presenter: FC<Props> = ({
             >
               利用規約
             </button>
-            <TermsOfUseDialog isOpen={isOpen} onClose={onClose} />
+            <TermsOfUseDialog
+              isOpen={isTermsOfUseDialogOpen}
+              onClose={onCloseTermsOfUseDialog}
+            />
             <button
               onClick={handleClickPrivacyPolicy}
               className="text-xs text-gray-600 hover:underline"
