@@ -9,7 +9,6 @@ type Props = {
   judgedAnswers: boolean[];
   handleClickSameLessonButton: () => void;
   handleClickNextLessonButton: () => void;
-  handleClickMenuButton: () => void;
 };
 
 const LessonResult: FC<Props> = ({
@@ -17,7 +16,6 @@ const LessonResult: FC<Props> = ({
   judgedAnswers,
   handleClickSameLessonButton,
   handleClickNextLessonButton,
-  handleClickMenuButton,
 }) => {
   return (
     <div className="relative">
@@ -33,7 +31,6 @@ const LessonResult: FC<Props> = ({
       <LessonResultFooter
         handleClickSameLessonButton={handleClickSameLessonButton}
         handleClickNextLessonButton={handleClickNextLessonButton}
-        handleClickMenuButton={handleClickMenuButton}
       />
     </div>
   );

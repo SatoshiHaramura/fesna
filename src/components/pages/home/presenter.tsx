@@ -7,7 +7,6 @@ import TermsOfUseDialog from '@/components/pages/home/TermsOfUseDialog';
 import PrivacyPolicyDialog from '@/components/pages/home/PrivacyPolicyDialog';
 
 type Props = {
-  transitToMenusPage: () => void;
   isOpen: boolean;
   handleClickTermsOfUse: () => void;
   onClose: () => void;
@@ -16,7 +15,6 @@ type Props = {
   onClosePrivacyPolicyDialog: () => void;
 };
 const Presenter: FC<Props> = ({
-  transitToMenusPage,
   isOpen,
   handleClickTermsOfUse,
   onClose,
@@ -47,7 +45,7 @@ const Presenter: FC<Props> = ({
           情報セキュリティやサイバーセキュリティに関するニュース記事で実際に使われている英単語に特化しているため、生きた英語を身につける手助けになります。
         </h1>
         <div className="py-6 px-8 text-center">
-          <StartButton onClick={transitToMenusPage} />
+          <StartButton />
         </div>
         <div className="absolute bottom-0 left-0 right-0 border-t border-gray-100 bg-slate-50 p-2">
           <div className="flex flex-row justify-center gap-10 p-2">
