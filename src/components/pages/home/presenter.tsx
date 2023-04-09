@@ -50,7 +50,7 @@ const Presenter: FC<Props> = ({
           <StartButton />
         </div>
         <div className="absolute bottom-0 left-0 right-0 border-t border-gray-100 bg-slate-50 p-2">
-          <div className="flex flex-row justify-center gap-10 p-2">
+          <div className="flex flex-row justify-center gap-4 p-0.5">
             <button
               onClick={handleClickTermsOfUse}
               className="text-xs text-gray-600 hover:underline"
