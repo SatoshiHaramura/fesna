@@ -5,6 +5,8 @@ import logo from '/public/logo.png';
 import StartButton from '@/components/pages/home/StartButton';
 import TermsOfUseDialog from '@/components/pages/home/TermsOfUseDialog';
 import PrivacyPolicyDialog from '@/components/pages/home/PrivacyPolicyDialog';
+import GithubIcon from '@/components/pages/home/GithubIcon';
+import TwitterIcon from '@/components/pages/home/TwitterIcon';
 
 type Props = {
   isTermsOfUseDialogOpen: boolean;
@@ -69,6 +71,10 @@ const Presenter: FC<Props> = ({
               isOpen={isPrivacyPolicyDialogOpen}
               onClose={onClosePrivacyPolicyDialog}
             />
+          </div>
+          <div className="flex flex-row justify-center gap-4 p-0.5">
+            <GithubIcon />
+            <TwitterIcon />
           </div>
         </div>
       </div>
