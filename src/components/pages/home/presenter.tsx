@@ -76,6 +76,9 @@ const Presenter: FC<Props> = ({
             <GithubIcon />
             <TwitterIcon />
           </div>
+          <div className="p-0.5 text-center text-xs text-gray-600">
+            © 2023 s_haramura
+          </div>
         </div>
       </div>
     </div>
