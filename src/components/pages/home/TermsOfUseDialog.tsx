@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+
 import { Dialog } from '@headlessui/react';
 
 type Props = {
@@ -5,20 +7,27 @@ type Props = {
   onClose: () => void;
 };
 const TermsOfUseDialog = ({ isOpen, onClose }: Props) => {
+  const dialogTitleRef = useRef(null);
+
   return (
-    <Dialog open={isOpen} onClose={onClose} className="relative z-50">
+    <Dialog
+      initialFocus={dialogTitleRef}
+      open={isOpen}
+      onClose={onClose}
+      className="relative z-50"
+    >
       <div className="fixed inset-0 bg-black/60" />
       <div className="fixed inset-0 overflow-y-scroll">
         <div className="flex min-h-full items-center justify-center p-6">
           <Dialog.Panel className="mx-auto max-w-sm rounded-3xl">
             <div className="max-w-sm rounded-2xl bg-stone-50 p-4 text-left">
               <Dialog.Title
+                ref={dialogTitleRef}
                 as="h2"
                 className="text-center text-3xl font-medium"
               >
                 利用規約
               </Dialog.Title>
-              <div tabIndex={0}></div>
               <div className="py-4 px-4">
                 <p className="text-sm text-gray-500">
                   本規約は、s_haramura（以下「当方」といいます。）が提供する「Stock
