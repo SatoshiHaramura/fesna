@@ -5,6 +5,8 @@ import logo from '/public/logo.png';
 import StartButton from '@/components/pages/home/StartButton';
 import TermsOfUseDialog from '@/components/pages/home/TermsOfUseDialog';
 import PrivacyPolicyDialog from '@/components/pages/home/PrivacyPolicyDialog';
+import GithubIcon from '@/components/pages/home/GithubIcon';
+import TwitterIcon from '@/components/pages/home/TwitterIcon';
 
 type Props = {
   isTermsOfUseDialogOpen: boolean;
@@ -48,7 +50,7 @@ const Presenter: FC<Props> = ({
           <StartButton />
         </div>
         <div className="absolute bottom-0 left-0 right-0 border-t border-gray-100 bg-slate-50 p-2">
-          <div className="flex flex-row justify-center gap-10 p-2">
+          <div className="flex flex-row justify-center gap-4 p-0.5">
             <button
               onClick={handleClickTermsOfUse}
               className="text-xs text-gray-600 hover:underline"
@@ -69,6 +71,13 @@ const Presenter: FC<Props> = ({
               isOpen={isPrivacyPolicyDialogOpen}
               onClose={onClosePrivacyPolicyDialog}
             />
+          </div>
+          <div className="flex flex-row justify-center gap-4 p-0.5">
+            <GithubIcon />
+            <TwitterIcon />
+          </div>
+          <div className="p-0.5 text-center text-xs text-gray-600">
+            © 2023 s_haramura
           </div>
         </div>
       </div>
