@@ -28,7 +28,6 @@ const PrivacyPolicyDialog = ({ isOpen, onClose }: Props) => {
               >
                 プライバシーポリシー
               </Dialog.Title>
-              <div tabIndex={0}></div>
               <div className="py-4 px-4">
                 <p className="text-sm text-gray-500">
                   s_haramura（以下「当方」といいます。）が提供する「Stock
