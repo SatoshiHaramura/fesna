@@ -10,7 +10,7 @@ const notoSansJapanese = Noto_Sans_JP({
   preload: false,
 });
 
-export default function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <style jsx global>{`
@@ -23,4 +23,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <Analytics />
     </>
   );
-}
+};
+
+export default App;
