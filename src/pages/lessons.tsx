@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo';
 
 import Lessons from '@/components/pages/lessons';
 
-export const LessonsPage = () => {
+const LessonsPage = () => {
   return (
     <>
       <Head>
