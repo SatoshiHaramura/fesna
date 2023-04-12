@@ -34,7 +34,7 @@ const Presenter: FC<Props> = ({
         <div className="mx-auto h-auto px-4">
           <Image
             src={logo}
-            alt="Stock Word logo"
+            alt="Webサービスのロゴ：サービス名はStock Word。"
             width={400}
             height={100}
             priority={true}
