@@ -86,13 +86,13 @@ const PrivacyPolicyDialog = ({ isOpen, onClose }: Props) => {
                   </p>
                 </div>
               </div>
-              <div className="py-1 text-center">
+              <div className="py-4 text-center">
                 <button
                   type="button"
-                  className="w-20 rounded-full border border-gray-400 bg-gray-100 px-4 py-2 hover:bg-gray-50"
+                  className="w-24 rounded-full border border-gray-400 bg-gray-100 px-4 py-2 hover:bg-gray-50"
                   onClick={onClose}
                 >
-                  戻る
+                  閉じる
                 </button>
               </div>
             </div>
