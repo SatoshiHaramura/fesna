@@ -40,9 +40,9 @@ const Presenter: FC<Props> = ({
             priority={true}
           />
         </div>
-        <h1 className="py-8 px-10">
+        <p className="py-8 px-10">
           情報セキュリティやサイバーセキュリティに関するニュース記事で実際に使われている英単語に特化しているため、生きた英語を身につける手助けになります。
-        </h1>
+        </p>
         <div className="py-6 px-8 text-center">
           <StartButton />
         </div>
