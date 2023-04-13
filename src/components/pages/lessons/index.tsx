@@ -19,11 +19,13 @@ const Index = () => {
       },
     }
   );
-  const [lessonId, setLessonId] = useState<number | undefined>(undefined);
   const [judgedAnswers, setJudgedAnswers] = useState<boolean[]>([]);
-  const [filteredQuestions, setFilteredQuestions] = useState<Question[]>([]);
+  const filteredQuestions = filterQuestionsByLessonId(
+    questionData,
+    userSetting.lessonId
+  );
 
-  const lesson = findLessonById(lessonData, lessonId);
+  const lesson = findLessonById(lessonData, userSetting.lessonId);
   const category = findCategoryByLessonId(categoryData, lesson?.categoryId);
 
   const [currentQuestion, setCurrentQuestion] = useState<Question>(
@@ -40,24 +42,20 @@ const Index = () => {
   };
   const handleClickSameLessonButton = (): void => {
     setJudgedAnswers([]);
-    setCurrentQuestionNumber(1);
   };
   const handleClickNextLessonButton = (): void => {
     let nextLessonId;
-    if (lessonId === lessonData.length) {
+    if (userSetting.lessonId === lessonData.length) {
       nextLessonId = 1;
-    } else if (lessonId !== undefined) {
-      nextLessonId = lessonId + 1;
+    } else if (userSetting.lessonId !== undefined) {
+      nextLessonId = userSetting.lessonId + 1;
     }
 
     setUserSetting({
       ...userSetting,
       lessonId: nextLessonId,
     });
-    setFilteredQuestions(filterQuestionsByLessonId(questionData, nextLessonId));
-    setLessonId(userSetting.lessonId ? nextLessonId : undefined);
     setJudgedAnswers([]);
-    setCurrentQuestionNumber(1);
   };
 
   const handleClickPlaySoundButton = (): void => {
@@ -68,14 +66,6 @@ const Index = () => {
   };
 
   useEffect(() => {
-    setLessonId(userSetting.lessonId);
-
-    setFilteredQuestions(
-      filterQuestionsByLessonId(questionData, userSetting.lessonId)
-    );
-  }, [userSetting]);
-
-  useEffect(() => {
     if (judgedAnswers.length > 0) {
       setTimeout(() => {
         setCurrentQuestion(filteredQuestions[judgedAnswers.length]);
@@ -83,6 +73,7 @@ const Index = () => {
       }, 1000);
     } else {
       setCurrentQuestion(filteredQuestions[0]);
+      setCurrentQuestionNumber(1);
     }
   }, [judgedAnswers, filteredQuestions]);
 
