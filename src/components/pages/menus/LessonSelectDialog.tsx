@@ -48,7 +48,7 @@ const LessonSelectDialog = ({
               <div className="py-6 text-center">
                 <button
                   onClick={onClose}
-                  className="w-20 rounded-full border border-gray-300 py-2 px-1 hover:bg-gray-50"
+                  className="w-20 rounded-full border border-gray-400 bg-gray-100 px-4 py-2 hover:bg-gray-50"
                 >
                   戻る
                 </button>
