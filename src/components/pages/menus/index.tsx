@@ -3,21 +3,20 @@ import { useRouter } from 'next/router';
 import React, { FC, useState } from 'react';
 
 import MenusPage from './presenter';
-import type { CategoryWithLessons, UserSetting } from '@/types';
-import useLocalStorage from 'use-local-storage';
+import type { CategoryWithLessons } from '@/types';
+import useLocalStorageState from 'use-local-storage-state';
 
 type Props = {
   categories: CategoryWithLessons[];
 };
 
 const Index: FC<Props> = ({ categories }) => {
-  const [userSetting, setUserSetting] = useLocalStorage<UserSetting>(
-    'userSetting',
-    {
+  const [userSetting, setUserSetting] = useLocalStorageState('userSetting', {
+    defaultValue: {
       lessonId: 1,
       playSound: false,
-    }
-  );
+    },
+  });
   const [category, setCategory] = useState<CategoryWithLessons>(categories[0]);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 

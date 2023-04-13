@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import LessonsPage from './presenter';
-import useLocalStorage from 'use-local-storage';
+import useLocalStorageState from 'use-local-storage-state';
 import {
   filterQuestionsByLessonId,
   findCategoryByLessonId,
@@ -10,11 +10,13 @@ import { categoryData, lessonData, questionData } from '@/data';
 import { Question, UserSetting } from '@/types';
 
 const Index = () => {
-  const [userSetting, setUserSetting] = useLocalStorage<UserSetting>(
+  const [userSetting, setUserSetting] = useLocalStorageState<UserSetting>(
     'userSetting',
     {
-      lessonId: 1,
-      playSound: false,
+      defaultValue: {
+        lessonId: 1,
+        playSound: false,
+      },
     }
   );
   const [lessonId, setLessonId] = useState<number | undefined>(undefined);
