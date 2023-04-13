@@ -1,12 +1,10 @@
 import { FC } from 'react';
-import { Category, Lesson, Question } from '@/types';
+import { Question, UserSetting } from '@/types';
 import LessonsPageHeader from '@/components/pages/lessons/LessonsPageHeader';
 import SelectionTypeQuestion from '@/components/pages/lessons/SelectionTypeQuestion';
 import LessonResult from '@/components/pages/lessons/LessonResult';
 
 type Props = {
-  category: Category | undefined;
-  lesson: Lesson | undefined;
   judgedAnswers: boolean[];
   questions: Question[];
   currentQuestionNumber: number;
@@ -16,11 +14,10 @@ type Props = {
   handleClickNextLessonButton: () => void;
   playSound: boolean | undefined;
   handleClickPlaySoundButton: () => void;
+  userSetting: UserSetting;
 };
 
 const Presenter: FC<Props> = ({
-  category,
-  lesson,
   judgedAnswers,
   questions,
   currentQuestionNumber,
@@ -30,15 +27,13 @@ const Presenter: FC<Props> = ({
   handleClickNextLessonButton,
   playSound,
   handleClickPlaySoundButton,
+  userSetting,
 }) => {
   return (
     <div className="min-h-screen bg-[url('/background.png')] bg-fixed">
       <div className="mx-auto flex max-w-sm flex-col justify-center border-gray-100 bg-stone-50">
         <div className="min-h-screen divide-y divide-gray-300">
-          <LessonsPageHeader
-            categoryName={category?.name}
-            lessonName={lesson?.name}
-          />
+          <LessonsPageHeader lessonId={userSetting.lessonId} />
           {currentQuestionNumber <= questions.length ? (
             <SelectionTypeQuestion
               questions={questions}

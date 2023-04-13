@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import LessonsPage from './presenter';
 import useLocalStorageState from 'use-local-storage-state';
-import {
-  filterQuestionsByLessonId,
-  findCategoryByLessonId,
-  findLessonById,
-} from '@/repositories';
-import { categoryData, lessonData, questionData } from '@/data';
+import { filterQuestionsByLessonId } from '@/repositories';
+import { lessonData, questionData } from '@/data';
 import { Question, UserSetting } from '@/types';
 
 const Index = () => {
@@ -24,9 +20,6 @@ const Index = () => {
     questionData,
     userSetting.lessonId
   );
-
-  const lesson = findLessonById(lessonData, userSetting.lessonId);
-  const category = findCategoryByLessonId(categoryData, lesson?.categoryId);
 
   const [currentQuestion, setCurrentQuestion] = useState<Question>(
     filteredQuestions[0]
@@ -79,8 +72,6 @@ const Index = () => {
 
   return (
     <LessonsPage
-      category={category}
-      lesson={lesson}
       judgedAnswers={judgedAnswers}
       questions={filteredQuestions}
       currentQuestionNumber={currentQuestionNumber}
@@ -90,6 +81,7 @@ const Index = () => {
       handleClickNextLessonButton={handleClickNextLessonButton}
       playSound={userSetting.playSound}
       handleClickPlaySoundButton={handleClickPlaySoundButton}
+      userSetting={userSetting}
     />
   );
 };
