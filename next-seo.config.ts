@@ -1,9 +1,6 @@
 import { DefaultSeoProps } from 'next-seo';
 
 const config: DefaultSeoProps = {
-  title: 'Stock Word',
-  description:
-    'セキュリティに関する英文記事を読むセキュリティエンジニア向けの英単語学習サービス',
   openGraph: {
     type: 'website',
     locale: 'ja_JP',

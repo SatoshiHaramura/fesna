@@ -25,11 +25,11 @@ const Presenter: FC<Props> = ({
   return (
     <div className="bg-[url('/background.png')] bg-fixed">
       <div className="mx-auto flex h-screen max-w-sm flex-col justify-center border-x border-gray-100 bg-stone-50">
-        <p className="p-4 text-center text-2xl text-gray-800">
+        <h1 className="p-4 text-center text-2xl text-gray-800">
           品詞を
           <br />
           選んでください
-        </p>
+        </h1>
         <CategorySelectButtonList
           categories={categories}
           handleClickCategory={handleClickCategory}

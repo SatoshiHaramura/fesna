@@ -14,13 +14,10 @@ const roboto = Roboto_Flex({
 const LessonResultHeader: FC<Props> = ({ categoryName, lessonName }) => {
   return (
     <div className="flex flex-row justify-center gap-2 p-4">
-      <div data-testid="category">{categoryName}</div>
-      <div
-        data-testid="lesson-number"
-        className={`${roboto.className} text-lg`}
-      >
+      <h1 data-testid="category">{categoryName}</h1>
+      <h1 data-testid="lesson-number" className={`${roboto.className} text-lg`}>
         Lesson{lessonName}
-      </div>
+      </h1>
     </div>
   );
 };

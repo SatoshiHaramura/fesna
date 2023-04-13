@@ -34,15 +34,15 @@ const Presenter: FC<Props> = ({
         <div className="mx-auto h-auto px-4">
           <Image
             src={logo}
-            alt="Stock Word logo"
+            alt="Webサービスのロゴ：サービス名はStock Word。"
             width={400}
             height={100}
             priority={true}
           />
         </div>
-        <h1 className="py-8 px-10">
+        <p className="py-8 px-10">
           情報セキュリティやサイバーセキュリティに関するニュース記事で実際に使われている英単語に特化しているため、生きた英語を身につける手助けになります。
-        </h1>
+        </p>
         <div className="py-6 px-8 text-center">
           <StartButton />
         </div>
