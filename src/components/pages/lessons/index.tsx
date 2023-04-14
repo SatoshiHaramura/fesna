@@ -1,20 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import LessonsPage from './presenter';
-import useLocalStorageState from 'use-local-storage-state';
 import { filterQuestionsByLessonId } from '@/repositories';
 import { lessonData, questionData } from '@/data';
 import { Question, UserSetting } from '@/types';
 
-const Index = () => {
-  const [userSetting, setUserSetting] = useLocalStorageState<UserSetting>(
-    'userSetting',
-    {
-      defaultValue: {
-        lessonId: 1,
-        playSound: false,
-      },
-    }
-  );
+type Props = {
+  localStorage: {
+    userSetting: UserSetting;
+    setUserSetting: (userSetting: UserSetting) => void;
+  };
+};
+
+const Index: FC<Props> = ({ localStorage }) => {
+  const { userSetting, setUserSetting } = localStorage;
   const [judgedAnswers, setJudgedAnswers] = useState<boolean[]>([]);
   const filteredQuestions = filterQuestionsByLessonId(
     questionData,

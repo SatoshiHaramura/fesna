@@ -1,12 +1,19 @@
 import Head from 'next/head';
-import { InferGetStaticPropsType, NextPage } from 'next';
+import { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 
 import Menus from '@/components/pages/menus';
 import { categoryData, lessonData } from '@/data';
 import { buildCategories } from '@/repositories';
+import { CategoryWithLessons, UserSetting } from '@/types';
 
-type Props = InferGetStaticPropsType<typeof getStaticProps>;
+type Props = {
+  categories: CategoryWithLessons[];
+  localStorage: {
+    userSetting: UserSetting;
+    setUserSetting: (userSetting: UserSetting) => void;
+  };
+};
 
 export const getStaticProps = () => {
   const categories = buildCategories(categoryData, lessonData);
@@ -16,7 +23,7 @@ export const getStaticProps = () => {
   };
 };
 
-const MenusPage: NextPage<Props> = ({ categories }) => {
+const MenusPage: NextPage<Props> = ({ categories, localStorage }) => {
   return (
     <>
       <Head>
@@ -33,7 +40,7 @@ const MenusPage: NextPage<Props> = ({ categories }) => {
           url: 'https://stock-word.vercel.app/menus',
         }}
       />
-      <Menus categories={categories}></Menus>
+      <Menus categories={categories} localStorage={localStorage}></Menus>
     </>
   );
 };
