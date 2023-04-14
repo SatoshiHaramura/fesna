@@ -2,7 +2,7 @@ import React, { FC, useEffect, useState } from 'react';
 import LessonsPage from './presenter';
 import { filterQuestionsByLessonId } from '@/repositories';
 import { lessonData, questionData } from '@/data';
-import { Question, UserSetting } from '@/types';
+import { UserSetting } from '@/types';
 
 type Props = {
   localStorage: {
@@ -19,16 +19,14 @@ const Index: FC<Props> = ({ localStorage }) => {
     userSetting.lessonId
   );
 
-  const [currentQuestion, setCurrentQuestion] = useState<Question>(
-    filteredQuestions[0]
-  );
   const [currentQuestionNumber, setCurrentQuestionNumber] = useState<number>(1);
 
   const handleClickChoiceButton = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ): void => {
     const isCorrect: boolean =
-      event.currentTarget.value === currentQuestion.answer;
+      event.currentTarget.value ===
+      filteredQuestions[currentQuestionNumber - 1].answer;
     setJudgedAnswers([...judgedAnswers, isCorrect]);
   };
   const handleClickSameLessonButton = (): void => {
@@ -59,11 +57,9 @@ const Index: FC<Props> = ({ localStorage }) => {
   useEffect(() => {
     if (judgedAnswers.length > 0) {
       setTimeout(() => {
-        setCurrentQuestion(filteredQuestions[judgedAnswers.length]);
         setCurrentQuestionNumber(judgedAnswers.length + 1);
       }, 1000);
     } else {
-      setCurrentQuestion(filteredQuestions[0]);
       setCurrentQuestionNumber(1);
     }
   }, [judgedAnswers, filteredQuestions]);
@@ -73,7 +69,6 @@ const Index: FC<Props> = ({ localStorage }) => {
       judgedAnswers={judgedAnswers}
       questions={filteredQuestions}
       currentQuestionNumber={currentQuestionNumber}
-      question={currentQuestion}
       handleClickChoiceButton={handleClickChoiceButton}
       handleClickSameLessonButton={handleClickSameLessonButton}
       handleClickNextLessonButton={handleClickNextLessonButton}

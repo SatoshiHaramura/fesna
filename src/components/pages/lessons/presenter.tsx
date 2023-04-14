@@ -8,7 +8,6 @@ type Props = {
   judgedAnswers: boolean[];
   questions: Question[];
   currentQuestionNumber: number;
-  question: Question;
   handleClickChoiceButton: (event: React.MouseEvent<HTMLButtonElement>) => void;
   handleClickSameLessonButton: () => void;
   handleClickNextLessonButton: () => void;
@@ -21,7 +20,6 @@ const Presenter: FC<Props> = ({
   judgedAnswers,
   questions,
   currentQuestionNumber,
-  question,
   handleClickChoiceButton,
   handleClickSameLessonButton,
   handleClickNextLessonButton,
@@ -38,7 +36,6 @@ const Presenter: FC<Props> = ({
             <SelectionTypeQuestion
               questions={questions}
               currentQuestionNumber={currentQuestionNumber}
-              question={question}
               handleClickChoiceButton={handleClickChoiceButton}
               judgedAnswer={judgedAnswers[currentQuestionNumber - 1]}
               playSound={playSound}

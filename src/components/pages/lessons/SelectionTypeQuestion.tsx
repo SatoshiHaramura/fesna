@@ -9,7 +9,6 @@ import { usePlaySound } from '@/hooks/usePlaySound';
 type Props = {
   questions: Question[];
   currentQuestionNumber: number;
-  question: Question;
   handleClickChoiceButton: (event: React.MouseEvent<HTMLButtonElement>) => void;
   judgedAnswer: boolean;
   playSound: boolean | undefined;
@@ -19,13 +18,13 @@ type Props = {
 const SelectionTypeQuestion: FC<Props> = ({
   questions,
   currentQuestionNumber,
-  question,
   handleClickChoiceButton,
   judgedAnswer,
   playSound,
   handleClickPlaySoundButton,
 }) => {
-  usePlaySound(playSound, question?.question);
+  const currentQuestion = questions[currentQuestionNumber - 1];
+  usePlaySound(playSound, currentQuestion?.question);
 
   return (
     <div>
@@ -42,16 +41,16 @@ const SelectionTypeQuestion: FC<Props> = ({
       <div className="flex flex-col items-center justify-center divide-y divide-gray-200 p-2">
         <div className="py-4">
           <QuestionWord
-            questionWord={question?.question}
+            questionWord={currentQuestion?.question}
             judgedAnswer={judgedAnswer}
           />
         </div>
         <div className="py-4">
           <ChoiceButtonList
-            choices={question?.choices}
+            choices={currentQuestion?.choices}
             handleClickChoiceButton={handleClickChoiceButton}
             judgedAnswer={judgedAnswer}
-            answer={question?.answer}
+            answer={currentQuestion?.answer}
           />
         </div>
       </div>
