@@ -72,7 +72,6 @@ const Index: FC<Props> = ({ localStorage }) => {
       handleClickChoiceButton={handleClickChoiceButton}
       handleClickSameLessonButton={handleClickSameLessonButton}
       handleClickNextLessonButton={handleClickNextLessonButton}
-      playSound={userSetting.playSound}
       handleClickPlaySoundButton={handleClickPlaySoundButton}
       userSetting={userSetting}
     />
