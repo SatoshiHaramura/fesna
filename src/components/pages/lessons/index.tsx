@@ -62,7 +62,7 @@ const Index: FC<Props> = ({ localStorage }) => {
     } else {
       setCurrentQuestionNumber(1);
     }
-  }, [judgedAnswers, filteredQuestions]);
+  }, [judgedAnswers]);
 
   return (
     <LessonsPage
