@@ -30,6 +30,7 @@ const Index: FC<Props> = ({ localStorage }) => {
     setJudgedAnswers([...judgedAnswers, isCorrect]);
   };
   const handleClickSameLessonButton = (): void => {
+    setCurrentQuestionNumber(1);
     setJudgedAnswers([]);
   };
   const handleClickNextLessonButton = (): void => {
@@ -44,6 +45,7 @@ const Index: FC<Props> = ({ localStorage }) => {
       ...userSetting,
       lessonId: nextLessonId,
     });
+    setCurrentQuestionNumber(1);
     setJudgedAnswers([]);
   };
 
@@ -59,8 +61,6 @@ const Index: FC<Props> = ({ localStorage }) => {
       setTimeout(() => {
         setCurrentQuestionNumber(judgedAnswers.length + 1);
       }, 1000);
-    } else {
-      setCurrentQuestionNumber(1);
     }
   }, [judgedAnswers]);
 
