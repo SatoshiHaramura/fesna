@@ -3,16 +3,8 @@ import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 
 import Lessons from '@/components/pages/lessons';
-import { UserSetting } from '@/types';
 
-type Props = {
-  localStorage: {
-    userSetting: UserSetting;
-    setUserSetting: (userSetting: UserSetting) => void;
-  };
-};
-
-const LessonsPage: NextPage<Props> = ({ localStorage }) => {
+const LessonsPage: NextPage = () => {
   return (
     <>
       <Head>
@@ -29,7 +21,7 @@ const LessonsPage: NextPage<Props> = ({ localStorage }) => {
           url: 'https://stock-word.vercel.app/lessons',
         }}
       />
-      <Lessons localStorage={localStorage} />
+      <Lessons />
     </>
   );
 };
