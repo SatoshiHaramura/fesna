@@ -1,21 +1,23 @@
 import { useRouter } from 'next/router';
 
 import React, { FC, useState } from 'react';
+import useLocalStorageState from 'use-local-storage-state';
 
 import MenusPage from './presenter';
 import type { CategoryWithLessons, UserSetting } from '@/types';
-import useLocalStorage from 'use-local-storage';
 
 type Props = {
   categories: CategoryWithLessons[];
 };
 
 const Index: FC<Props> = ({ categories }) => {
-  const [userSetting, setUserSetting] = useLocalStorage<UserSetting>(
+  const [userSetting, setUserSetting] = useLocalStorageState<UserSetting>(
     'userSetting',
     {
-      lessonId: 1,
-      playSound: false,
+      defaultValue: {
+        lessonId: 1,
+        playSound: false,
+      },
     }
   );
   const [category, setCategory] = useState<CategoryWithLessons>(categories[0]);

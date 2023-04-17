@@ -1,9 +1,10 @@
+import { NextPage } from 'next';
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 
 import Lessons from '@/components/pages/lessons';
 
-const LessonsPage = () => {
+const LessonsPage: NextPage = () => {
   return (
     <>
       <Head>

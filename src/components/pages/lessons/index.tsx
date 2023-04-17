@@ -1,61 +1,55 @@
-import React, { useEffect, useState } from 'react';
-import LessonsPage from './presenter';
-import useLocalStorage from 'use-local-storage';
-import {
-  filterQuestionsByLessonId,
-  findCategoryByLessonId,
-  findLessonById,
-} from '@/repositories';
-import { categoryData, lessonData, questionData } from '@/data';
-import { Question, UserSetting } from '@/types';
+import React, { FC, useEffect, useState } from 'react';
+import useLocalStorageState from 'use-local-storage-state';
 
-const Index = () => {
-  const [userSetting, setUserSetting] = useLocalStorage<UserSetting>(
+import LessonsPage from './presenter';
+import { filterQuestionsByLessonId } from '@/repositories';
+import { lessonData, questionData } from '@/data';
+import { UserSetting } from '@/types';
+
+const Index: FC = () => {
+  const [userSetting, setUserSetting] = useLocalStorageState<UserSetting>(
     'userSetting',
     {
-      lessonId: 1,
-      playSound: false,
+      defaultValue: {
+        lessonId: 1,
+        playSound: false,
+      },
     }
   );
-  const [lessonId, setLessonId] = useState<number | undefined>(undefined);
   const [judgedAnswers, setJudgedAnswers] = useState<boolean[]>([]);
-  const [filteredQuestions, setFilteredQuestions] = useState<Question[]>([]);
-
-  const lesson = findLessonById(lessonData, lessonId);
-  const category = findCategoryByLessonId(categoryData, lesson?.categoryId);
-
-  const [currentQuestion, setCurrentQuestion] = useState<Question>(
-    filteredQuestions[0]
+  const filteredQuestions = filterQuestionsByLessonId(
+    questionData,
+    userSetting.lessonId
   );
+
   const [currentQuestionNumber, setCurrentQuestionNumber] = useState<number>(1);
 
   const handleClickChoiceButton = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ): void => {
     const isCorrect: boolean =
-      event.currentTarget.value === currentQuestion.answer;
+      event.currentTarget.value ===
+      filteredQuestions[currentQuestionNumber - 1].answer;
     setJudgedAnswers([...judgedAnswers, isCorrect]);
   };
   const handleClickSameLessonButton = (): void => {
-    setJudgedAnswers([]);
     setCurrentQuestionNumber(1);
+    setJudgedAnswers([]);
   };
   const handleClickNextLessonButton = (): void => {
     let nextLessonId;
-    if (lessonId === lessonData.length) {
+    if (userSetting.lessonId === lessonData.length) {
       nextLessonId = 1;
-    } else if (lessonId !== undefined) {
-      nextLessonId = lessonId + 1;
+    } else if (userSetting.lessonId !== undefined) {
+      nextLessonId = userSetting.lessonId + 1;
     }
 
     setUserSetting({
       ...userSetting,
       lessonId: nextLessonId,
     });
-    setFilteredQuestions(filterQuestionsByLessonId(questionData, nextLessonId));
-    setLessonId(userSetting.lessonId ? nextLessonId : undefined);
-    setJudgedAnswers([]);
     setCurrentQuestionNumber(1);
+    setJudgedAnswers([]);
   };
 
   const handleClickPlaySoundButton = (): void => {
@@ -66,37 +60,23 @@ const Index = () => {
   };
 
   useEffect(() => {
-    setLessonId(userSetting.lessonId);
-
-    setFilteredQuestions(
-      filterQuestionsByLessonId(questionData, userSetting.lessonId)
-    );
-  }, [userSetting]);
-
-  useEffect(() => {
     if (judgedAnswers.length > 0) {
       setTimeout(() => {
-        setCurrentQuestion(filteredQuestions[judgedAnswers.length]);
         setCurrentQuestionNumber(judgedAnswers.length + 1);
       }, 1000);
-    } else {
-      setCurrentQuestion(filteredQuestions[0]);
     }
-  }, [judgedAnswers, filteredQuestions]);
+  }, [judgedAnswers]);
 
   return (
     <LessonsPage
-      category={category}
-      lesson={lesson}
       judgedAnswers={judgedAnswers}
       questions={filteredQuestions}
       currentQuestionNumber={currentQuestionNumber}
-      question={currentQuestion}
       handleClickChoiceButton={handleClickChoiceButton}
       handleClickSameLessonButton={handleClickSameLessonButton}
       handleClickNextLessonButton={handleClickNextLessonButton}
-      playSound={userSetting.playSound}
       handleClickPlaySoundButton={handleClickPlaySoundButton}
+      userSetting={userSetting}
     />
   );
 };
