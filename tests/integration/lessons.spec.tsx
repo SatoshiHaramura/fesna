@@ -4,7 +4,22 @@ import userEvent from '@testing-library/user-event';
 import LessonsPage from '@/pages/lessons';
 
 jest.mock('next/router', () => require('next-router-mock'));
+
+jest.mock('next/head', () => {
+  return {
+    __esModule: true,
+    default: ({ children }: { children: Array<React.ReactElement> }) => {
+      return <>{children}</>;
+    },
+  };
+});
+
 describe('lesson page', () => {
+  test('should have a title tag', () => {
+    render(<LessonsPage />);
+    expect(document.title).toBe('レッスン | Stock Word');
+  });
+
   test('answer the default lesson questions', async () => {
     render(<LessonsPage />);
 

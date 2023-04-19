@@ -6,7 +6,21 @@ import HomePage from '@/pages';
 
 jest.mock('next/router', () => require('next-router-mock'));
 
+jest.mock('next/head', () => {
+  return {
+    __esModule: true,
+    default: ({ children }: { children: Array<React.ReactElement> }) => {
+      return <>{children}</>;
+    },
+  };
+});
+
 describe('home page', () => {
+  test('should have a title tag', () => {
+    render(<HomePage />);
+    expect(document.title).toBe('Stock Word');
+  });
+
   test('click terms of use button, terms of use dialog is opened', async () => {
     render(<HomePage />);
     mockAllIsIntersecting(true);
