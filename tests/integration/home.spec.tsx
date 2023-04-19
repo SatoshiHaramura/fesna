@@ -17,4 +17,17 @@ describe('home page', () => {
       screen.getByRole('heading', { name: '利用規約' })
     ).toBeInTheDocument();
   });
+
+  test('click privacy policy button, privacy policy dialog is opened', async () => {
+    render(<HomePage />);
+    mockAllIsIntersecting(true);
+    const user = userEvent.setup();
+    const privacyPolicy = screen.getByRole('button', {
+      name: 'プライバシーポリシー',
+    });
+    await user.click(privacyPolicy);
+    expect(
+      screen.getByRole('heading', { name: 'プライバシーポリシー' })
+    ).toBeInTheDocument();
+  });
 });
