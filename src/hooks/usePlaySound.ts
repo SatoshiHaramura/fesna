@@ -1,24 +1,35 @@
 import { useEffect } from 'react';
 
+const UTTERANCE_LANG = 'en-US';
+const UTTERANCE_RATE = 1;
+const UTTERANCE_PITCH = 1;
+const UTTERANCE_VOLUME = 1;
+export const SPEECH_DELAY_TIME = 200;
+
+const createUtterance = (text: string): SpeechSynthesisUtterance => {
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = UTTERANCE_LANG;
+  utterance.rate = UTTERANCE_RATE;
+  utterance.pitch = UTTERANCE_PITCH;
+  utterance.volume = UTTERANCE_VOLUME;
+  utterance.voice = window.speechSynthesis.getVoices().filter((voice) => {
+    return voice.name === 'Alex' || voice.name === 'Samantha';
+  })[0];
+
+  return utterance;
+};
+
 export const usePlaySound = (
   soundToggle: boolean | undefined,
   text: string
-) => {
+): void => {
   useEffect(() => {
-    setTimeout(() => {
-      if (soundToggle && text) {
-        const utterance = new SpeechSynthesisUtterance();
-        utterance.text = text;
-        utterance.lang = 'en-US';
-        utterance.rate = 1;
-        utterance.pitch = 1;
-        utterance.volume = 1;
-        utterance.voice = window.speechSynthesis.getVoices().filter((voice) => {
-          return voice.name === 'Alex' || voice.name === 'Samantha';
-        })[0];
+    if (soundToggle) {
+      setTimeout(() => {
+        const utterance = createUtterance(text);
         window.speechSynthesis.speak(utterance);
-      }
-    }, 200);
+      }, SPEECH_DELAY_TIME);
+    }
 
     return () => {
       window.speechSynthesis?.cancel();

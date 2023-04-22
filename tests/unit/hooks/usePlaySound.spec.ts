@@ -1,6 +1,6 @@
 import { act, renderHook } from '@testing-library/react';
 
-import { usePlaySound } from '@/hooks/usePlaySound';
+import { SPEECH_DELAY_TIME, usePlaySound } from '@/hooks/usePlaySound';
 
 const mockSpeak = jest.fn();
 const mockCancel = jest.fn();
@@ -50,7 +50,7 @@ describe('usePlaySound function', () => {
     ]);
 
     act(() => {
-      jest.advanceTimersByTime(200);
+      jest.advanceTimersByTime(SPEECH_DELAY_TIME);
     });
     expect(mockSpeak).toHaveBeenCalledTimes(1);
   });
@@ -70,7 +70,7 @@ describe('usePlaySound function', () => {
     ]);
 
     act(() => {
-      jest.advanceTimersByTime(200);
+      jest.advanceTimersByTime(SPEECH_DELAY_TIME);
     });
     expect(mockSpeak).toHaveBeenCalledTimes(0);
   });
