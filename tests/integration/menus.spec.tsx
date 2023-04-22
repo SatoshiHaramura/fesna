@@ -6,6 +6,15 @@ import MenusPage from '@/pages/menus';
 
 jest.mock('next/router', () => require('next-router-mock'));
 
+jest.mock('next/head', () => {
+  return {
+    __esModule: true,
+    default: ({ children }: { children: Array<React.ReactElement> }) => {
+      return <>{children}</>;
+    },
+  };
+});
+
 describe('menu page', () => {
   beforeEach(() => {
     localStorage.clear();
@@ -44,6 +53,11 @@ describe('menu page', () => {
       lessons: [{ id: 10, categoryId: 4, name: '1' }],
     },
   ];
+
+  test('should have a title tag', () => {
+    render(<MenusPage categories={categories}></MenusPage>);
+    expect(document.title).toBe('メニュー | Stock Word');
+  });
 
   test('choose a verb and a lesson number, the lesson number is saved in localstorage', async () => {
     render(<MenusPage categories={categories}></MenusPage>);
