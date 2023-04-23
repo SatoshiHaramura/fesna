@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { act, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import LessonsPage from '@/pages/lessons';
@@ -285,4 +285,32 @@ describe('lesson page', () => {
     expect(currentQuestionNumber).toHaveTextContent('1');
     expect(screen.getByTestId('question-word')).toHaveTextContent('enable');
   }, 30000);
+
+  test('sound toggle switches to mute button icon when reloaded', async () => {
+    const { unmount } = render(<LessonsPage />);
+
+    const speakerXMarkButtonIcon = screen.getByRole('button', {
+      name: '音声読み上げ機能が無効になっています',
+    });
+    expect(speakerXMarkButtonIcon).toBeInTheDocument();
+
+    const user = userEvent.setup();
+    await user.click(speakerXMarkButtonIcon);
+
+    const speakerWaveButtonIcon = screen.getByRole('button', {
+      name: '音声読み上げ機能が有効になっています',
+    });
+    expect(speakerWaveButtonIcon).toBeInTheDocument();
+
+    await act(() => {
+      window.dispatchEvent(new Event('unload'));
+    });
+    unmount();
+    render(<LessonsPage />);
+
+    const reloadedspeakerXMarkButtonIcon = screen.getByRole('button', {
+      name: '音声読み上げ機能が無効になっています',
+    });
+    expect(reloadedspeakerXMarkButtonIcon).toBeInTheDocument();
+  });
 });

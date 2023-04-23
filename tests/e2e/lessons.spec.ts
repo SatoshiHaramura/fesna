@@ -235,4 +235,26 @@ test.describe('lesson page', () => {
     await page.getByRole('button', { name: 'メニュー選択へ' }).click();
     await expect(page).toHaveURL('/menus');
   });
+
+  test('sound toggle switches to mute button icon when reloaded', async ({
+    page,
+  }) => {
+    await page.goto('/lessons');
+
+    const speakerXMarkButtonIcon = page.getByRole('button', {
+      name: '音声読み上げ機能が無効になっています',
+    });
+    await expect(speakerXMarkButtonIcon).toBeVisible();
+
+    await speakerXMarkButtonIcon.click();
+
+    const speakerWaveButtonIcon = page.getByRole('button', {
+      name: '音声読み上げ機能が有効になっています',
+    });
+    await expect(speakerWaveButtonIcon).toBeVisible();
+
+    await page.reload();
+
+    await expect(speakerXMarkButtonIcon).toBeVisible();
+  });
 });

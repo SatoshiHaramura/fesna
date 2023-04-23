@@ -67,6 +67,21 @@ const Index: FC = () => {
     }
   }, [judgedAnswers]);
 
+  useEffect(() => {
+    const handleReload = () => {
+      setUserSetting({
+        ...userSetting,
+        playSound: false,
+      });
+    };
+
+    window.addEventListener('unload', handleReload);
+
+    return () => {
+      window.removeEventListener('unload', handleReload);
+    };
+  });
+
   return (
     <LessonsPage
       judgedAnswers={judgedAnswers}
