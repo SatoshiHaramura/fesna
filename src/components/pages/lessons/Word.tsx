@@ -16,7 +16,7 @@ const roboto = Roboto_Flex({
 const Word: FC<Props> = ({ partOfSpeech, word, meaning }) => {
   return (
     <>
-      <div className="flex flex-row gap-1">
+      <div className="flex flex-row gap-1" data-testid="word">
         <div className="pt-2.5">
           <div className="rounded border border-slate-400 px-1">
             {shortenPartOfSpeech(partOfSpeech)}

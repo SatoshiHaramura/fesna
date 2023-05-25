@@ -7,7 +7,11 @@ type Props = {
 };
 
 const CorrectOrIncorrectIcon: FC<Props> = ({ judgedAnswer }) => {
-  return <div>{judgedAnswer ? <CorrectIcon /> : <IncorrectIcon />}</div>;
+  return (
+    <div data-testid="correct-or-incorrect-icon">
+      {judgedAnswer ? <CorrectIcon /> : <IncorrectIcon />}
+    </div>
+  );
 };
 
 export default CorrectOrIncorrectIcon;
