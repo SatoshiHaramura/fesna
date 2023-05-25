@@ -17,12 +17,12 @@ const LessonsPageHeader: FC<Props> = ({ lessonId }) => {
   const category = findCategoryByLessonId(categoryData, lesson?.categoryId);
 
   return (
-    <div className="flex flex-row justify-center gap-2 p-4">
+    <header className="flex flex-row justify-center gap-2 p-4">
       <h1 data-testid="category">{category?.name}</h1>
       <h1 data-testid="lesson-number" className={`${roboto.className} text-lg`}>
         Lesson{lesson?.name}
       </h1>
-    </div>
+    </header>
   );
 };
 

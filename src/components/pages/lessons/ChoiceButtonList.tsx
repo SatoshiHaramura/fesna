@@ -4,7 +4,7 @@ import ChoiceButton from '@/components/pages/lessons/ChoiceButton';
 type Props = {
   choices: string[];
   handleClickChoiceButton: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  judgedAnswer: boolean;
+  judgedAnswer: boolean | undefined;
   answer: string;
 };
 
@@ -17,9 +17,12 @@ const ChoiceButtonList: FC<Props> = ({
   const correctChoiceIndex = choices?.findIndex((choice) => choice === answer);
 
   return (
-    <div className="flex flex-col items-center justify-center gap-2">
+    <ul
+      className="flex flex-col items-center justify-center gap-2"
+      data-testid="choice-button-list"
+    >
       {choices?.map((choice, index) => (
-        <div key={index}>
+        <li key={index}>
           <ChoiceButton
             choice={choice}
             handleClickChoiceButton={handleClickChoiceButton}
@@ -27,9 +30,9 @@ const ChoiceButtonList: FC<Props> = ({
             index={index}
             correctChoiceIndex={correctChoiceIndex}
           />
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 

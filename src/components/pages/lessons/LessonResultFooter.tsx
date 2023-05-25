@@ -12,7 +12,7 @@ const LessonResultFooter: FC<Props> = ({
   handleClickNextLessonButton,
 }) => {
   return (
-    <div className="sticky bottom-0 left-0 right-0 border-t border-gray-200 bg-slate-50">
+    <footer className="sticky bottom-0 left-0 right-0 border-t border-gray-200 bg-slate-50">
       <div className="flex flex-row justify-center gap-4">
         <SameLessonButton
           handleClickSameLessonButton={handleClickSameLessonButton}
@@ -24,7 +24,7 @@ const LessonResultFooter: FC<Props> = ({
       <div className="flex flex-row justify-center">
         <MenuButton />
       </div>
-    </div>
+    </footer>
   );
 };
 

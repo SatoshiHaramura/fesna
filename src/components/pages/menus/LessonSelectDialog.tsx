@@ -33,18 +33,19 @@ const LessonSelectDialog = ({
                 <br />
                 選んでください
               </Dialog.Title>
-              <div className="grid grid-cols-4 grid-rows-4 justify-items-center gap-2">
+              <ul className="grid grid-cols-4 grid-rows-4 justify-items-center gap-2">
                 {category.lessons.map((lesson) => (
-                  <button
-                    key={lesson.id}
-                    value={lesson.id}
-                    onClick={handleClickLesson}
-                    className="h-16 w-16 rounded-3xl border border-cyan-500 bg-cyan-500 bg-opacity-5 text-xl hover:bg-opacity-30"
-                  >
-                    {lesson.name}
-                  </button>
+                  <li key={lesson.id}>
+                    <button
+                      value={lesson.id}
+                      onClick={handleClickLesson}
+                      className="h-16 w-16 rounded-3xl border border-cyan-500 bg-cyan-500 bg-opacity-5 text-xl hover:bg-opacity-30"
+                    >
+                      {lesson.name}
+                    </button>
+                  </li>
                 ))}
-              </div>
+              </ul>
               <div className="py-6 text-center">
                 <button
                   onClick={onClose}
