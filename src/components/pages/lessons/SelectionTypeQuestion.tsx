@@ -11,7 +11,7 @@ type Props = {
   currentQuestionNumber: number;
   handleClickChoiceButton: (event: React.MouseEvent<HTMLButtonElement>) => void;
   judgedAnswer: boolean | undefined;
-  playSound: boolean | undefined;
+  automaticTextToSpeechMode: boolean | undefined;
   handleClickPlaySoundButton: () => void;
 };
 
@@ -20,17 +20,17 @@ const SelectionTypeQuestion: FC<Props> = ({
   currentQuestionNumber,
   handleClickChoiceButton,
   judgedAnswer,
-  playSound,
+  automaticTextToSpeechMode,
   handleClickPlaySoundButton,
 }) => {
   const currentQuestion = questions[currentQuestionNumber - 1];
-  useTextToSpeech(playSound, currentQuestion?.question);
+  useTextToSpeech(automaticTextToSpeechMode, currentQuestion?.question);
 
   return (
     <div>
       <div className="flex h-1/2 flex-row justify-between p-2">
         <SoundToggleIcon
-          playSound={playSound}
+          automaticTextToSpeechMode={automaticTextToSpeechMode}
           handleClickPlaySoundButton={handleClickPlaySoundButton}
         />
         <CurrentQuestionNumber

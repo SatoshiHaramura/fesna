@@ -37,5 +37,5 @@ export type UseExample = {
 
 export type UserSetting = {
   lessonId: number | undefined;
-  playSound: boolean | undefined;
+  automaticTextToSpeechMode: boolean | undefined;
 };

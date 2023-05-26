@@ -16,7 +16,7 @@ const Index: FC<Props> = ({ categories }) => {
     {
       defaultValue: {
         lessonId: 1,
-        playSound: false,
+        automaticTextToSpeechMode: false,
       },
     }
   );

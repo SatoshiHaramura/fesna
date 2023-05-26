@@ -3,12 +3,12 @@ import SpeakerWaveIcon from '@/components/pages/lessons/SpeakerWaveIcon';
 import SpeakerXMarkIcon from '@/components/pages/lessons/SpeakerXMarkIcon';
 
 type Props = {
-  playSound: boolean | undefined;
+  automaticTextToSpeechMode: boolean | undefined;
   handleClickPlaySoundButton: () => void;
 };
 
 const SoundToggleIcon: FC<Props> = ({
-  playSound,
+  automaticTextToSpeechMode,
   handleClickPlaySoundButton,
 }) => {
   return (
@@ -16,7 +16,7 @@ const SoundToggleIcon: FC<Props> = ({
       onClick={handleClickPlaySoundButton}
       data-testid="sound-toggle-icon"
     >
-      {playSound ? <SpeakerWaveIcon /> : <SpeakerXMarkIcon />}
+      {automaticTextToSpeechMode ? <SpeakerWaveIcon /> : <SpeakerXMarkIcon />}
     </button>
   );
 };

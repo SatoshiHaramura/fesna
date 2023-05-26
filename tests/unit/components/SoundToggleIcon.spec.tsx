@@ -4,14 +4,14 @@ import userEvent from '@testing-library/user-event';
 import SoundToggleIcon from '@/components/pages/lessons/SoundToggleIcon';
 
 describe('SoundToggleIcon component', () => {
-  describe('when playSound is true', () => {
+  describe('when automaticTextToSpeechMode is true', () => {
     test('display the speaker wave icon', () => {
-      const playSound = true;
+      const automaticTextToSpeechMode = true;
       const handleClickPlaySound = jest.fn();
 
       render(
         <SoundToggleIcon
-          playSound={playSound}
+          automaticTextToSpeechMode={automaticTextToSpeechMode}
           handleClickPlaySoundButton={handleClickPlaySound}
         />
       );
@@ -23,13 +23,13 @@ describe('SoundToggleIcon component', () => {
     });
   });
 
-  describe('when playSound is false', () => {
+  describe('when automaticTextToSpeechMode is false', () => {
     test('display the speaker x mark icon', () => {
-      const playSound = false;
+      const automaticTextToSpeechMode = false;
       const handleClickPlaySound = jest.fn();
       render(
         <SoundToggleIcon
-          playSound={playSound}
+          automaticTextToSpeechMode={automaticTextToSpeechMode}
           handleClickPlaySoundButton={handleClickPlaySound}
         />
       );
@@ -42,11 +42,11 @@ describe('SoundToggleIcon component', () => {
   });
 
   test('event handler is called when the sound toggle icon is clicked', async () => {
-    const playSound = false;
+    const automaticTextToSpeechMode = false;
     const handleClickPlaySound = jest.fn();
     render(
       <SoundToggleIcon
-        playSound={playSound}
+        automaticTextToSpeechMode={automaticTextToSpeechMode}
         handleClickPlaySoundButton={handleClickPlaySound}
       />
     );
