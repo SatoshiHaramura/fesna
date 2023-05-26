@@ -4,7 +4,7 @@ import CurrentQuestionNumber from '@/components/pages/lessons/CurrentQuestionNum
 import QuestionWord from '@/components/pages/lessons/QuestionWord';
 import ChoiceButtonList from '@/components/pages/lessons/ChoiceButtonList';
 import { Question } from '@/types';
-import { usePlaySound } from '@/hooks/usePlaySound';
+import { useTextToSpeech } from '@/hooks/useTextToSpeech';
 
 type Props = {
   questions: Question[];
@@ -24,7 +24,7 @@ const SelectionTypeQuestion: FC<Props> = ({
   handleClickPlaySoundButton,
 }) => {
   const currentQuestion = questions[currentQuestionNumber - 1];
-  usePlaySound(playSound, currentQuestion?.question);
+  useTextToSpeech(playSound, currentQuestion?.question);
 
   return (
     <div>

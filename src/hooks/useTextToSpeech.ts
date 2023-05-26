@@ -19,7 +19,7 @@ const createUtterance = (text: string): SpeechSynthesisUtterance => {
   return utterance;
 };
 
-export const usePlaySound = (
+export const useTextToSpeech = (
   soundToggle: boolean | undefined,
   text: string
 ): void => {

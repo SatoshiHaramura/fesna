@@ -1,6 +1,6 @@
 import { act, renderHook } from '@testing-library/react';
 
-import { SPEECH_DELAY_TIME, usePlaySound } from '@/hooks/usePlaySound';
+import { SPEECH_DELAY_TIME, useTextToSpeech } from '@/hooks/useTextToSpeech';
 
 const mockSpeak = jest.fn();
 const mockCancel = jest.fn();
@@ -24,7 +24,7 @@ const mockSpeechSynthesis: SpeechSynthesis = {
 global.SpeechSynthesisUtterance = jest.fn();
 global.speechSynthesis = mockSpeechSynthesis;
 
-describe('usePlaySound function', () => {
+describe('useTextToSpeech function', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     jest.useFakeTimers();
@@ -38,7 +38,7 @@ describe('usePlaySound function', () => {
   test('text should be spoken when soundToggle is true', async () => {
     const soundToggle = true;
     const text = 'include';
-    renderHook(() => usePlaySound(soundToggle, text));
+    renderHook(() => useTextToSpeech(soundToggle, text));
     mockGetVoices.mockReturnValue([
       {
         name: 'Samantha',
@@ -58,7 +58,7 @@ describe('usePlaySound function', () => {
   test('text should not be spoken when soundToggle is false', async () => {
     const soundToggle = false;
     const text = 'include';
-    renderHook(() => usePlaySound(soundToggle, text));
+    renderHook(() => useTextToSpeech(soundToggle, text));
     mockGetVoices.mockReturnValue([
       {
         name: 'Samantha',
@@ -78,7 +78,7 @@ describe('usePlaySound function', () => {
   test('should cancel speech when unmount', async () => {
     const soundToggle = true;
     const text = 'include';
-    const { unmount } = renderHook(() => usePlaySound(soundToggle, text));
+    const { unmount } = renderHook(() => useTextToSpeech(soundToggle, text));
     mockGetVoices.mockReturnValue([
       {
         name: 'Samantha',
