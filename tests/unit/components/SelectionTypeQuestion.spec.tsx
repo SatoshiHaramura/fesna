@@ -56,7 +56,7 @@ describe('SelectionTypeQuestion component', () => {
   const currentQuestionNumber = 1;
   const handleClickChoiceButton = jest.fn();
   const judgedAnswer: boolean | undefined = undefined;
-  const playSound = false;
+  const automaticTextToSpeechMode = false;
   const handleClickPlaySoundButton = jest.fn();
 
   let renderResult: RenderResult;
@@ -67,7 +67,7 @@ describe('SelectionTypeQuestion component', () => {
         currentQuestionNumber={currentQuestionNumber}
         handleClickChoiceButton={handleClickChoiceButton}
         judgedAnswer={judgedAnswer}
-        playSound={playSound}
+        automaticTextToSpeechMode={automaticTextToSpeechMode}
         handleClickPlaySoundButton={handleClickPlaySoundButton}
       />
     );

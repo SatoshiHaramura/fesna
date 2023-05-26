@@ -62,7 +62,7 @@ describe('menu page', () => {
   test('choose a verb and a lesson number, the lesson number is saved in localstorage', async () => {
     render(<MenusPage categories={categories}></MenusPage>);
     expect(localStorage.getItem('userSetting')).toEqual(
-      JSON.stringify({ lessonId: 1, playSound: false })
+      JSON.stringify({ lessonId: 1, automaticTextToSpeechMode: false })
     );
     mockAllIsIntersecting(true);
 
@@ -81,14 +81,14 @@ describe('menu page', () => {
 
     await user.click(screen.getByRole('button', { name: '4' }));
     expect(localStorage.getItem('userSetting')).toEqual(
-      JSON.stringify({ lessonId: 4, playSound: false })
+      JSON.stringify({ lessonId: 4, automaticTextToSpeechMode: false })
     );
   });
 
   test('choose a noun and a lesson number, the lesson number is saved in localstorage', async () => {
     render(<MenusPage categories={categories}></MenusPage>);
     expect(localStorage.getItem('userSetting')).toEqual(
-      JSON.stringify({ lessonId: 1, playSound: false })
+      JSON.stringify({ lessonId: 1, automaticTextToSpeechMode: false })
     );
     mockAllIsIntersecting(true);
 
@@ -106,14 +106,14 @@ describe('menu page', () => {
 
     await user.click(screen.getByRole('button', { name: '3' }));
     expect(localStorage.getItem('userSetting')).toEqual(
-      JSON.stringify({ lessonId: 7, playSound: false })
+      JSON.stringify({ lessonId: 7, automaticTextToSpeechMode: false })
     );
   });
 
   test('choose a adjective and a lesson number, the lesson number is saved in localstorage', async () => {
     render(<MenusPage categories={categories}></MenusPage>);
     expect(localStorage.getItem('userSetting')).toEqual(
-      JSON.stringify({ lessonId: 1, playSound: false })
+      JSON.stringify({ lessonId: 1, automaticTextToSpeechMode: false })
     );
     mockAllIsIntersecting(true);
 
@@ -130,14 +130,14 @@ describe('menu page', () => {
 
     await user.click(screen.getByRole('button', { name: '2' }));
     expect(localStorage.getItem('userSetting')).toEqual(
-      JSON.stringify({ lessonId: 9, playSound: false })
+      JSON.stringify({ lessonId: 9, automaticTextToSpeechMode: false })
     );
   });
 
   test('choose a adverb and a lesson number, the lesson number is saved in localstorage', async () => {
     render(<MenusPage categories={categories}></MenusPage>);
     expect(localStorage.getItem('userSetting')).toEqual(
-      JSON.stringify({ lessonId: 1, playSound: false })
+      JSON.stringify({ lessonId: 1, automaticTextToSpeechMode: false })
     );
     mockAllIsIntersecting(true);
 
@@ -153,7 +153,7 @@ describe('menu page', () => {
 
     await user.click(screen.getByRole('button', { name: '1' }));
     expect(localStorage.getItem('userSetting')).toEqual(
-      JSON.stringify({ lessonId: 10, playSound: false })
+      JSON.stringify({ lessonId: 10, automaticTextToSpeechMode: false })
     );
   });
 });
