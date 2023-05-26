@@ -12,7 +12,10 @@ const SoundToggleIcon: FC<Props> = ({
   handleClickPlaySoundButton,
 }) => {
   return (
-    <button onClick={handleClickPlaySoundButton}>
+    <button
+      onClick={handleClickPlaySoundButton}
+      data-testid="sound-toggle-icon"
+    >
       {playSound ? <SpeakerWaveIcon /> : <SpeakerXMarkIcon />}
     </button>
   );

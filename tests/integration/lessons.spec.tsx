@@ -15,6 +15,10 @@ jest.mock('next/head', () => {
 });
 
 describe('lesson page', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
   test('should have a title tag', () => {
     render(<LessonsPage />);
     expect(document.title).toBe('レッスン | Stock Word');
@@ -285,6 +289,23 @@ describe('lesson page', () => {
     expect(currentQuestionNumber).toHaveTextContent('1');
     expect(screen.getByTestId('question-word')).toHaveTextContent('enable');
   }, 30000);
+
+  test('the speaker x mark icon switches to the speaker wave icon when the sound toggle button is clicked', async () => {
+    render(<LessonsPage />);
+
+    const speakerXMarkButtonIcon = screen.getByRole('button', {
+      name: '音声読み上げ機能が無効になっています',
+    });
+    expect(speakerXMarkButtonIcon).toBeInTheDocument();
+
+    const user = userEvent.setup();
+    await user.click(speakerXMarkButtonIcon);
+
+    const speakerWaveButtonIcon = screen.getByRole('button', {
+      name: '音声読み上げ機能が有効になっています',
+    });
+    expect(speakerWaveButtonIcon).toBeInTheDocument();
+  });
 
   test('sound toggle switches to mute button icon when reloaded', async () => {
     const { unmount } = render(<LessonsPage />);

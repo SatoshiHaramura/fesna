@@ -10,7 +10,7 @@ type Props = {
   questions: Question[];
   currentQuestionNumber: number;
   handleClickChoiceButton: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  judgedAnswer: boolean;
+  judgedAnswer: boolean | undefined;
   playSound: boolean | undefined;
   handleClickPlaySoundButton: () => void;
 };

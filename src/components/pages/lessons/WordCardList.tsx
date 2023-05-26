@@ -9,15 +9,15 @@ type Props = {
 
 const WordCardList: FC<Props> = ({ questions, judgedAnswers }) => {
   return (
-    <div>
+    <ul data-testid="word-card-list">
       {questions.map((question, index) => {
         return (
-          <div key={question.id}>
+          <li key={question.id}>
             <WordCard question={question} judgedAnswer={judgedAnswers[index]} />
-          </div>
+          </li>
         );
       })}
-    </div>
+    </ul>
   );
 };
 

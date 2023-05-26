@@ -25,32 +25,40 @@ const HomePageFooter: FC<Props> = ({
   return (
     <footer>
       <div className="absolute bottom-0 left-0 right-0 border-t border-gray-100 bg-slate-50 p-2">
-        <div className="flex flex-row justify-center gap-4 p-0.5">
-          <button
-            onClick={handleClickTermsOfUse}
-            className="text-xs text-gray-600 hover:underline"
-          >
-            利用規約
-          </button>
-          <TermsOfUseDialog
-            isOpen={isTermsOfUseDialogOpen}
-            onClose={onCloseTermsOfUseDialog}
-          />
-          <button
-            onClick={handleClickPrivacyPolicy}
-            className="text-xs text-gray-600 hover:underline"
-          >
-            プライバシーポリシー
-          </button>
-          <PrivacyPolicyDialog
-            isOpen={isPrivacyPolicyDialogOpen}
-            onClose={onClosePrivacyPolicyDialog}
-          />
-        </div>
-        <div className="flex flex-row justify-center gap-4 p-0.5">
-          <GithubIcon />
-          <TwitterIcon />
-        </div>
+        <ul className="flex flex-row justify-center gap-4 p-0.5">
+          <li>
+            <button
+              onClick={handleClickTermsOfUse}
+              className="text-xs text-gray-600 hover:underline"
+            >
+              利用規約
+            </button>
+            <TermsOfUseDialog
+              isOpen={isTermsOfUseDialogOpen}
+              onClose={onCloseTermsOfUseDialog}
+            />
+          </li>
+          <li>
+            <button
+              onClick={handleClickPrivacyPolicy}
+              className="text-xs text-gray-600 hover:underline"
+            >
+              プライバシーポリシー
+            </button>
+            <PrivacyPolicyDialog
+              isOpen={isPrivacyPolicyDialogOpen}
+              onClose={onClosePrivacyPolicyDialog}
+            />
+          </li>
+        </ul>
+        <ul className="flex flex-row justify-center gap-4 p-0.5">
+          <li>
+            <GithubIcon />
+          </li>
+          <li>
+            <TwitterIcon />
+          </li>
+        </ul>
         <div className="p-0.5 text-center text-xs text-gray-600">
           © 2023 s_haramura
         </div>

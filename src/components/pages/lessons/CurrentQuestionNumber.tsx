@@ -12,7 +12,8 @@ const CurrentQuestionNumber: FC<Props> = ({
   return (
     <div>
       <span data-testid="current-question-number">{currentQuestionNumber}</span>
-      /{numberOfQuestions}
+      <span>/</span>
+      <span data-testid="number-of-questions">{numberOfQuestions}</span>
     </div>
   );
 };
