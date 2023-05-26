@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import ChoiceButton from '@/components/pages/lessons/ChoiceButton';
 
@@ -6,7 +7,7 @@ describe('ChoiceButton component', () => {
   test('choice button for unanswered status', async () => {
     const choice = 'を含む';
     const handleClickChoiceButton = jest.fn();
-    const judgedAnswer = undefined;
+    const judgedAnswer: undefined | boolean = undefined;
     const index = 0;
     const correctChoiceIndex = 0;
     render(
@@ -52,7 +53,7 @@ describe('ChoiceButton component', () => {
   test('choice button for incorrect answer', async () => {
     const choice = 'を含む';
     const handleClickChoiceButton = jest.fn();
-    const judgedAnswer = false;
+    const judgedAnswer: undefined | boolean = false;
     const index = 0;
     const correctChoiceIndex = 1;
     render(
@@ -70,5 +71,27 @@ describe('ChoiceButton component', () => {
     await expect(screen.getByRole('button')).toHaveClass(
       'bg-slate-50 bg-opacity-80 border-slate-200 text-gray-400'
     );
+  });
+
+  test('event handler is called when the choice button is clicked', async () => {
+    const choice = 'を含む';
+    const handleClickChoiceButton = jest.fn();
+    const judgedAnswer: undefined | boolean = undefined;
+    const index = 0;
+    const correctChoiceIndex = 1;
+    render(
+      <ChoiceButton
+        choice={choice}
+        handleClickChoiceButton={handleClickChoiceButton}
+        judgedAnswer={judgedAnswer}
+        index={index}
+        correctChoiceIndex={correctChoiceIndex}
+      />
+    );
+
+    const user = userEvent.setup();
+    await user.click(screen.getByRole('button'));
+
+    expect(handleClickChoiceButton).toHaveBeenCalledTimes(1);
   });
 });
