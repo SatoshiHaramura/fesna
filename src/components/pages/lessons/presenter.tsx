@@ -36,7 +36,7 @@ const Presenter: FC<Props> = ({
               currentQuestionNumber={currentQuestionNumber}
               handleClickChoiceButton={handleClickChoiceButton}
               judgedAnswer={judgedAnswers[currentQuestionNumber - 1]}
-              playSound={userSetting.playSound}
+              automaticTextToSpeechMode={userSetting?.automaticTextToSpeechMode}
               handleClickPlaySoundButton={handleClickPlaySoundButton}
             />
           ) : (

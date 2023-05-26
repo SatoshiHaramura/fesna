@@ -12,7 +12,7 @@ const Index: FC = () => {
     {
       defaultValue: {
         lessonId: 1,
-        playSound: false,
+        automaticTextToSpeechMode: false,
       },
     }
   );
@@ -55,7 +55,7 @@ const Index: FC = () => {
   const handleClickPlaySoundButton = (): void => {
     setUserSetting({
       ...userSetting,
-      playSound: !userSetting.playSound,
+      automaticTextToSpeechMode: !userSetting.automaticTextToSpeechMode,
     });
   };
 
@@ -71,7 +71,7 @@ const Index: FC = () => {
     const handleReload = () => {
       setUserSetting({
         ...userSetting,
-        playSound: false,
+        automaticTextToSpeechMode: false,
       });
     };
 
