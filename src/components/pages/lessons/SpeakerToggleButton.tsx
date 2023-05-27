@@ -14,7 +14,7 @@ const SpeakerToggleButton: FC<Props> = ({
   return (
     <button
       onClick={handleClickPlaySoundButton}
-      data-testid="sound-toggle-icon"
+      data-testid="speaker-toggle-button"
     >
       {automaticTextToSpeechMode ? <SpeakerWaveIcon /> : <SpeakerXMarkIcon />}
     </button>
