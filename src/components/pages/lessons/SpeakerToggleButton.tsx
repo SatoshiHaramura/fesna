@@ -7,7 +7,7 @@ type Props = {
   handleClickPlaySoundButton: () => void;
 };
 
-const SoundToggleIcon: FC<Props> = ({
+const SpeakerToggleButton: FC<Props> = ({
   automaticTextToSpeechMode,
   handleClickPlaySoundButton,
 }) => {
@@ -21,4 +21,4 @@ const SoundToggleIcon: FC<Props> = ({
   );
 };
 
-export default SoundToggleIcon;
+export default SpeakerToggleButton;
