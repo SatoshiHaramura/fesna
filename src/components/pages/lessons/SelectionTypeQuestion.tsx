@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import SoundToggleIcon from '@/components/pages/lessons/SoundToggleIcon';
+import SpeakerToggleButton from '@/components/pages/lessons/SpeakerToggleButton';
 import CurrentQuestionNumber from '@/components/pages/lessons/CurrentQuestionNumber';
 import QuestionWord from '@/components/pages/lessons/QuestionWord';
 import ChoiceButtonList from '@/components/pages/lessons/ChoiceButtonList';
@@ -29,7 +29,7 @@ const SelectionTypeQuestion: FC<Props> = ({
   return (
     <div>
       <div className="flex h-1/2 flex-row justify-between p-2">
-        <SoundToggleIcon
+        <SpeakerToggleButton
           automaticTextToSpeechMode={automaticTextToSpeechMode}
           handleClickPlaySoundButton={handleClickPlaySoundButton}
         />
