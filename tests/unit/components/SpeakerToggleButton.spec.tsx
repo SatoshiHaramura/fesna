@@ -1,16 +1,16 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import SoundToggleIcon from '@/components/pages/lessons/SoundToggleIcon';
+import SpeakerToggleButton from '@/components/pages/lessons/SpeakerToggleButton';
 
-describe('SoundToggleIcon component', () => {
+describe('SpeakerToggleButton component', () => {
   describe('when automaticTextToSpeechMode is true', () => {
     test('display the speaker wave icon', () => {
       const automaticTextToSpeechMode = true;
       const handleClickPlaySound = jest.fn();
 
       render(
-        <SoundToggleIcon
+        <SpeakerToggleButton
           automaticTextToSpeechMode={automaticTextToSpeechMode}
           handleClickPlaySoundButton={handleClickPlaySound}
         />
@@ -28,7 +28,7 @@ describe('SoundToggleIcon component', () => {
       const automaticTextToSpeechMode = false;
       const handleClickPlaySound = jest.fn();
       render(
-        <SoundToggleIcon
+        <SpeakerToggleButton
           automaticTextToSpeechMode={automaticTextToSpeechMode}
           handleClickPlaySoundButton={handleClickPlaySound}
         />
@@ -41,19 +41,19 @@ describe('SoundToggleIcon component', () => {
     });
   });
 
-  test('event handler is called when the sound toggle icon is clicked', async () => {
+  test('event handler is called when the speaker toggle button is clicked', async () => {
     const automaticTextToSpeechMode = false;
     const handleClickPlaySound = jest.fn();
     render(
-      <SoundToggleIcon
+      <SpeakerToggleButton
         automaticTextToSpeechMode={automaticTextToSpeechMode}
         handleClickPlaySoundButton={handleClickPlaySound}
       />
     );
 
     const user = userEvent.setup();
-    const soundToggleIcon = screen.getByTestId('sound-toggle-icon');
-    await user.click(soundToggleIcon);
+    const speakerToggleButton = screen.getByTestId('speaker-toggle-button');
+    await user.click(speakerToggleButton);
 
     expect(handleClickPlaySound).toHaveBeenCalledTimes(1);
   });

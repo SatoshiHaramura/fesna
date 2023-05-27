@@ -236,7 +236,7 @@ test.describe('lesson page', () => {
     await expect(page).toHaveURL('/menus');
   });
 
-  test('sound toggle switches to mute button icon when reloaded', async ({
+  test('the speaker toggle button switches to the speaker x mark icon button when reloaded', async ({
     page,
   }) => {
     await page.goto('/lessons');

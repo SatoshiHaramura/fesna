@@ -290,7 +290,7 @@ describe('lesson page', () => {
     expect(screen.getByTestId('question-word')).toHaveTextContent('enable');
   }, 30000);
 
-  test('the speaker x mark icon switches to the speaker wave icon when the sound toggle button is clicked', async () => {
+  test('the speaker x mark icon switches to the speaker wave icon when the speaker toggle button is clicked', async () => {
     render(<LessonsPage />);
 
     const speakerXMarkButtonIcon = screen.getByRole('button', {
@@ -307,7 +307,7 @@ describe('lesson page', () => {
     expect(speakerWaveButtonIcon).toBeInTheDocument();
   });
 
-  test('sound toggle switches to mute button icon when reloaded', async () => {
+  test('the speaker toggle icon button switches to the speaker x mark button icon when reloaded', async () => {
     const { unmount } = render(<LessonsPage />);
 
     const speakerXMarkButtonIcon = screen.getByRole('button', {
