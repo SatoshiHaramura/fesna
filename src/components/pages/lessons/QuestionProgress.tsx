@@ -5,7 +5,7 @@ type Props = {
   currentQuestionNumber: number;
 };
 
-const CurrentQuestionNumber: FC<Props> = ({
+const QuestionProgress: FC<Props> = ({
   numberOfQuestions,
   currentQuestionNumber,
 }) => {
@@ -18,4 +18,4 @@ const CurrentQuestionNumber: FC<Props> = ({
   );
 };
 
-export default CurrentQuestionNumber;
+export default QuestionProgress;
