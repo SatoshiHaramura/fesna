@@ -20,11 +20,11 @@ const createUtterance = (text: string): SpeechSynthesisUtterance => {
 };
 
 export const useTextToSpeech = (
-  soundToggle: boolean | undefined,
+  automaticTextToSpeechMode: boolean | undefined,
   text: string
 ): void => {
   useEffect(() => {
-    if (soundToggle) {
+    if (automaticTextToSpeechMode) {
       setTimeout(() => {
         const utterance = createUtterance(text);
         window.speechSynthesis.speak(utterance);
@@ -34,5 +34,5 @@ export const useTextToSpeech = (
     return () => {
       window.speechSynthesis?.cancel();
     };
-  }, [soundToggle, text]);
+  }, [automaticTextToSpeechMode, text]);
 };
