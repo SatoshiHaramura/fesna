@@ -76,9 +76,11 @@ describe('SelectionTypeQuestion component', () => {
     renderResult.unmount();
   });
 
-  test('display the sound toggle icon', () => {
-    const soundToggleIcon = renderResult.getByTestId('sound-toggle-icon');
-    expect(soundToggleIcon).toBeInTheDocument();
+  test('display the speaker toggle button', () => {
+    const speakerToggleButton = renderResult.getByTestId(
+      'speaker-toggle-button'
+    );
+    expect(speakerToggleButton).toBeInTheDocument();
   });
 
   test('display the current question number', () => {
