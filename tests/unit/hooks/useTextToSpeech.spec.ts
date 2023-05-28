@@ -35,10 +35,10 @@ describe('useTextToSpeech function', () => {
     jest.useRealTimers();
   });
 
-  test('text should be spoken when soundToggle is true', async () => {
-    const soundToggle = true;
+  test('text should be spoken when automaticTextToSpeechMode is true', async () => {
+    const automaticTextToSpeechMode = true;
     const text = 'include';
-    renderHook(() => useTextToSpeech(soundToggle, text));
+    renderHook(() => useTextToSpeech(automaticTextToSpeechMode, text));
     mockGetVoices.mockReturnValue([
       {
         name: 'Samantha',
@@ -55,10 +55,10 @@ describe('useTextToSpeech function', () => {
     expect(mockSpeak).toHaveBeenCalledTimes(1);
   });
 
-  test('text should not be spoken when soundToggle is false', async () => {
-    const soundToggle = false;
+  test('text should not be spoken when automaticTextToSpeechMode is false', async () => {
+    const automaticTextToSpeechMode = false;
     const text = 'include';
-    renderHook(() => useTextToSpeech(soundToggle, text));
+    renderHook(() => useTextToSpeech(automaticTextToSpeechMode, text));
     mockGetVoices.mockReturnValue([
       {
         name: 'Samantha',
@@ -76,9 +76,11 @@ describe('useTextToSpeech function', () => {
   });
 
   test('should cancel speech when unmount', async () => {
-    const soundToggle = true;
+    const automaticTextToSpeechMode = true;
     const text = 'include';
-    const { unmount } = renderHook(() => useTextToSpeech(soundToggle, text));
+    const { unmount } = renderHook(() =>
+      useTextToSpeech(automaticTextToSpeechMode, text)
+    );
     mockGetVoices.mockReturnValue([
       {
         name: 'Samantha',
