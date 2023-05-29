@@ -5,10 +5,7 @@ type Props = {
   numberOfQuestions: number;
 };
 
-const CorrectAnswerNumber: FC<Props> = ({
-  judgedAnswers,
-  numberOfQuestions,
-}) => {
+const Score: FC<Props> = ({ judgedAnswers, numberOfQuestions }) => {
   const correctAnswerNumber = judgedAnswers.filter(
     (judgedAnswer) => judgedAnswer
   ).length;
@@ -24,4 +21,4 @@ const CorrectAnswerNumber: FC<Props> = ({
   );
 };
 
-export default CorrectAnswerNumber;
+export default Score;
