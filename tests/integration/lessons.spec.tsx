@@ -121,7 +121,7 @@ describe('lesson page', () => {
     expect(correctMarkOrIncorrectMark).toHaveTextContent('○');
 
     await waitFor(() => {
-      expect(screen.getByTestId('correct-answer-number')).toHaveTextContent(
+      expect(screen.getByTestId('number-of-correct-answers')).toHaveTextContent(
         '10'
       );
     });
