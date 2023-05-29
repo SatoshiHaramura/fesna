@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import SpeakerToggleButton from '@/components/pages/lessons/SpeakerToggleButton';
-import CurrentQuestionNumber from '@/components/pages/lessons/CurrentQuestionNumber';
+import QuestionProgress from '@/components/pages/lessons/QuestionProgress';
 import QuestionWord from '@/components/pages/lessons/QuestionWord';
 import ChoiceButtonList from '@/components/pages/lessons/ChoiceButtonList';
 import { Question } from '@/types';
@@ -33,7 +33,7 @@ const SelectionTypeQuestion: FC<Props> = ({
           automaticTextToSpeechMode={automaticTextToSpeechMode}
           handleClickPlaySoundButton={handleClickPlaySoundButton}
         />
-        <CurrentQuestionNumber
+        <QuestionProgress
           numberOfQuestions={questions.length}
           currentQuestionNumber={currentQuestionNumber}
         />
