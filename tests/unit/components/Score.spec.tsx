@@ -1,15 +1,15 @@
 import { render, RenderResult } from '@testing-library/react';
 
-import CorrectAnswerNumber from '@/components/pages/lessons/CorrectAnswerNumber';
+import Score from '@/components/pages/lessons/Score';
 
-describe('CorrectAnswerNumber component', () => {
+describe('Score component', () => {
   const judgedAnswers: boolean[] = [true, false];
   const numberOfQuestions = 2;
 
   let renderResult: RenderResult;
   beforeEach(() => {
     renderResult = render(
-      <CorrectAnswerNumber
+      <Score
         judgedAnswers={judgedAnswers}
         numberOfQuestions={numberOfQuestions}
       />
