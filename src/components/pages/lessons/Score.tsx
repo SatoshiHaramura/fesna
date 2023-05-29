@@ -11,7 +11,7 @@ const Score: FC<Props> = ({ judgedAnswers, numberOfQuestions }) => {
   ).length;
 
   return (
-    <div className="text-center">
+    <div className="text-center" data-testid="score">
       <span className="text-3xl" data-testid="correct-answer-number">
         {correctAnswerNumber}
       </span>
