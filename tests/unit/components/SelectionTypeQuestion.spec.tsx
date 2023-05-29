@@ -77,24 +77,24 @@ describe('SelectionTypeQuestion component', () => {
       renderResult.unmount();
     });
 
-    test('display the speaker toggle button', () => {
+    test('display the speaker toggle button component', () => {
       const speakerToggleButton = renderResult.getByTestId(
         'speaker-toggle-button'
       );
       expect(speakerToggleButton).toBeInTheDocument();
     });
 
-    test('display the question progress', () => {
+    test('display the question progress component', () => {
       const questionProgress = renderResult.getByTestId('question-progress');
       expect(questionProgress).toBeInTheDocument();
     });
 
-    test('display the question word', () => {
+    test('display the question word component', () => {
       const questionWord = renderResult.getByTestId('question-word');
       expect(questionWord).toBeInTheDocument();
     });
 
-    test('display the choice button list', () => {
+    test('display the choice button list component', () => {
       const choiceButtonList = renderResult.getByTestId('choice-button-list');
       expect(choiceButtonList).toBeInTheDocument();
     });
