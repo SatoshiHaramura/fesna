@@ -1,15 +1,15 @@
 import { render, RenderResult } from '@testing-library/react';
 
-import CurrentQuestionNumber from '@/components/pages/lessons/CurrentQuestionNumber';
+import QuestionProgress from '@/components/pages/lessons/QuestionProgress';
 
-describe('CurrentQuestionNumber component', () => {
+describe('QuestionProgress component', () => {
   const numberOfQuestions = 2;
   const currentQuestionNumber = 1;
 
   let renderResult: RenderResult;
   beforeEach(() => {
     renderResult = render(
-      <CurrentQuestionNumber
+      <QuestionProgress
         numberOfQuestions={numberOfQuestions}
         currentQuestionNumber={currentQuestionNumber}
       />

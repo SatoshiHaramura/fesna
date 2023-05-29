@@ -5,12 +5,12 @@ type Props = {
   currentQuestionNumber: number;
 };
 
-const CurrentQuestionNumber: FC<Props> = ({
+const QuestionProgress: FC<Props> = ({
   numberOfQuestions,
   currentQuestionNumber,
 }) => {
   return (
-    <div>
+    <div data-testid="question-progress">
       <span data-testid="current-question-number">{currentQuestionNumber}</span>
       <span>/</span>
       <span data-testid="number-of-questions">{numberOfQuestions}</span>
@@ -18,4 +18,4 @@ const CurrentQuestionNumber: FC<Props> = ({
   );
 };
 
-export default CurrentQuestionNumber;
+export default QuestionProgress;
