@@ -12,7 +12,7 @@ const Score: FC<Props> = ({ judgedAnswers, numberOfQuestions }) => {
 
   return (
     <div className="text-center" data-testid="score">
-      <span className="text-3xl" data-testid="correct-answer-number">
+      <span className="text-3xl" data-testid="number-of-correct-answers">
         {correctAnswerNumber}
       </span>
       <span> / </span>
