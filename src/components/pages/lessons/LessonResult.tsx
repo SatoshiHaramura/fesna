@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import CorrectAnswerNumber from '@/components/pages/lessons/CorrectAnswerNumber';
+import Score from '@/components/pages/lessons/Score';
 import WordCardList from '@/components/pages/lessons/WordCardList';
 import LessonResultFooter from '@/components/pages/lessons/LessonResultFooter';
 import { Question } from '@/types';
@@ -20,7 +20,7 @@ const LessonResult: FC<Props> = ({
   return (
     <div className="relative">
       <div className="p-4">
-        <CorrectAnswerNumber
+        <Score
           judgedAnswers={judgedAnswers}
           numberOfQuestions={questions.length}
         />
