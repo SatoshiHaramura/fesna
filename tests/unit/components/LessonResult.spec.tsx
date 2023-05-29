@@ -73,17 +73,17 @@ describe('LessonResultFooter component', () => {
       renderResult.unmount();
     });
 
-    test('display the score', () => {
+    test('display the score component', () => {
       const score = renderResult.getByTestId('score');
       expect(score).toBeInTheDocument();
     });
 
-    test('display the word card list', () => {
+    test('display the word card list component', () => {
       const wordCardList = renderResult.getByTestId('word-card-list');
       expect(wordCardList).toBeInTheDocument();
     });
 
-    test('display the lesson result footer', () => {
+    test('display the lesson result footer component', () => {
       const lessonResultFooter = renderResult.getByRole('contentinfo');
       expect(lessonResultFooter).toBeInTheDocument();
     });
