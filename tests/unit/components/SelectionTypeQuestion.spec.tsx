@@ -83,16 +83,9 @@ describe('SelectionTypeQuestion component', () => {
     expect(speakerToggleButton).toBeInTheDocument();
   });
 
-  test('display the current question number', () => {
-    const currentQuestionNumber = renderResult.getByTestId(
-      'current-question-number'
-    );
-    expect(currentQuestionNumber).toBeInTheDocument();
-  });
-
-  test('display the number of questions', () => {
-    const numberOfQuestions = renderResult.getByTestId('number-of-questions');
-    expect(numberOfQuestions).toBeInTheDocument();
+  test('display the question progress', () => {
+    const questionProgress = renderResult.getByTestId('question-progress');
+    expect(questionProgress).toBeInTheDocument();
   });
 
   test('display the question word', () => {
