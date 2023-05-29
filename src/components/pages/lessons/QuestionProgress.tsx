@@ -10,7 +10,7 @@ const QuestionProgress: FC<Props> = ({
   currentQuestionNumber,
 }) => {
   return (
-    <div>
+    <div data-testid="question-progress">
       <span data-testid="current-question-number">{currentQuestionNumber}</span>
       <span>/</span>
       <span data-testid="number-of-questions">{numberOfQuestions}</span>
