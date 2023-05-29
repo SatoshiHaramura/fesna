@@ -72,16 +72,9 @@ describe('LessonResultFooter component', () => {
     renderResult.unmount();
   });
 
-  test('display the number of correct answers', () => {
-    const correctAnswerNumber = renderResult.getByTestId(
-      'correct-answer-number'
-    );
-    expect(correctAnswerNumber).toBeInTheDocument();
-  });
-
-  test('display the number of questions', () => {
-    const numberOfQuestions = renderResult.getByTestId('number-of-questions');
-    expect(numberOfQuestions).toBeInTheDocument();
+  test('display the score', () => {
+    const score = renderResult.getByTestId('score');
+    expect(score).toBeInTheDocument();
   });
 
   test('display the word card list', () => {
