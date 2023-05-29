@@ -76,8 +76,10 @@ test.describe('lesson page', () => {
     await expect(correctMark).toBeVisible();
     await expect(incorrectMark).toBeHidden();
 
-    const correctAnswerNumber = page.getByTestId('correct-answer-number');
-    await expect(correctAnswerNumber).toHaveText('10');
+    const numberOfCorrectAnswers = page.getByTestId(
+      'number-of-correct-answers'
+    );
+    await expect(numberOfCorrectAnswers).toHaveText('10');
     correctMark = page.getByText('○');
     incorrectMark = page.getByText('×');
     await expect(correctMark).toHaveCount(10);

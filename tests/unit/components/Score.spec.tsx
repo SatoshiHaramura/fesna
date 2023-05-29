@@ -20,10 +20,10 @@ describe('Score component', () => {
   });
 
   test('display the number of correct answers', () => {
-    const correctAnswerNumber = renderResult.getByTestId(
-      'correct-answer-number'
+    const numberOfCorrectAnswers = renderResult.getByTestId(
+      'number-of-correct-answers'
     );
-    expect(correctAnswerNumber).toHaveTextContent('1');
+    expect(numberOfCorrectAnswers).toHaveTextContent('1');
   });
 
   test('display the number of questions', () => {
