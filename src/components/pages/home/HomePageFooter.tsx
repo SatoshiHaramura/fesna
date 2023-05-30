@@ -5,49 +5,43 @@ import PrivacyPolicyDialog from '@/components/pages/home/PrivacyPolicyDialog';
 import GithubIcon from '@/components/pages/home/GithubIcon';
 import TwitterIcon from '@/components/pages/home/TwitterIcon';
 
-type Props = {
-  isTermsOfUseDialogOpen: boolean;
-  handleClickTermsOfUse: () => void;
-  onCloseTermsOfUseDialog: () => void;
-  isPrivacyPolicyDialogOpen: boolean;
-  handleClickPrivacyPolicy: () => void;
-  onClosePrivacyPolicyDialog: () => void;
-};
+import useDialog from '@/hooks/useDialog';
 
-const HomePageFooter: FC<Props> = ({
-  isTermsOfUseDialogOpen,
-  handleClickTermsOfUse,
-  onCloseTermsOfUseDialog,
-  isPrivacyPolicyDialogOpen,
-  handleClickPrivacyPolicy,
-  onClosePrivacyPolicyDialog,
-}) => {
+const HomePageFooter: FC = () => {
+  const [isTermsOfUseDialogOpen, openTermsOfUseDialog, closeTermsOfUseDialog] =
+    useDialog();
+  const [
+    isPrivacyPolicyDialogOpen,
+    openPrivacyPolicyDialog,
+    closePrivacyPolicyDialog,
+  ] = useDialog();
+
   return (
     <footer>
       <div className="absolute bottom-0 left-0 right-0 border-t border-gray-100 bg-slate-50 p-2">
         <ul className="flex flex-row justify-center gap-4 p-0.5">
           <li>
             <button
-              onClick={handleClickTermsOfUse}
+              onClick={openTermsOfUseDialog}
               className="text-xs text-gray-600 hover:underline"
             >
               利用規約
             </button>
             <TermsOfUseDialog
               isOpen={isTermsOfUseDialogOpen}
-              onClose={onCloseTermsOfUseDialog}
+              onClose={closeTermsOfUseDialog}
             />
           </li>
           <li>
             <button
-              onClick={handleClickPrivacyPolicy}
+              onClick={openPrivacyPolicyDialog}
               className="text-xs text-gray-600 hover:underline"
             >
               プライバシーポリシー
             </button>
             <PrivacyPolicyDialog
               isOpen={isPrivacyPolicyDialogOpen}
-              onClose={onClosePrivacyPolicyDialog}
+              onClose={closePrivacyPolicyDialog}
             />
           </li>
         </ul>
