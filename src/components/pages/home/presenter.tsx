@@ -5,22 +5,7 @@ import logo from '/public/logo.png';
 import StartButton from '@/components/pages/home/StartButton';
 import HomePageFooter from '@/components/pages/home/HomePageFooter';
 
-type Props = {
-  isTermsOfUseDialogOpen: boolean;
-  handleClickTermsOfUse: () => void;
-  onCloseTermsOfUseDialog: () => void;
-  isPrivacyPolicyDialogOpen: boolean;
-  handleClickPrivacyPolicy: () => void;
-  onClosePrivacyPolicyDialog: () => void;
-};
-const Presenter: FC<Props> = ({
-  isTermsOfUseDialogOpen,
-  handleClickTermsOfUse,
-  onCloseTermsOfUseDialog,
-  isPrivacyPolicyDialogOpen,
-  handleClickPrivacyPolicy,
-  onClosePrivacyPolicyDialog,
-}) => {
+const Presenter: FC = () => {
   return (
     <div className="bg-[url('/background.png')] bg-fixed">
       <div className="relative mx-auto flex h-screen max-w-sm flex-col justify-center border-x border-gray-100 bg-slate-50">
@@ -46,14 +31,7 @@ const Presenter: FC<Props> = ({
         <div className="py-6 px-8 text-center">
           <StartButton />
         </div>
-        <HomePageFooter
-          isTermsOfUseDialogOpen={isTermsOfUseDialogOpen}
-          handleClickTermsOfUse={handleClickTermsOfUse}
-          onCloseTermsOfUseDialog={onCloseTermsOfUseDialog}
-          isPrivacyPolicyDialogOpen={isPrivacyPolicyDialogOpen}
-          handleClickPrivacyPolicy={handleClickPrivacyPolicy}
-          onClosePrivacyPolicyDialog={onClosePrivacyPolicyDialog}
-        />
+        <HomePageFooter />
       </div>
     </div>
   );

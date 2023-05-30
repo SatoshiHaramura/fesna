@@ -6,6 +6,8 @@ import useLocalStorageState from 'use-local-storage-state';
 import MenusPage from './presenter';
 import type { CategoryWithLessons, UserSetting } from '@/types';
 
+import useDialog from '@/hooks/useDialog';
+
 type Props = {
   categories: CategoryWithLessons[];
 };
@@ -21,14 +23,17 @@ const Index: FC<Props> = ({ categories }) => {
     }
   );
   const [category, setCategory] = useState<CategoryWithLessons>(categories[0]);
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [
+    isCategorySelectDialogOpen,
+    openCategorySelectDialog,
+    closeCategorySelectDialog,
+  ] = useDialog();
 
   const handleClickCategory = (category: CategoryWithLessons): void => {
     setCategory(category);
-    setIsModalOpen(true);
+    openCategorySelectDialog();
   };
 
-  const onClose = (): void => setIsModalOpen(false);
   const router = useRouter();
   const transitToLessonsPage = (): void => {
     router.push('/lessons');
@@ -47,8 +52,8 @@ const Index: FC<Props> = ({ categories }) => {
     <MenusPage
       categories={categories}
       handleClickCategory={handleClickCategory}
-      isOpen={isModalOpen}
-      onClose={onClose}
+      isOpen={isCategorySelectDialogOpen}
+      onClose={closeCategorySelectDialog}
       category={category}
       handleClickLesson={handleClickLesson}
     ></MenusPage>
