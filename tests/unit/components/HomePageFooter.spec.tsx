@@ -3,25 +3,9 @@ import { render, RenderResult } from '@testing-library/react';
 import HomePageFooter from '@/components/pages/home/HomePageFooter';
 
 describe('HomePageFooter component', () => {
-  const isTermsOfUseDialogOpen = false;
-  const handleClickTermsOfUse = jest.fn();
-  const onCloseTermsOfUseDialog = jest.fn();
-  const isPrivacyPolicyDialogOpen = false;
-  const handleClickPrivacyPolicy = jest.fn();
-  const onClosePrivacyPolicyDialog = jest.fn();
-
   let renderResult: RenderResult;
   beforeEach(() => {
-    renderResult = render(
-      <HomePageFooter
-        isTermsOfUseDialogOpen={isTermsOfUseDialogOpen}
-        handleClickTermsOfUse={handleClickTermsOfUse}
-        onCloseTermsOfUseDialog={onCloseTermsOfUseDialog}
-        isPrivacyPolicyDialogOpen={isPrivacyPolicyDialogOpen}
-        handleClickPrivacyPolicy={handleClickPrivacyPolicy}
-        onClosePrivacyPolicyDialog={onClosePrivacyPolicyDialog}
-      />
-    );
+    renderResult = render(<HomePageFooter />);
   });
   afterEach(() => {
     renderResult.unmount();
