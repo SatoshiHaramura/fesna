@@ -34,13 +34,11 @@ describe('WordCard component', () => {
     };
     const judgedAnswer = true;
 
-    test('display the CorrectOrIncorrectIcon component', () => {
+    test('display the AnswerJudgmentIcon component', () => {
       render(<WordCard question={question} judgedAnswer={judgedAnswer} />);
 
-      const correctOrIncorrectIcon = screen.getByTestId(
-        'correct-or-incorrect-icon'
-      );
-      expect(correctOrIncorrectIcon).toBeInTheDocument();
+      const answerJudgmentIcon = screen.getByTestId('answer-judgment-icon');
+      expect(answerJudgmentIcon).toBeInTheDocument();
     });
 
     test('display the Word component', () => {
