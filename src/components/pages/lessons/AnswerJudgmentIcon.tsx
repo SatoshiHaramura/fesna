@@ -3,13 +3,13 @@ import CorrectIcon from '@/components/pages/lessons/CorrectIcon';
 import IncorrectIcon from '@/components/pages/lessons/IncorrectIcon';
 
 type Props = {
-  judgedAnswer: boolean;
+  isAnswerCorrect: boolean;
 };
 
-const AnswerJudgmentIcon: FC<Props> = ({ judgedAnswer }) => {
+const AnswerJudgmentIcon: FC<Props> = ({ isAnswerCorrect }) => {
   return (
     <div data-testid="answer-judgment-icon">
-      {judgedAnswer ? <CorrectIcon /> : <IncorrectIcon />}
+      {isAnswerCorrect ? <CorrectIcon /> : <IncorrectIcon />}
     </div>
   );
 };
