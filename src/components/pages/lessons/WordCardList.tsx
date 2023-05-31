@@ -13,7 +13,10 @@ const WordCardList: FC<Props> = ({ questions, judgedAnswers }) => {
       {questions.map((question, index) => {
         return (
           <li key={question.id}>
-            <WordCard question={question} judgedAnswer={judgedAnswers[index]} />
+            <WordCard
+              question={question}
+              isAnswerCorrect={judgedAnswers[index]}
+            />
           </li>
         );
       })}
