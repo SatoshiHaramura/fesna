@@ -32,24 +32,30 @@ describe('WordCard component', () => {
         },
       ],
     };
-    const judgedAnswer = true;
+    const isAnswerCorrect = true;
 
     test('display the AnswerJudgmentIcon component', () => {
-      render(<WordCard question={question} judgedAnswer={judgedAnswer} />);
+      render(
+        <WordCard question={question} isAnswerCorrect={isAnswerCorrect} />
+      );
 
       const answerJudgmentIcon = screen.getByTestId('answer-judgment-icon');
       expect(answerJudgmentIcon).toBeInTheDocument();
     });
 
     test('display the Word component', () => {
-      render(<WordCard question={question} judgedAnswer={judgedAnswer} />);
+      render(
+        <WordCard question={question} isAnswerCorrect={isAnswerCorrect} />
+      );
 
       const word = screen.getByTestId('word');
       expect(word).toBeInTheDocument();
     });
 
     test('display the UseExample component', () => {
-      render(<WordCard question={question} judgedAnswer={judgedAnswer} />);
+      render(
+        <WordCard question={question} isAnswerCorrect={isAnswerCorrect} />
+      );
 
       const useExample = screen.getByTestId('use-example');
       expect(useExample).toBeInTheDocument();
@@ -88,7 +94,10 @@ describe('WordCard component', () => {
             },
           ],
         };
-        render(<WordCard question={question} judgedAnswer={true} />);
+        const isAnswerCorrect = true;
+        render(
+          <WordCard question={question} isAnswerCorrect={isAnswerCorrect} />
+        );
 
         const relatedWord = screen.getByTestId('related-word');
         expect(relatedWord).toBeInTheDocument();
@@ -115,7 +124,10 @@ describe('WordCard component', () => {
             },
           ],
         };
-        render(<WordCard question={question} judgedAnswer={true} />);
+        const isAnswerCorrect = true;
+        render(
+          <WordCard question={question} isAnswerCorrect={isAnswerCorrect} />
+        );
 
         const relatedWord = screen.queryByTestId('related-word');
         expect(relatedWord).not.toBeInTheDocument();
