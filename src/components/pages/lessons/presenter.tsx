@@ -25,12 +25,14 @@ const Presenter: FC<Props> = ({
   handleClickPlaySoundButton,
   userSetting,
 }) => {
+  const isDisplayingQuestion = currentQuestionNumber <= questions.length;
+
   return (
     <div className="min-h-screen bg-[url('/background.png')] bg-fixed">
       <div className="mx-auto flex max-w-sm flex-col justify-center border-gray-100 bg-stone-50">
         <div className="min-h-screen divide-y divide-gray-300">
           <LessonsPageHeader lessonId={userSetting.lessonId} />
-          {currentQuestionNumber <= questions.length ? (
+          {isDisplayingQuestion ? (
             <MultipleChoiceQuestion
               questions={questions}
               currentQuestionNumber={currentQuestionNumber}
