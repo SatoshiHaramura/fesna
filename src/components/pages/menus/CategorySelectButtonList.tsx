@@ -12,17 +12,15 @@ const CategorySelectButtonList: FC<Props> = ({
   handleClickCategory,
 }) => {
   return (
-    <ul className="p-4">
-      <div className="flex flex-col items-center justify-center gap-4">
-        {categories.map((category) => (
-          <li key={category.id}>
-            <CategorySelectButton
-              category={category}
-              handleClickCategory={handleClickCategory}
-            />
-          </li>
-        ))}
-      </div>
+    <ul className="flex flex-col items-center justify-center gap-4 p-4">
+      {categories.map((category) => (
+        <li key={category.id}>
+          <CategorySelectButton
+            category={category}
+            handleClickCategory={handleClickCategory}
+          />
+        </li>
+      ))}
     </ul>
   );
 };
