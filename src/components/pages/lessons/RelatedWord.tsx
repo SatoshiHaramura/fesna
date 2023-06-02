@@ -19,9 +19,9 @@ const RelatedWord: FC<Props> = ({ relatedWords }) => {
         関連語
       </h2>
       <ul className="flex w-10/12 flex-col justify-center">
-        {relatedWords.map(({ partOfSpeech, word, meaning }, index) => {
+        {relatedWords.map(({ partOfSpeech, word, meaning }) => {
           return (
-            <li key={index} className="flex flex-row py-0.5">
+            <li key={word} className="flex flex-row py-0.5">
               <div>
                 <div className="inline-block rounded border border-slate-400 px-0.5 leading-5">
                   {shortenPartOfSpeech(partOfSpeech)}
