@@ -6,12 +6,12 @@ type Props = {
   isAnswerCorrect: boolean;
 };
 
-const AnswerJudgmentIcon: FC<Props> = ({ isAnswerCorrect }) => {
+const AnswerJudgmentMark: FC<Props> = ({ isAnswerCorrect }) => {
   return (
-    <div data-testid="answer-judgment-icon">
+    <div data-testid="answer-judgment-mark">
       {isAnswerCorrect ? <CorrectAnswerMark /> : <IncorrectAnswerMark />}
     </div>
   );
 };
 
-export default AnswerJudgmentIcon;
+export default AnswerJudgmentMark;

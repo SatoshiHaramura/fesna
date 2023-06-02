@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react';
 
-import AnswerJudgmentIcon from '@/components/pages/lessons/AnswerJudgmentIcon';
+import AnswerJudgmentMark from '@/components/pages/lessons/AnswerJudgmentMark';
 
-describe('AnswerJudgmentIcon component', () => {
+describe('AnswerJudgmentMark component', () => {
   describe('when the isAnswerCorrect is true', () => {
     test('display the correct answer mark', () => {
-      render(<AnswerJudgmentIcon isAnswerCorrect={true} />);
+      render(<AnswerJudgmentMark isAnswerCorrect={true} />);
 
       const correctAnswerMark = screen.getByTestId('correct-answer-mark');
       expect(correctAnswerMark).toBeInTheDocument();
@@ -14,7 +14,7 @@ describe('AnswerJudgmentIcon component', () => {
 
   describe('when the isAnswerCorrect is false', () => {
     test('display the incorrect answer mark', () => {
-      render(<AnswerJudgmentIcon isAnswerCorrect={false} />);
+      render(<AnswerJudgmentMark isAnswerCorrect={false} />);
 
       const incorrectAnswerMark = screen.getByTestId('incorrect-answer-mark');
       expect(incorrectAnswerMark).toBeInTheDocument();
