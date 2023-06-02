@@ -34,22 +34,23 @@ describe('lesson page', () => {
 
     const currentQuestionNumber = screen.getByTestId('current-question-number');
     const questionWord = screen.getByTestId('question-word');
-    const correctMarkOrIncorrectMark = await screen.findByTestId(
-      'correct-mark-or-incorrect-mark'
-    );
-
     expect(currentQuestionNumber).toHaveTextContent('1');
     expect(questionWord).toHaveTextContent('include');
+
     const user = userEvent.setup();
     await user.click(screen.getByRole('button', { name: 'を含む' }));
-    expect(correctMarkOrIncorrectMark).toHaveTextContent('○');
+
+    let answerJudgmentMark = await screen.findByTestId('answer-judgment-mark');
+    expect(answerJudgmentMark).toHaveTextContent('○');
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('2');
     });
     expect(questionWord).toHaveTextContent('steal');
     await user.click(screen.getByRole('button', { name: 'を盗む' }));
-    expect(correctMarkOrIncorrectMark).toHaveTextContent('○');
+
+    answerJudgmentMark = await screen.findByTestId('answer-judgment-mark');
+    expect(answerJudgmentMark).toHaveTextContent('○');
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('3');
@@ -58,67 +59,76 @@ describe('lesson page', () => {
     await user.click(
       screen.getByRole('button', { name: '(脆弱性)を突いて攻撃する' })
     );
-    expect(correctMarkOrIncorrectMark).toHaveTextContent('○');
+
+    answerJudgmentMark = await screen.findByTestId('answer-judgment-mark');
+    expect(answerJudgmentMark).toHaveTextContent('○');
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('4');
     });
-    expect(currentQuestionNumber).toHaveTextContent('4');
     expect(questionWord).toHaveTextContent('release');
     await user.click(
       screen.getByRole('button', { name: 'を入手可能な状態にする' })
     );
-    expect(correctMarkOrIncorrectMark).toHaveTextContent('○');
+
+    answerJudgmentMark = await screen.findByTestId('answer-judgment-mark');
+    expect(answerJudgmentMark).toHaveTextContent('○');
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('5');
     });
-    expect(currentQuestionNumber).toHaveTextContent('5');
     expect(questionWord).toHaveTextContent('target');
     await user.click(screen.getByRole('button', { name: 'を標的とする' }));
-    expect(correctMarkOrIncorrectMark).toHaveTextContent('○');
+
+    answerJudgmentMark = await screen.findByTestId('answer-judgment-mark');
+    expect(answerJudgmentMark).toHaveTextContent('○');
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('6');
     });
-    expect(currentQuestionNumber).toHaveTextContent('6');
     expect(questionWord).toHaveTextContent('allow');
     await user.click(
       screen.getByRole('button', { name: 'を可能とする、許可する' })
     );
-    expect(correctMarkOrIncorrectMark).toHaveTextContent('○');
+
+    answerJudgmentMark = await screen.findByTestId('answer-judgment-mark');
+    expect(answerJudgmentMark).toHaveTextContent('○');
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('7');
     });
-    expect(currentQuestionNumber).toHaveTextContent('7');
     expect(questionWord).toHaveTextContent('provide');
     await user.click(screen.getByRole('button', { name: 'を提供する' }));
-    expect(correctMarkOrIncorrectMark).toHaveTextContent('○');
+
+    answerJudgmentMark = await screen.findByTestId('answer-judgment-mark');
+    expect(answerJudgmentMark).toHaveTextContent('○');
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('8');
     });
-    expect(currentQuestionNumber).toHaveTextContent('8');
     expect(questionWord).toHaveTextContent('create');
     await user.click(screen.getByRole('button', { name: 'を作り出す' }));
-    expect(correctMarkOrIncorrectMark).toHaveTextContent('○');
+
+    answerJudgmentMark = await screen.findByTestId('answer-judgment-mark');
+    expect(answerJudgmentMark).toHaveTextContent('○');
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('9');
     });
-    expect(currentQuestionNumber).toHaveTextContent('9');
     expect(questionWord).toHaveTextContent('compromise');
     await user.click(screen.getByRole('button', { name: 'を侵害する' }));
-    expect(correctMarkOrIncorrectMark).toHaveTextContent('○');
+
+    answerJudgmentMark = await screen.findByTestId('answer-judgment-mark');
+    expect(answerJudgmentMark).toHaveTextContent('○');
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('10');
     });
-    expect(currentQuestionNumber).toHaveTextContent('10');
     expect(questionWord).toHaveTextContent('warn');
     await user.click(screen.getByRole('button', { name: 'を警告する' }));
-    expect(correctMarkOrIncorrectMark).toHaveTextContent('○');
+
+    answerJudgmentMark = await screen.findByTestId('answer-judgment-mark');
+    expect(answerJudgmentMark).toHaveTextContent('○');
 
     await waitFor(() => {
       expect(screen.getByTestId('number-of-correct-answers')).toHaveTextContent(
