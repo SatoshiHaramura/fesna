@@ -13,11 +13,11 @@ describe('AnswerJudgmentIcon component', () => {
   });
 
   describe('when the isAnswerCorrect is false', () => {
-    test('display the incorrect icon', () => {
+    test('display the incorrect answer mark', () => {
       render(<AnswerJudgmentIcon isAnswerCorrect={false} />);
 
-      const incorrectIcon = screen.getByTestId('incorrect-icon');
-      expect(incorrectIcon).toBeInTheDocument();
+      const incorrectAnswerMark = screen.getByTestId('incorrect-answer-mark');
+      expect(incorrectAnswerMark).toBeInTheDocument();
     });
   });
 });
