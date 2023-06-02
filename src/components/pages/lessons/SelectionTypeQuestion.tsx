@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import SpeakerToggleButton from '@/components/pages/lessons/SpeakerToggleButton';
 import QuestionProgress from '@/components/pages/lessons/QuestionProgress';
-import QuestionWord from '@/components/pages/lessons/QuestionWord';
+import QuestionAndAnswerJudgment from '@/components/pages/lessons/QuestionAndAnswerJudgment';
 import ChoiceButtonList from '@/components/pages/lessons/ChoiceButtonList';
 import { Question } from '@/types';
 import { useTextToSpeech } from '@/hooks/useTextToSpeech';
@@ -40,7 +40,7 @@ const SelectionTypeQuestion: FC<Props> = ({
       </div>
       <div className="flex flex-col items-center justify-center divide-y divide-gray-200 p-2">
         <div className="py-4">
-          <QuestionWord
+          <QuestionAndAnswerJudgment
             questionWord={currentQuestion?.question}
             judgedAnswer={judgedAnswer}
           />
