@@ -22,7 +22,7 @@ const ChoiceButtonList: FC<Props> = ({
       data-testid="choice-button-list"
     >
       {choices?.map((choice, index) => (
-        <li key={index}>
+        <li key={choice}>
           <ChoiceButton
             choice={choice}
             handleClickChoiceButton={handleClickChoiceButton}

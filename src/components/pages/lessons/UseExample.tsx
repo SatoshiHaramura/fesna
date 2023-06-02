@@ -18,9 +18,9 @@ const UseExample: FC<Props> = ({ useExamples }) => {
         使用例
       </h2>
       <ul className="w-10/12">
-        {useExamples.map(({ example, meaning }, index) => {
+        {useExamples.map(({ example, meaning }) => {
           return (
-            <li key={index}>
+            <li key={example}>
               <div className={`${roboto.className} p-0.5 leading-4`}>
                 {example}
               </div>
