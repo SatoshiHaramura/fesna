@@ -146,65 +146,83 @@ describe('lesson page', () => {
 
     const currentQuestionNumber = screen.getByTestId('current-question-number');
     const questionWord = screen.getByTestId('question-word');
-
     expect(currentQuestionNumber).toHaveTextContent('1');
     expect(questionWord).toHaveTextContent('include');
+
     const user = userEvent.setup();
-    const choiceButtonList = screen.getAllByTestId('choice-button');
+    let choiceButtonList = screen.getAllByTestId('choice-button');
     await user.click(choiceButtonList[0]);
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('2');
     });
     expect(questionWord).toHaveTextContent('steal');
+
+    choiceButtonList = screen.getAllByTestId('choice-button');
     await user.click(choiceButtonList[0]);
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('3');
     });
     expect(questionWord).toHaveTextContent('exploit');
+
+    choiceButtonList = screen.getAllByTestId('choice-button');
     await user.click(choiceButtonList[0]);
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('4');
     });
     expect(questionWord).toHaveTextContent('release');
+
+    choiceButtonList = screen.getAllByTestId('choice-button');
     await user.click(choiceButtonList[0]);
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('5');
     });
     expect(questionWord).toHaveTextContent('target');
+
+    choiceButtonList = screen.getAllByTestId('choice-button');
     await user.click(choiceButtonList[0]);
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('6');
     });
     expect(questionWord).toHaveTextContent('allow');
+
+    choiceButtonList = screen.getAllByTestId('choice-button');
     await user.click(choiceButtonList[0]);
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('7');
     });
     expect(questionWord).toHaveTextContent('provide');
+
+    choiceButtonList = screen.getAllByTestId('choice-button');
     await user.click(choiceButtonList[0]);
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('8');
     });
     expect(questionWord).toHaveTextContent('create');
+
+    choiceButtonList = screen.getAllByTestId('choice-button');
     await user.click(choiceButtonList[0]);
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('9');
     });
     expect(questionWord).toHaveTextContent('compromise');
+
+    choiceButtonList = screen.getAllByTestId('choice-button');
     await user.click(choiceButtonList[0]);
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('10');
     });
     expect(questionWord).toHaveTextContent('warn');
+
+    choiceButtonList = screen.getAllByTestId('choice-button');
     await user.click(choiceButtonList[0]);
 
     await waitFor(() => {
@@ -213,6 +231,7 @@ describe('lesson page', () => {
       ).toBeInTheDocument();
     });
     await user.click(screen.getByRole('button', { name: 'もう1度' }));
+
     expect(currentQuestionNumber).toHaveTextContent('1');
     expect(screen.getByTestId('question-word')).toHaveTextContent('include');
   }, 30000);
@@ -227,65 +246,83 @@ describe('lesson page', () => {
 
     const currentQuestionNumber = screen.getByTestId('current-question-number');
     const questionWord = screen.getByTestId('question-word');
-
     expect(currentQuestionNumber).toHaveTextContent('1');
     expect(questionWord).toHaveTextContent('include');
+
     const user = userEvent.setup();
-    const choiceButtonList = screen.getAllByTestId('choice-button');
+    let choiceButtonList = screen.getAllByTestId('choice-button');
     await user.click(choiceButtonList[0]);
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('2');
     });
     expect(questionWord).toHaveTextContent('steal');
+
+    choiceButtonList = screen.getAllByTestId('choice-button');
     await user.click(choiceButtonList[0]);
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('3');
     });
     expect(questionWord).toHaveTextContent('exploit');
+
+    choiceButtonList = screen.getAllByTestId('choice-button');
     await user.click(choiceButtonList[0]);
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('4');
     });
     expect(questionWord).toHaveTextContent('release');
+
+    choiceButtonList = screen.getAllByTestId('choice-button');
     await user.click(choiceButtonList[0]);
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('5');
     });
     expect(questionWord).toHaveTextContent('target');
+
+    choiceButtonList = screen.getAllByTestId('choice-button');
     await user.click(choiceButtonList[0]);
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('6');
     });
     expect(questionWord).toHaveTextContent('allow');
+
+    choiceButtonList = screen.getAllByTestId('choice-button');
     await user.click(choiceButtonList[0]);
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('7');
     });
     expect(questionWord).toHaveTextContent('provide');
+
+    choiceButtonList = screen.getAllByTestId('choice-button');
     await user.click(choiceButtonList[0]);
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('8');
     });
     expect(questionWord).toHaveTextContent('create');
+
+    choiceButtonList = screen.getAllByTestId('choice-button');
     await user.click(choiceButtonList[0]);
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('9');
     });
     expect(questionWord).toHaveTextContent('compromise');
+
+    choiceButtonList = screen.getAllByTestId('choice-button');
     await user.click(choiceButtonList[0]);
 
     await waitFor(() => {
       expect(currentQuestionNumber).toHaveTextContent('10');
     });
     expect(questionWord).toHaveTextContent('warn');
+
+    choiceButtonList = screen.getAllByTestId('choice-button');
     await user.click(choiceButtonList[0]);
 
     await waitFor(() => {
@@ -294,6 +331,7 @@ describe('lesson page', () => {
       ).toBeInTheDocument();
     });
     await user.click(screen.getByRole('button', { name: '次のレッスン' }));
+
     expect(category).toHaveTextContent('動詞');
     expect(lessonNumber).toHaveTextContent('Lesson2');
     expect(currentQuestionNumber).toHaveTextContent('1');
@@ -339,9 +377,9 @@ describe('lesson page', () => {
     unmount();
     render(<LessonsPage />);
 
-    const reloadedspeakerXMarkButtonIcon = screen.getByRole('button', {
+    const reloadedSpeakerXMarkButtonIcon = screen.getByRole('button', {
       name: '音声読み上げ機能が無効になっています',
     });
-    expect(reloadedspeakerXMarkButtonIcon).toBeInTheDocument();
+    expect(reloadedSpeakerXMarkButtonIcon).toBeInTheDocument();
   });
 });
