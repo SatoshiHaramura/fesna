@@ -4,11 +4,11 @@ import AnswerJudgmentIcon from '@/components/pages/lessons/AnswerJudgmentIcon';
 
 describe('AnswerJudgmentIcon component', () => {
   describe('when the isAnswerCorrect is true', () => {
-    test('display the correct icon', () => {
+    test('display the correct answer mark', () => {
       render(<AnswerJudgmentIcon isAnswerCorrect={true} />);
 
-      const correctIcon = screen.getByTestId('correct-icon');
-      expect(correctIcon).toBeInTheDocument();
+      const correctAnswerMark = screen.getByTestId('correct-answer-mark');
+      expect(correctAnswerMark).toBeInTheDocument();
     });
   });
 
