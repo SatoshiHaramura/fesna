@@ -1,12 +1,12 @@
-const CorrectIcon = () => {
+const CorrectAnswerMark = () => {
   return (
     <div
       className="leading-2 text-center font-sans text-5xl font-bold text-sky-500 opacity-90"
-      data-testid="correct-icon"
+      data-testid="correct-answer-mark"
     >
       ○
     </div>
   );
 };
 
-export default CorrectIcon;
+export default CorrectAnswerMark;
