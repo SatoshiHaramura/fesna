@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Question, UserSetting } from '@/types';
 import LessonsPageHeader from '@/components/pages/lessons/LessonsPageHeader';
-import SelectionTypeQuestion from '@/components/pages/lessons/SelectionTypeQuestion';
+import MultipleChoiceQuestion from '@/components/pages/lessons/MultipleChoiceQuestion';
 import LessonResult from '@/components/pages/lessons/LessonResult';
 
 type Props = {
@@ -31,7 +31,7 @@ const Presenter: FC<Props> = ({
         <div className="min-h-screen divide-y divide-gray-300">
           <LessonsPageHeader lessonId={userSetting.lessonId} />
           {currentQuestionNumber <= questions.length ? (
-            <SelectionTypeQuestion
+            <MultipleChoiceQuestion
               questions={questions}
               currentQuestionNumber={currentQuestionNumber}
               handleClickChoiceButton={handleClickChoiceButton}
