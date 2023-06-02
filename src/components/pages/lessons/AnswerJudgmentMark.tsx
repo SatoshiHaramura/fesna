@@ -6,7 +6,7 @@ type Props = {
   isAnswerCorrect: boolean;
 };
 
-const AnswerJudgmentIcon: FC<Props> = ({ isAnswerCorrect }) => {
+const AnswerJudgmentMark: FC<Props> = ({ isAnswerCorrect }) => {
   return (
     <div data-testid="answer-judgment-icon">
       {isAnswerCorrect ? <CorrectAnswerMark /> : <IncorrectAnswerMark />}
@@ -14,4 +14,4 @@ const AnswerJudgmentIcon: FC<Props> = ({ isAnswerCorrect }) => {
   );
 };
 
-export default AnswerJudgmentIcon;
+export default AnswerJudgmentMark;
