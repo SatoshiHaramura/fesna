@@ -1,4 +1,4 @@
-const IncorrectIcon = () => {
+const IncorrectAnswerMark = () => {
   return (
     <div
       className="leading-2 text-center font-sans text-5xl font-bold text-red-500 opacity-90"
@@ -9,4 +9,4 @@ const IncorrectIcon = () => {
   );
 };
 
-export default IncorrectIcon;
+export default IncorrectAnswerMark;
