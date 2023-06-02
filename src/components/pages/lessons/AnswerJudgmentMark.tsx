@@ -8,7 +8,7 @@ type Props = {
 
 const AnswerJudgmentMark: FC<Props> = ({ isAnswerCorrect }) => {
   return (
-    <div data-testid="answer-judgment-icon">
+    <div data-testid="answer-judgment-mark">
       {isAnswerCorrect ? <CorrectAnswerMark /> : <IncorrectAnswerMark />}
     </div>
   );
