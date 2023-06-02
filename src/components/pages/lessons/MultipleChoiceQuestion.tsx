@@ -15,7 +15,7 @@ type Props = {
   handleClickPlaySoundButton: () => void;
 };
 
-const SelectionTypeQuestion: FC<Props> = ({
+const MultipleChoiceQuestion: FC<Props> = ({
   questions,
   currentQuestionNumber,
   handleClickChoiceButton,
@@ -58,4 +58,4 @@ const SelectionTypeQuestion: FC<Props> = ({
   );
 };
 
-export default SelectionTypeQuestion;
+export default MultipleChoiceQuestion;
