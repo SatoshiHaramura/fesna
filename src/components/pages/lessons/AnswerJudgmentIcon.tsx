@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import CorrectIcon from '@/components/pages/lessons/CorrectIcon';
+import CorrectAnswerMark from '@/components/pages/lessons/CorrectAnswerMark';
 import IncorrectIcon from '@/components/pages/lessons/IncorrectIcon';
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
 const AnswerJudgmentIcon: FC<Props> = ({ isAnswerCorrect }) => {
   return (
     <div data-testid="answer-judgment-icon">
-      {isAnswerCorrect ? <CorrectIcon /> : <IncorrectIcon />}
+      {isAnswerCorrect ? <CorrectAnswerMark /> : <IncorrectIcon />}
     </div>
   );
 };
