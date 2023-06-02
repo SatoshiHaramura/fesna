@@ -2,9 +2,9 @@ import { render, RenderResult } from '@testing-library/react';
 
 import type { Question } from '@/types';
 
-import SelectionTypeQuestion from '@/components/pages/lessons/SelectionTypeQuestion';
+import MultipleChoiceQuestion from '@/components/pages/lessons/MultipleChoiceQuestion';
 
-describe('SelectionTypeQuestion component', () => {
+describe('MultipleChoiceQuestion component', () => {
   describe('display each child component', () => {
     const questions: Question[] = [
       {
@@ -63,7 +63,7 @@ describe('SelectionTypeQuestion component', () => {
     let renderResult: RenderResult;
     beforeEach(() => {
       renderResult = render(
-        <SelectionTypeQuestion
+        <MultipleChoiceQuestion
           questions={questions}
           currentQuestionNumber={currentQuestionNumber}
           handleClickChoiceButton={handleClickChoiceButton}

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Question, UserSetting } from '@/types';
 import LessonsPageHeader from '@/components/pages/lessons/LessonsPageHeader';
-import SelectionTypeQuestion from '@/components/pages/lessons/SelectionTypeQuestion';
+import MultipleChoiceQuestion from '@/components/pages/lessons/MultipleChoiceQuestion';
 import LessonResult from '@/components/pages/lessons/LessonResult';
 
 type Props = {
@@ -25,13 +25,15 @@ const Presenter: FC<Props> = ({
   handleClickPlaySoundButton,
   userSetting,
 }) => {
+  const isDisplayingQuestion = currentQuestionNumber <= questions.length;
+
   return (
     <div className="min-h-screen bg-[url('/background.png')] bg-fixed">
       <div className="mx-auto flex max-w-sm flex-col justify-center border-gray-100 bg-stone-50">
         <div className="min-h-screen divide-y divide-gray-300">
           <LessonsPageHeader lessonId={userSetting.lessonId} />
-          {currentQuestionNumber <= questions.length ? (
-            <SelectionTypeQuestion
+          {isDisplayingQuestion ? (
+            <MultipleChoiceQuestion
               questions={questions}
               currentQuestionNumber={currentQuestionNumber}
               handleClickChoiceButton={handleClickChoiceButton}
