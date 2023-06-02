@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import CorrectAnswerMark from '@/components/pages/lessons/CorrectAnswerMark';
-import IncorrectIcon from '@/components/pages/lessons/IncorrectIcon';
+import IncorrectAnswerMark from '@/components/pages/lessons/IncorrectAnswerMark';
 
 type Props = {
   isAnswerCorrect: boolean;
@@ -9,7 +9,7 @@ type Props = {
 const AnswerJudgmentIcon: FC<Props> = ({ isAnswerCorrect }) => {
   return (
     <div data-testid="answer-judgment-icon">
-      {isAnswerCorrect ? <CorrectAnswerMark /> : <IncorrectIcon />}
+      {isAnswerCorrect ? <CorrectAnswerMark /> : <IncorrectAnswerMark />}
     </div>
   );
 };
