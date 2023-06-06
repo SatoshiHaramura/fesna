@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import WordCard from '@/components/pages/lessons/WordCard';
+import WordDetailCard from '@/components/pages/lessons/WordDetailCard';
 import { Question } from '@/types';
 
 type Props = {
@@ -7,13 +7,13 @@ type Props = {
   judgedAnswers: boolean[];
 };
 
-const WordCardList: FC<Props> = ({ questions, judgedAnswers }) => {
+const WordDetailCardList: FC<Props> = ({ questions, judgedAnswers }) => {
   return (
-    <ul data-testid="word-card-list">
+    <ul data-testid="word-detail-card-list">
       {questions.map((question, index) => {
         return (
           <li key={question.id}>
-            <WordCard
+            <WordDetailCard
               question={question}
               isAnswerCorrect={judgedAnswers[index]}
             />
@@ -24,4 +24,4 @@ const WordCardList: FC<Props> = ({ questions, judgedAnswers }) => {
   );
 };
 
-export default WordCardList;
+export default WordDetailCardList;

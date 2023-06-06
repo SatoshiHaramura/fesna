@@ -78,9 +78,11 @@ describe('LessonResultFooter component', () => {
       expect(score).toBeInTheDocument();
     });
 
-    test('display the word card list component', () => {
-      const wordCardList = renderResult.getByTestId('word-card-list');
-      expect(wordCardList).toBeInTheDocument();
+    test('display the word detail card list component', () => {
+      const wordDetailCardList = renderResult.getByTestId(
+        'word-detail-card-list'
+      );
+      expect(wordDetailCardList).toBeInTheDocument();
     });
 
     test('display the lesson result footer component', () => {
