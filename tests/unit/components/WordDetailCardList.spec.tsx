@@ -2,9 +2,9 @@ import { render, screen } from '@testing-library/react';
 
 import type { Question } from '@/types';
 
-import WordCardList from '@/components/pages/lessons/WordCardList';
+import WordDetailCardList from '@/components/pages/lessons/WordDetailCardList';
 
-describe('WordCardList component', () => {
+describe('WordDetailCardList component', () => {
   test('display all word detail cards', () => {
     const questions: Question[] = [
       {
@@ -56,10 +56,10 @@ describe('WordCardList component', () => {
     ];
     const judgedAnswers = [true, false];
     render(
-      <WordCardList questions={questions} judgedAnswers={judgedAnswers} />
+      <WordDetailCardList questions={questions} judgedAnswers={judgedAnswers} />
     );
 
-    const wordCardList = screen.getAllByTestId('word-detail-card');
-    expect(wordCardList).toHaveLength(2);
+    const wordDetailCardList = screen.getAllByTestId('word-detail-card');
+    expect(wordDetailCardList).toHaveLength(2);
   });
 });
