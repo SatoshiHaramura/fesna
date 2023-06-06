@@ -1,19 +1,25 @@
 import {
-  buildCategories,
-  buildCategory,
+  buildCategoriesWithLessons,
+  buildCategoryWithLessons,
   filterQuestionsByLessonId,
   findCategoryByLessonId,
   findLessonById,
 } from '@/repositories';
 
+import type { Category, CategoryWithLessons, Lesson, Question } from '@/types';
+
 describe('repositories functions', () => {
-  test('buildCategory function', () => {
-    const category = { id: 1, name: '動詞' };
-    const lessons = [
+  test('buildCategoryWithLessons function', () => {
+    const category: Category = { id: 1, name: '動詞' };
+    const lessons: Lesson[] = [
       { id: 1, categoryId: 1, name: '1' },
       { id: 2, categoryId: 1, name: '2' },
     ];
-    const result = buildCategory(category, lessons);
+    const result: CategoryWithLessons = buildCategoryWithLessons(
+      category,
+      lessons
+    );
+
     expect(result).toEqual({
       id: 1,
       name: '動詞',
@@ -24,18 +30,22 @@ describe('repositories functions', () => {
     });
   });
 
-  test('buildCategories function', () => {
-    const categories = [
+  test('buildCategoriesWithLessons function', () => {
+    const categories: Category[] = [
       { id: 1, name: '動詞' },
       { id: 2, name: '名詞' },
     ];
-    const lessons = [
+    const lessons: Lesson[] = [
       { id: 1, categoryId: 1, name: '1' },
       { id: 2, categoryId: 1, name: '2' },
       { id: 3, categoryId: 2, name: '1' },
       { id: 4, categoryId: 2, name: '2' },
     ];
-    const result = buildCategories(categories, lessons);
+    const result: CategoryWithLessons[] = buildCategoriesWithLessons(
+      categories,
+      lessons
+    );
+
     expect(result).toEqual([
       {
         id: 1,
@@ -57,7 +67,7 @@ describe('repositories functions', () => {
   });
 
   test('filterQuestionsByLessonId function', () => {
-    const questions = [
+    const questions: Question[] = [
       {
         id: 1,
         lessonId: 1,
@@ -100,7 +110,9 @@ describe('repositories functions', () => {
         ],
       },
     ];
-    const result = filterQuestionsByLessonId(questions, 1);
+    const lessonId = 1;
+    const result: Question[] = filterQuestionsByLessonId(questions, lessonId);
+
     expect(result).toEqual([
       {
         id: 1,
@@ -127,20 +139,27 @@ describe('repositories functions', () => {
   });
 
   test('findCategoryByLessonId function', () => {
-    const categories = [
+    const categories: Category[] = [
       { id: 1, name: '動詞' },
       { id: 2, name: '名詞' },
     ];
-    const result = findCategoryByLessonId(categories, 1);
+    const lessonId = 1;
+    const result: Category | undefined = findCategoryByLessonId(
+      categories,
+      lessonId
+    );
+
     expect(result).toEqual({ id: 1, name: '動詞' });
   });
 
   test('findLessonById function', () => {
-    const lessons = [
+    const lessons: Lesson[] = [
       { id: 1, categoryId: 1, name: '1' },
       { id: 2, categoryId: 1, name: '2' },
     ];
-    const result = findLessonById(lessons, 1);
+    const id = 1;
+    const result: Lesson | undefined = findLessonById(lessons, id);
+
     expect(result).toEqual({ id: 1, categoryId: 1, name: '1' });
   });
 });
