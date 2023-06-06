@@ -4,12 +4,12 @@ import { NextSeo } from 'next-seo';
 
 import Menus from '@/components/pages/menus';
 import { categoryData, lessonData } from '@/data';
-import { buildCategories } from '@/repositories';
+import { buildCategoriesWithLessons } from '@/repositories';
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 export const getStaticProps = () => {
-  const categories = buildCategories(categoryData, lessonData);
+  const categories = buildCategoriesWithLessons(categoryData, lessonData);
 
   return {
     props: { categories },
