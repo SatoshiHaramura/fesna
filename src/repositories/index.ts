@@ -1,10 +1,13 @@
 import type { Category, CategoryWithLessons, Lesson, Question } from '@/types';
 
-const filterLessonsByCategoryId = (lessons: Lesson[], id: number): Lesson[] => {
-  return lessons.filter((lesson) => lesson.categoryId === id);
+const filterLessonsByCategoryId = (
+  lessons: Lesson[],
+  categoryId: number
+): Lesson[] => {
+  return lessons.filter((lesson) => lesson.categoryId === categoryId);
 };
 
-export const buildCategory = (
+export const buildCategoryWithLessons = (
   category: Category,
   lessons: Lesson[]
 ): CategoryWithLessons => {
@@ -15,25 +18,27 @@ export const buildCategory = (
   };
 };
 
-export const buildCategories = (
+export const buildCategoriesWithLessons = (
   categories: Category[],
   lessons: Lesson[]
 ): CategoryWithLessons[] => {
-  return categories.map((category) => buildCategory(category, lessons));
+  return categories.map((category) =>
+    buildCategoryWithLessons(category, lessons)
+  );
 };
 
 export const filterQuestionsByLessonId = (
   questions: Question[],
-  id: number | undefined
+  lessonId: number | undefined
 ): Question[] => {
-  return questions.filter((question) => question.lessonId === id);
+  return questions.filter((question) => question.lessonId === lessonId);
 };
 
 export const findCategoryByLessonId = (
   categories: Category[],
-  id: number | undefined | null
+  lessonId: number | undefined | null
 ): Category | undefined => {
-  return categories.find((category) => category.id === id);
+  return categories.find((category) => category.id === lessonId);
 };
 
 export const findLessonById = (
