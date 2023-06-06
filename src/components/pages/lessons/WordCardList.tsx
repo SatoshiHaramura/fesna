@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import WordCard from '@/components/pages/lessons/WordCard';
+import WordDetailCard from '@/components/pages/lessons/WordDetailCard';
 import { Question } from '@/types';
 
 type Props = {
@@ -13,7 +13,7 @@ const WordCardList: FC<Props> = ({ questions, judgedAnswers }) => {
       {questions.map((question, index) => {
         return (
           <li key={question.id}>
-            <WordCard
+            <WordDetailCard
               question={question}
               isAnswerCorrect={judgedAnswers[index]}
             />
