@@ -7,7 +7,7 @@ type Props = {
   judgedAnswers: boolean[];
 };
 
-const WordCardList: FC<Props> = ({ questions, judgedAnswers }) => {
+const WordDetailCardList: FC<Props> = ({ questions, judgedAnswers }) => {
   return (
     <ul data-testid="word-card-list">
       {questions.map((question, index) => {
@@ -24,4 +24,4 @@ const WordCardList: FC<Props> = ({ questions, judgedAnswers }) => {
   );
 };
 
-export default WordCardList;
+export default WordDetailCardList;
