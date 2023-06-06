@@ -2,9 +2,9 @@ import { render, screen } from '@testing-library/react';
 
 import type { Question } from '@/types';
 
-import WordCard from '@/components/pages/lessons/WordCard';
+import WordDetailCard from '@/components/pages/lessons/WordDetailCard';
 
-describe('WordCard component', () => {
+describe('WordDetailCard component', () => {
   describe('display each child component', () => {
     const question: Question = {
       id: 1,
@@ -36,7 +36,7 @@ describe('WordCard component', () => {
 
     test('display the AnswerJudgmentMark component', () => {
       render(
-        <WordCard question={question} isAnswerCorrect={isAnswerCorrect} />
+        <WordDetailCard question={question} isAnswerCorrect={isAnswerCorrect} />
       );
 
       const answerJudgmentMark = screen.getByTestId('answer-judgment-mark');
@@ -45,7 +45,7 @@ describe('WordCard component', () => {
 
     test('display the Word component', () => {
       render(
-        <WordCard question={question} isAnswerCorrect={isAnswerCorrect} />
+        <WordDetailCard question={question} isAnswerCorrect={isAnswerCorrect} />
       );
 
       const word = screen.getByTestId('word');
@@ -54,7 +54,7 @@ describe('WordCard component', () => {
 
     test('display the UseExample component', () => {
       render(
-        <WordCard question={question} isAnswerCorrect={isAnswerCorrect} />
+        <WordDetailCard question={question} isAnswerCorrect={isAnswerCorrect} />
       );
 
       const useExample = screen.getByTestId('use-example');
@@ -96,7 +96,10 @@ describe('WordCard component', () => {
         };
         const isAnswerCorrect = true;
         render(
-          <WordCard question={question} isAnswerCorrect={isAnswerCorrect} />
+          <WordDetailCard
+            question={question}
+            isAnswerCorrect={isAnswerCorrect}
+          />
         );
 
         const relatedWord = screen.getByTestId('related-word');
@@ -126,7 +129,10 @@ describe('WordCard component', () => {
         };
         const isAnswerCorrect = true;
         render(
-          <WordCard question={question} isAnswerCorrect={isAnswerCorrect} />
+          <WordDetailCard
+            question={question}
+            isAnswerCorrect={isAnswerCorrect}
+          />
         );
 
         const relatedWord = screen.queryByTestId('related-word');

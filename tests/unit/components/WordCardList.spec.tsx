@@ -5,7 +5,7 @@ import type { Question } from '@/types';
 import WordCardList from '@/components/pages/lessons/WordCardList';
 
 describe('WordCardList component', () => {
-  test('display all word cards', () => {
+  test('display all word detail cards', () => {
     const questions: Question[] = [
       {
         id: 1,
@@ -59,7 +59,7 @@ describe('WordCardList component', () => {
       <WordCardList questions={questions} judgedAnswers={judgedAnswers} />
     );
 
-    const wordCardList = screen.getAllByTestId('word-card');
+    const wordCardList = screen.getAllByTestId('word-detail-card');
     expect(wordCardList).toHaveLength(2);
   });
 });
