@@ -10,7 +10,7 @@ type Props = {
   isAnswerCorrect: boolean;
 };
 
-const WordCard: FC<Props> = ({ question, isAnswerCorrect }) => {
+const WordDetailCard: FC<Props> = ({ question, isAnswerCorrect }) => {
   return (
     <div className="p-2" data-testid="word-card">
       <div className="flex flex-col items-center justify-center">
@@ -37,4 +37,4 @@ const WordCard: FC<Props> = ({ question, isAnswerCorrect }) => {
   );
 };
 
-export default WordCard;
+export default WordDetailCard;
