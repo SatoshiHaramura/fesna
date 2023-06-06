@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Score from '@/components/pages/lessons/Score';
-import WordCardList from '@/components/pages/lessons/WordCardList';
+import WordDetailCardList from '@/components/pages/lessons/WordDetailCardList';
 import LessonResultFooter from '@/components/pages/lessons/LessonResultFooter';
 import { Question } from '@/types';
 
@@ -26,7 +26,10 @@ const LessonResult: FC<Props> = ({
         />
       </div>
       <div className="p-1">
-        <WordCardList questions={questions} judgedAnswers={judgedAnswers} />
+        <WordDetailCardList
+          questions={questions}
+          judgedAnswers={judgedAnswers}
+        />
       </div>
       <LessonResultFooter
         handleClickSameLessonButton={handleClickSameLessonButton}
