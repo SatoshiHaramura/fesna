@@ -29,7 +29,7 @@ const WordDetailCard: FC<Props> = ({ question, isAnswerCorrect }) => {
             <div className="w-2/12">
               <AnswerJudgmentMark isAnswerCorrect={isAnswerCorrect} />
             </div>
-            <div className="w-2/10">
+            <div className="w-10/12">
               <Word partOfSpeech={partOfSpeech} word={word} meaning={meaning} />
             </div>
           </div>
