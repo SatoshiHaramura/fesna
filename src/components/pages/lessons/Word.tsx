@@ -2,8 +2,10 @@ import { FC } from 'react';
 import { shortenPartOfSpeech } from '@/utils';
 import { Roboto_Flex } from '@next/font/google';
 
+import { PartOfSpeech } from '@/types';
+
 type Props = {
-  partOfSpeech: string;
+  partOfSpeech: PartOfSpeech;
   word: string;
   meaning: string;
 };
