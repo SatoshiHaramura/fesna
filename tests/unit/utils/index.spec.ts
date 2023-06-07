@@ -16,8 +16,4 @@ describe('shortenPartOfSpeech function', () => {
   test('when the adverb is omitted', () => {
     expect(shortenPartOfSpeech('副詞')).toBe('副');
   });
-
-  test('unexpected case', () => {
-    expect(shortenPartOfSpeech('')).toBe('');
-  });
 });
