@@ -1,6 +1,8 @@
+export type PartOfSpeech = '動詞' | '名詞' | '形容詞' | '副詞';
+
 export type Category = {
   id: number;
-  name: string;
+  name: PartOfSpeech;
 };
 
 export type CategoryWithLessons = Category & {
@@ -19,7 +21,7 @@ export type Question = {
   question: string;
   answer: string;
   choices: string[];
-  partOfSpeech: string;
+  partOfSpeech: PartOfSpeech;
   relatedWords: RelatedWord[];
   useExamples: UseExample[];
 };
@@ -27,7 +29,7 @@ export type Question = {
 export type RelatedWord = {
   word: string;
   meaning: string;
-  partOfSpeech: string;
+  partOfSpeech: PartOfSpeech;
 };
 
 export type UseExample = {
