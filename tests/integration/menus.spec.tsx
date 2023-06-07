@@ -4,6 +4,8 @@ import { mockAllIsIntersecting } from 'react-intersection-observer/test-utils';
 
 import MenusPage from '@/pages/menus';
 
+import { CategoryWithLessons } from '@/types';
+
 jest.mock('next/router', () => require('next-router-mock'));
 
 jest.mock('next/head', () => {
@@ -19,7 +21,7 @@ describe('menu page', () => {
   beforeEach(() => {
     localStorage.clear();
   });
-  const categories = [
+  const categories: CategoryWithLessons[] = [
     {
       id: 1,
       name: '動詞',
