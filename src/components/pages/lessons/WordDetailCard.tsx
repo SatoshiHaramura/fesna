@@ -11,6 +11,8 @@ type Props = {
 };
 
 const WordDetailCard: FC<Props> = ({ question, isAnswerCorrect }) => {
+  const hasRelatedWords = question.relatedWords.length > 0;
+
   return (
     <div className="p-2" data-testid="word-detail-card">
       <div className="flex flex-col items-center justify-center">
@@ -27,7 +29,7 @@ const WordDetailCard: FC<Props> = ({ question, isAnswerCorrect }) => {
               />
             </div>
           </div>
-          {question.relatedWords.length > 0 && (
+          {hasRelatedWords && (
             <RelatedWord relatedWords={question.relatedWords} />
           )}
           <UseExample useExamples={question.useExamples} />
