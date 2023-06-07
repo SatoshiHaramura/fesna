@@ -11,6 +11,16 @@ type Props = {
 };
 
 const WordDetailCard: FC<Props> = ({ question, isAnswerCorrect }) => {
+  const {
+    partOfSpeech,
+    question: word,
+    answer: meaning,
+    relatedWords,
+    useExamples,
+  } = question;
+
+  const hasRelatedWords = relatedWords.length > 0;
+
   return (
     <div className="p-2" data-testid="word-detail-card">
       <div className="flex flex-col items-center justify-center">
@@ -19,18 +29,12 @@ const WordDetailCard: FC<Props> = ({ question, isAnswerCorrect }) => {
             <div className="w-2/12">
               <AnswerJudgmentMark isAnswerCorrect={isAnswerCorrect} />
             </div>
-            <div className="w-2/10">
-              <Word
-                partOfSpeech={question.partOfSpeech}
-                word={question.question}
-                meaning={question.answer}
-              />
+            <div className="w-10/12">
+              <Word partOfSpeech={partOfSpeech} word={word} meaning={meaning} />
             </div>
           </div>
-          {question.relatedWords.length > 0 && (
-            <RelatedWord relatedWords={question.relatedWords} />
-          )}
-          <UseExample useExamples={question.useExamples} />
+          {hasRelatedWords && <RelatedWord relatedWords={relatedWords} />}
+          <UseExample useExamples={useExamples} />
         </div>
       </div>
     </div>
