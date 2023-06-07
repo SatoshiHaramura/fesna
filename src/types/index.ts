@@ -1,3 +1,5 @@
+export type PartOfSpeech = '動詞' | '名詞' | '形容詞' | '副詞';
+
 export type Category = {
   id: number;
   name: string;
