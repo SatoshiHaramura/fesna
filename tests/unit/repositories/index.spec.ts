@@ -41,7 +41,7 @@ describe('repositories functions', () => {
       { id: 3, categoryId: 2, name: '1' },
       { id: 4, categoryId: 2, name: '2' },
     ];
-    const result: CategoryWithLessons[] = buildCategoriesWithLessons(
+    const result: readonly CategoryWithLessons[] = buildCategoriesWithLessons(
       categories,
       lessons
     );
@@ -111,7 +111,10 @@ describe('repositories functions', () => {
       },
     ];
     const lessonId = 1;
-    const result: Question[] = filterQuestionsByLessonId(questions, lessonId);
+    const result: readonly Question[] = filterQuestionsByLessonId(
+      questions,
+      lessonId
+    );
 
     expect(result).toEqual([
       {

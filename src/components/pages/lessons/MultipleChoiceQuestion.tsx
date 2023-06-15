@@ -7,7 +7,7 @@ import { Question } from '@/types';
 import { useTextToSpeech } from '@/hooks/useTextToSpeech';
 
 type Props = {
-  questions: Question[];
+  questions: readonly Question[];
   currentQuestionNumber: number;
   handleClickChoiceButton: (event: React.MouseEvent<HTMLButtonElement>) => void;
   judgedAnswer: boolean | undefined;

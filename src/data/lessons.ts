@@ -1,6 +1,6 @@
 import { Lesson } from '@/types';
 
-export const lessonData: Lesson[] = [
+export const lessonData: readonly Lesson[] = [
   {
     id: 1,
     categoryId: 1,

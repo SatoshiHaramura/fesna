@@ -9,7 +9,7 @@ import type { CategoryWithLessons, UserSetting } from '@/types';
 import useDialog from '@/hooks/useDialog';
 
 type Props = {
-  categories: CategoryWithLessons[];
+  categories: readonly CategoryWithLessons[];
 };
 
 const Index: FC<Props> = ({ categories }) => {

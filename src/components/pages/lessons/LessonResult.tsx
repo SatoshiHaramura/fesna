@@ -5,7 +5,7 @@ import LessonResultFooter from '@/components/pages/lessons/LessonResultFooter';
 import { Question } from '@/types';
 
 type Props = {
-  questions: Question[];
+  questions: readonly Question[];
   judgedAnswers: boolean[];
   handleClickSameLessonButton: () => void;
   handleClickNextLessonButton: () => void;

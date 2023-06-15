@@ -4,7 +4,7 @@ import { shortenPartOfSpeech } from '@/utils';
 import { Roboto_Flex } from '@next/font/google';
 
 type Props = {
-  relatedWords: RelatedWord[];
+  relatedWords: readonly RelatedWord[];
 };
 
 const roboto = Roboto_Flex({

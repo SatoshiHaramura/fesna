@@ -2,7 +2,7 @@ import { FC } from 'react';
 import ChoiceButton from '@/components/pages/lessons/ChoiceButton';
 
 type Props = {
-  choices: string[];
+  choices: readonly string[];
   handleClickChoiceButton: (event: React.MouseEvent<HTMLButtonElement>) => void;
   judgedAnswer: boolean | undefined;
   answer: string;

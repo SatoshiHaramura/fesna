@@ -3,7 +3,7 @@ import WordDetailCard from '@/components/pages/lessons/WordDetailCard';
 import { Question } from '@/types';
 
 type Props = {
-  questions: Question[];
+  questions: readonly Question[];
   judgedAnswers: boolean[];
 };
 

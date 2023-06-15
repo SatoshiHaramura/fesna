@@ -3,7 +3,7 @@ import CategorySelectButton from '@/components/pages/menus/CategorySelectButton'
 import type { CategoryWithLessons } from '@/types';
 
 type Props = {
-  categories: CategoryWithLessons[];
+  categories: readonly CategoryWithLessons[];
   handleClickCategory: (category: CategoryWithLessons) => void;
 };
 

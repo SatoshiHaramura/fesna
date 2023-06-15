@@ -3,7 +3,7 @@ import { UseExample } from '@/types';
 import { Roboto_Flex } from '@next/font/google';
 
 type Props = {
-  useExamples: UseExample[];
+  useExamples: readonly UseExample[];
 };
 
 const roboto = Roboto_Flex({
