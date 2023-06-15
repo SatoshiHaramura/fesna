@@ -1,6 +1,6 @@
 import type { Category } from '@/types';
 
-export const categoryData: Category[] = [
+export const categoryData: readonly Category[] = [
   {
     id: 1,
     name: '動詞',

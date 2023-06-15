@@ -1,6 +1,6 @@
 import type { Question } from '@/types';
 
-export const questionData: Question[] = [
+export const questionData: readonly Question[] = [
   {
     id: 1,
     lessonId: 1,
