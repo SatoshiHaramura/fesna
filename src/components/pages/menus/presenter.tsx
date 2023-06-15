@@ -4,7 +4,7 @@ import LessonSelectDialog from '@/components/pages/menus/LessonSelectDialog';
 import type { CategoryWithLessons } from '@/types';
 
 type Props = {
-  categories: CategoryWithLessons[];
+  categories: readonly CategoryWithLessons[];
   handleClickCategory: (category: CategoryWithLessons) => void;
   isOpen: boolean;
   onClose: () => void;
