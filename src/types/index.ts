@@ -1,43 +1,43 @@
 export type PartOfSpeech = '動詞' | '名詞' | '形容詞' | '副詞';
 
 export type Category = {
-  id: number;
-  name: PartOfSpeech;
+  readonly id: number;
+  readonly name: PartOfSpeech;
 };
 
 export type CategoryWithLessons = Category & {
-  lessons: Lesson[];
+  readonly lessons: readonly Lesson[];
 };
 
 export type Lesson = {
-  id: number;
-  categoryId: number | null;
-  name: string;
+  readonly id: number;
+  readonly categoryId: number | null;
+  readonly name: string;
 };
 
 export type Question = {
-  id: number;
-  lessonId: number;
-  question: string;
-  answer: string;
-  choices: string[];
-  partOfSpeech: PartOfSpeech;
-  relatedWords: RelatedWord[];
-  useExamples: UseExample[];
+  readonly id: number;
+  readonly lessonId: number;
+  readonly question: string;
+  readonly answer: string;
+  readonly choices: readonly string[];
+  readonly partOfSpeech: PartOfSpeech;
+  readonly relatedWords: readonly RelatedWord[];
+  readonly useExamples: readonly UseExample[];
 };
 
 export type RelatedWord = {
-  word: string;
-  meaning: string;
-  partOfSpeech: PartOfSpeech;
+  readonly word: string;
+  readonly meaning: string;
+  readonly partOfSpeech: PartOfSpeech;
 };
 
 export type UseExample = {
-  example: string;
-  meaning: string;
+  readonly example: string;
+  readonly meaning: string;
 };
 
 export type UserSetting = {
-  lessonId: number | undefined;
-  automaticTextToSpeechMode: boolean | undefined;
+  readonly lessonId: number | undefined;
+  readonly automaticTextToSpeechMode: boolean | undefined;
 };
