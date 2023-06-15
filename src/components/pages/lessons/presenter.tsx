@@ -6,7 +6,7 @@ import LessonResult from '@/components/pages/lessons/LessonResult';
 
 type Props = {
   judgedAnswers: boolean[];
-  questions: Question[];
+  questions: readonly Question[];
   currentQuestionNumber: number;
   handleClickChoiceButton: (event: React.MouseEvent<HTMLButtonElement>) => void;
   handleClickSameLessonButton: () => void;
