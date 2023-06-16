@@ -1,4 +1,5 @@
 const nextJest = require('next/jest');
+const structuredClone = require('@ungap/structured-clone');
 
 const createJestConfig = nextJest({
   // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
@@ -20,6 +21,9 @@ const customJestConfig = {
     '<rootDir>/tests/integration/**/*.{tsx,ts}',
     '<rootDir>/tests/unit/**/*.{tsx,ts}',
   ],
+  globals: {
+    structuredClone: structuredClone.default,
+  },
 };
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
