@@ -4,16 +4,19 @@ const filterLessonsByCategoryId = (
   lessons: readonly Lesson[],
   categoryId: number
 ): readonly Lesson[] => {
-  return lessons.filter((lesson) => lesson.categoryId === categoryId);
+  return structuredClone(
+    lessons.filter((lesson) => lesson.categoryId === categoryId)
+  );
 };
 
 export const buildCategoryWithLessons = (
   category: Category,
   lessons: readonly Lesson[]
 ): CategoryWithLessons => {
+  const copiedCategory = structuredClone(category);
   const filteredLessons = filterLessonsByCategoryId(lessons, category.id);
   return {
-    ...category,
+    ...copiedCategory,
     lessons: filteredLessons,
   };
 };
@@ -31,19 +34,23 @@ export const filterQuestionsByLessonId = (
   questions: readonly Question[],
   lessonId: number | undefined
 ): readonly Question[] => {
-  return questions.filter((question) => question.lessonId === lessonId);
+  return structuredClone(
+    questions.filter((question) => question.lessonId === lessonId)
+  );
 };
 
 export const findCategoryByLessonId = (
   categories: readonly Category[],
   lessonId: number | undefined | null
 ): Category | undefined => {
-  return categories.find((category) => category.id === lessonId);
+  return structuredClone(
+    categories.find((category) => category.id === lessonId)
+  );
 };
 
 export const findLessonById = (
   lessons: readonly Lesson[],
   id: number | undefined
 ): Lesson | undefined => {
-  return lessons.find((lesson) => lesson.id === id);
+  return structuredClone(lessons.find((lesson) => lesson.id === id));
 };
