@@ -9,7 +9,7 @@ import {
 import type { Category, CategoryWithLessons, Lesson, Question } from '@/types';
 
 describe('repositories functions', () => {
-  test('buildCategoryWithLessons function', () => {
+  describe('buildCategoryWithLessons function', () => {
     const category: Category = { id: 1, name: '動詞' };
     const lessons: Lesson[] = [
       { id: 1, categoryId: 1, name: '1' },
@@ -19,18 +19,25 @@ describe('repositories functions', () => {
       category,
       lessons
     );
-
-    expect(result).toEqual({
+    const expected: CategoryWithLessons = {
       id: 1,
       name: '動詞',
       lessons: [
         { id: 1, categoryId: 1, name: '1' },
         { id: 2, categoryId: 1, name: '2' },
       ],
+    };
+
+    test('build category with lessons', () => {
+      expect(result).toEqual(expected);
+    });
+
+    test('return a deep copy of category with lessons', () => {
+      expect(result.lessons[0]).not.toBe(expected.lessons[0]);
     });
   });
 
-  test('buildCategoriesWithLessons function', () => {
+  describe('buildCategoriesWithLessons function', () => {
     const categories: Category[] = [
       { id: 1, name: '動詞' },
       { id: 2, name: '名詞' },
@@ -45,8 +52,7 @@ describe('repositories functions', () => {
       categories,
       lessons
     );
-
-    expect(result).toEqual([
+    const expected: readonly CategoryWithLessons[] = [
       {
         id: 1,
         name: '動詞',
@@ -63,10 +69,18 @@ describe('repositories functions', () => {
           { id: 4, categoryId: 2, name: '2' },
         ],
       },
-    ]);
+    ];
+
+    test('build categories with lessons', () => {
+      expect(result).toEqual(expected);
+    });
+
+    test('return deep copy of categories with lessons', () => {
+      expect(result[0].lessons[0]).not.toBe(expected[0].lessons[0]);
+    });
   });
 
-  test('filterQuestionsByLessonId function', () => {
+  describe('filterQuestionsByLessonId function', () => {
     const questions: Question[] = [
       {
         id: 1,
@@ -115,8 +129,7 @@ describe('repositories functions', () => {
       questions,
       lessonId
     );
-
-    expect(result).toEqual([
+    const expected: readonly Question[] = [
       {
         id: 1,
         lessonId: 1,
@@ -138,10 +151,18 @@ describe('repositories functions', () => {
           },
         ],
       },
-    ]);
+    ];
+
+    test('filter questions by lesson id', () => {
+      expect(result).toEqual(expected);
+    });
+
+    test('return deep copy of questions', () => {
+      expect(result[0].relatedWords[0]).not.toBe(expected[0].relatedWords[0]);
+    });
   });
 
-  test('findCategoryByLessonId function', () => {
+  describe('findCategoryByLessonId function', () => {
     const categories: Category[] = [
       { id: 1, name: '動詞' },
       { id: 2, name: '名詞' },
@@ -151,18 +172,32 @@ describe('repositories functions', () => {
       categories,
       lessonId
     );
+    const expected: Category = { id: 1, name: '動詞' };
 
-    expect(result).toEqual({ id: 1, name: '動詞' });
+    test('find category by lesson id', () => {
+      expect(result).toEqual(expected);
+    });
+
+    test('return deep copy of category', () => {
+      expect(result).not.toBe(expected);
+    });
   });
 
-  test('findLessonById function', () => {
+  describe('findLessonById function', () => {
     const lessons: Lesson[] = [
       { id: 1, categoryId: 1, name: '1' },
       { id: 2, categoryId: 1, name: '2' },
     ];
     const id = 1;
     const result: Lesson | undefined = findLessonById(lessons, id);
+    const expected: Lesson = { id: 1, categoryId: 1, name: '1' };
 
-    expect(result).toEqual({ id: 1, categoryId: 1, name: '1' });
+    test('find lesson by id', () => {
+      expect(result).toEqual(expected);
+    });
+
+    test('return deep copy of lesson', () => {
+      expect(result).not.toBe(expected);
+    });
   });
 });
