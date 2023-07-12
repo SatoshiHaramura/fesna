@@ -21,7 +21,7 @@ const MenusPage: NextPage<Props> = ({ categories }) => {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>メニュー | Stock Word</title>
+        <title>メニュー | SecuWord Boost</title>
         <meta
           name="description"
           content="セキュリティに関する英文記事を読むセキュリティエンジニア向けの英単語学習サービス。出題する英単語の品詞を選択します。"
