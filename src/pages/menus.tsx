@@ -30,7 +30,7 @@ const MenusPage: NextPage<Props> = ({ categories }) => {
       </Head>
       <NextSeo
         openGraph={{
-          url: 'https://stock-word.vercel.app/menus',
+          url: 'https://secuword-boost.vercel.app/menus',
         }}
       />
       <Menus categories={categories}></Menus>

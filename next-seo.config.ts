@@ -4,18 +4,18 @@ const config: DefaultSeoProps = {
   openGraph: {
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://stock-word.vercel.app',
-    title: 'Stock Word',
+    url: 'https://secuword-boost.vercel.app',
+    title: 'SecuWord Boost',
     description:
       'セキュリティに関する英文記事を読むセキュリティエンジニア向けの英単語学習サービス',
     images: [
       {
-        url: 'https://stock-word.vercel.app/ogp.png',
+        url: 'https://secuword-boost.vercel.app/ogp.png',
         width: 1200,
         height: 630,
       },
     ],
-    siteName: 'Stock Word',
+    siteName: 'SecuWord Boost',
   },
   twitter: {
     handle: '@s_haramura',

@@ -18,7 +18,7 @@ const LessonsPage: NextPage = () => {
       </Head>
       <NextSeo
         openGraph={{
-          url: 'https://stock-word.vercel.app/lessons',
+          url: 'https://secuword-boost.vercel.app/lessons',
         }}
       />
       <Lessons />
