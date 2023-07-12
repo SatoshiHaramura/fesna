@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { FC } from 'react';
 
-import logo from '/public/logo.png';
 import StartButton from '@/components/pages/home/StartButton';
 import HomePageFooter from '@/components/pages/home/HomePageFooter';
 
@@ -18,8 +17,8 @@ const Presenter: FC = () => {
         </h1>
         <div className="mx-auto h-auto px-4">
           <Image
-            src={logo}
-            alt="Webサービスのロゴ：サービス名はStock Word。"
+            src="/logo.svg"
+            alt="Webサービスのロゴ：サービス名はSecuWord Boost。"
             width={400}
             height={100}
             priority={true}
