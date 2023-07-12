@@ -21,7 +21,7 @@ describe('lesson page', () => {
 
   test('should have a title tag', () => {
     render(<LessonsPage />);
-    expect(document.title).toBe('レッスン | Stock Word');
+    expect(document.title).toBe('レッスン | SecuWord Boost');
   });
 
   test('answer the default lesson questions', async () => {
