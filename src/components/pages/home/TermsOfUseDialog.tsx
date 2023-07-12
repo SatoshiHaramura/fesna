@@ -30,8 +30,8 @@ const TermsOfUseDialog = ({ isOpen, onClose }: Props) => {
               </Dialog.Title>
               <div className="py-4 px-4">
                 <p className="text-sm text-gray-500">
-                  本規約は、s_haramura（以下「当方」といいます。）が提供する「Stock
-                  Word」（以下「本サービス」といいます。）を利用される際に適用されます。
+                  本規約は、s_haramura（以下「当方」といいます。）が提供する「SecuWord
+                  Boost」（以下「本サービス」といいます。）を利用される際に適用されます。
                   ご利用にあたっては、本規約をお読みいただき、内容をご承諾の上でご利用ください。
                 </p>
               </div>
