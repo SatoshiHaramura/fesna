@@ -9,7 +9,7 @@ const LessonsPage: NextPage = () => {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>レッスン | Stock Word</title>
+        <title>レッスン | SecuWord Boost</title>
         <meta
           name="description"
           content="セキュリティに関する英文記事を読むセキュリティエンジニア向けの英単語学習サービス。品詞ごとに英単語の問題を最大10問出題します。"
@@ -18,7 +18,7 @@ const LessonsPage: NextPage = () => {
       </Head>
       <NextSeo
         openGraph={{
-          url: 'https://stock-word.vercel.app/lessons',
+          url: 'https://secuword-boost.vercel.app/lessons',
         }}
       />
       <Lessons />

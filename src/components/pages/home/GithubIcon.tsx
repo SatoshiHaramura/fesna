@@ -3,7 +3,7 @@ import { FaGithub } from 'react-icons/fa';
 
 const GithubIcon = () => {
   return (
-    <Link href="https://github.com/SatoshiHaramura/stock-word">
+    <Link href="https://github.com/SatoshiHaramura/secuword-boost">
       <FaGithub
         role="img"
         aria-label="GitHub"

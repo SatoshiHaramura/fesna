@@ -30,8 +30,9 @@ const PrivacyPolicyDialog = ({ isOpen, onClose }: Props) => {
               </Dialog.Title>
               <div className="py-4 px-4">
                 <p className="text-sm text-gray-500">
-                  s_haramura（以下「当方」といいます。）が提供する「Stock
-                  Word」（以下「本サービス」といいます。）における、利用者についての個人情報の取り扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定めます。
+                  s_haramura（以下「当方」といいます。）が提供する「SecuWord
+                  Boost」（以下「本サービス」といいます。）における、
+                  利用者についての個人情報の取り扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定めます。
                 </p>
               </div>
               <div className="py-1">

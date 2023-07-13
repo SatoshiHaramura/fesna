@@ -8,7 +8,7 @@ const HomePage: NextPage = () => {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Stock Word</title>
+        <title>SecuWord Boost</title>
         <meta
           name="description"
           content="セキュリティに関する英文記事を読むセキュリティエンジニア向けの英単語学習サービス。"

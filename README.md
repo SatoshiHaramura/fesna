@@ -1,4 +1,4 @@
-# stock word
+# SecuWord Boost
 
 このWebサービスは、英単語を学習するサービスです。
 

@@ -16,6 +16,6 @@ jest.mock('next/head', () => {
 describe('home page', () => {
   test('should have a title tag', () => {
     render(<HomePage />);
-    expect(document.title).toBe('Stock Word');
+    expect(document.title).toBe('SecuWord Boost');
   });
 });

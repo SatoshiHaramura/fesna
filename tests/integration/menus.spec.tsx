@@ -58,7 +58,7 @@ describe('menu page', () => {
 
   test('should have a title tag', () => {
     render(<MenusPage categories={categories}></MenusPage>);
-    expect(document.title).toBe('メニュー | Stock Word');
+    expect(document.title).toBe('メニュー | SecuWord Boost');
   });
 
   test('choose a verb and a lesson number, the lesson number is saved in localstorage', async () => {
