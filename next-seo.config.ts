@@ -10,7 +10,7 @@ const config: DefaultSeoProps = {
       'セキュリティに関する英文記事を読むセキュリティエンジニア向けの英単語学習サービス',
     images: [
       {
-        url: 'https://secuword-boost.vercel.app/ogp.png',
+        url: 'https://secuword-boost.vercel.app/ogp.jpg',
         width: 1200,
         height: 630,
       },
